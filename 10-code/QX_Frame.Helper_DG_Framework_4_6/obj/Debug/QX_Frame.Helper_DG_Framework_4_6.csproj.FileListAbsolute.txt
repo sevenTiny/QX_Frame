@@ -1,0 +1,17 @@
+G:\ACSharp\QXFrame\QXFrame\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\QX_Frame.Helper_DG_Framework_4_6.dll
+G:\ACSharp\QXFrame\QXFrame\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\QX_Frame.Helper_DG_Framework_4_6.pdb
+G:\ACSharp\QXFrame\QXFrame\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\EntityFramework.dll
+G:\ACSharp\QXFrame\QXFrame\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\EntityFramework.xml
+G:\ACSharp\QXFrame\QXFrame\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework_4_6.csprojResolveAssemblyReference.cache
+G:\ACSharp\QXFrame\QXFrame\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework_4_6.dll
+G:\ACSharp\QXFrame\QXFrame\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework_4_6.pdb
+G:\ACSharp\QXFrame\QXFrame\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\Newtonsoft.Json.dll
+G:\ACSharp\QXFrame\QXFrame\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\Newtonsoft.Json.xml
+G:\Git\ACSharp\AntHelp\AntHelp\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework_4_6.csprojResolveAssemblyReference.cache
+G:\Git\ACSharp\AntHelp\AntHelp\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework_4_6.dll
+G:\Git\ACSharp\AntHelp\AntHelp\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework_4_6.pdb
+G:\Git\ACSharp\AntHelp\AntHelp\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\QX_Frame.Helper_DG_Framework_4_6.dll
+G:\Git\ACSharp\AntHelp\AntHelp\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\QX_Frame.Helper_DG_Framework_4_6.pdb
+G:\Git\ACSharp\AntHelp\AntHelp\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\Newtonsoft.Json.dll
+G:\Git\ACSharp\AntHelp\AntHelp\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\EntityFramework.xml
+G:\Git\ACSharp\AntHelp\AntHelp\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\Newtonsoft.Json.xml
