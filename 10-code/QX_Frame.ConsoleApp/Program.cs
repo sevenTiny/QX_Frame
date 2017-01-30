@@ -42,8 +42,12 @@ namespace QX_Frame.ConsoleApp
             TimeSpan span = timeEnd.Subtract(timesStart);
             Console.WriteLine($"time total use {span.TotalMilliseconds}");
 
+            string a = "123";
+            int aa = a.ToInt32();
+
             Console.WriteLine("any key to exit ...");
             Console.ReadKey();
         }
+        
     }
 }

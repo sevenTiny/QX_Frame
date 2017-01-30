@@ -173,6 +173,3 @@ G:\Git\AQX_Frame\10-code\QX_Frame.WebAPI\bin\System.Web.Http.xml
 G:\Git\AQX_Frame\10-code\QX_Frame.WebAPI\bin\System.Web.Http.WebHost.xml
 G:\Git\AQX_Frame\10-code\QX_Frame.WebAPI\bin\Autofac.xml
 G:\Git\AQX_Frame\10-code\QX_Frame.WebAPI\bin\QX_Frame.Data.Contract.pdb
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\obj\Debug\QX_Frame.WebAPI.csprojResolveAssemblyReference.cache
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\obj\Debug\QX_Frame.WebAPI.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\obj\Debug\QX_Frame.WebAPI.pdb

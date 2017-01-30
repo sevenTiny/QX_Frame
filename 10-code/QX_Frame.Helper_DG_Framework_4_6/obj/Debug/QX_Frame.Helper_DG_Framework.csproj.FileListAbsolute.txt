@@ -35,10 +35,3 @@ G:\AProject\AQX_Frame\10-code\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\Newtons
 G:\AProject\AQX_Frame\10-code\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework.csprojResolveAssemblyReference.cache
 G:\AProject\AQX_Frame\10-code\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework.dll
 G:\AProject\AQX_Frame\10-code\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework.pdb
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\QX_Frame.Helper_DG_Framework.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\QX_Frame.Helper_DG_Framework.pdb
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\Newtonsoft.Json.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\Newtonsoft.Json.xml
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework.csprojResolveAssemblyReference.cache
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework.pdb

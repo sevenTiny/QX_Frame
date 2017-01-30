@@ -60,6 +60,7 @@
     <Compile Include="DateTime_Helper_DG.cs" />
     <Compile Include="EF_Helper_DG.cs" />
     <Compile Include="Encrypt_Helper_DG.cs" />
+    <Compile Include="Extends\ToTypesExtends.cs" />
     <Compile Include="Ini_Helper_DG.cs" />
     <Compile Include="IO_Helper_DG.cs" />
     <Compile Include="ListPaging_Helper_DG.cs" />
