@@ -1,7 +1,6 @@
 ﻿using QX_Frame.App.Web;
 using QX_Frame.Data.DTO;
 using QX_Frame.Helper_DG_Framework;
-using QX_Frame.WebAPI.Filters_DG;
 using System;
 using System.Net;
 using System.Threading.Tasks;
@@ -17,7 +16,7 @@ namespace QX_Frame.WebAPI.Controllers
         {
             string name = await ProcessFlow_Helper_DG.channel_Async_Task<string>(() =>
             {
-                return "";
+                return "this is task string";
             });
 
             return name;

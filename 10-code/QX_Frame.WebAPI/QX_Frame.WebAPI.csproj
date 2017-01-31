@@ -108,13 +108,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SecretKeyController.cs" />
     <Compile Include="Controllers\testController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Filters_DG\AuthByQuery_Filter.cs" />
-    <Compile Include="Filters_DG\Limits_Filter.cs" />
-    <Compile Include="Filters_DG\SubmitRepeat_Filter.cs" />
+    <Compile Include="Filters\AuthByQueryAttribute_DG.cs" />
+    <Compile Include="Filters\LimitsAttribute_DG.cs" />
+    <Compile Include="Filters\SubmitRepeatAttribute_DG.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -130,8 +130,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="config\" />
     <Folder Include="Files\images\userHeadImages\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QX_Frame.Data.Service\QX_Frame.Data.Service.csproj">

@@ -5,3 +5,16 @@ G:\Git\AQX_Frame\10-code\QX_Frame.App.Web\bin\Debug\Autofac.dll
 G:\Git\AQX_Frame\10-code\QX_Frame.App.Web\bin\Debug\Autofac.xml
 G:\Git\AQX_Frame\10-code\QX_Frame.App.Web\obj\Debug\QX_Frame.App.Web.dll
 G:\Git\AQX_Frame\10-code\QX_Frame.App.Web\obj\Debug\QX_Frame.App.Web.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\QX_Frame.App.Web.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\QX_Frame.App.Web.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\Autofac.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\EntityFramework.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\QX_Frame.App.Base.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\QX_Frame.Helper_DG_Framework.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\LinqKit.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\QX_Frame.App.Base.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\QX_Frame.Helper_DG_Framework.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\Autofac.xml
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\obj\Debug\QX_Frame.App.Web.csprojResolveAssemblyReference.cache
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\obj\Debug\QX_Frame.App.Web.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\obj\Debug\QX_Frame.App.Web.pdb

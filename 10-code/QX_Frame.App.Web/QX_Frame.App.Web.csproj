@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dependency.cs" />
+    <Compile Include="Extends\HttpRouteCollectionExtends.cs" />
     <Compile Include="Filters\CrossSiteAttribute_DG.cs" />
     <Compile Include="Filters\ExceptionAttribute_DG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +78,7 @@
       <Name>QX_Frame.Helper_DG_Framework</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
