@@ -13,9 +13,27 @@ namespace QX_Frame.App.Base
     public abstract class WcfService : Dependency, IWcfService
     {
         private static IContainer _container;
+
+        private static int ExecuteTimes = 0;    //rigister execute times
+
         static WcfService()
         {
-            _container = Dependency.Factory();
+
+        }
+        /// <summary>
+        /// RegisterComplex  execute when register complex !
+        /// </summary>
+        protected static void RegisterComplex()
+        {
+            if (ExecuteTimes <= 0)
+            {
+                _container = Dependency.Factory();
+                ExecuteTimes++;
+            }
+            else
+            {
+                new Exception(nameof(RegisterComplex) + " Method can not be used more than one times in a class -- QX_Frame");
+            }
         }
         protected static ChannelFactory<TService> Wcf<TService>()
         {
@@ -81,7 +99,6 @@ namespace QX_Frame.App.Base
             {
                 throw new ArgumentNullException("query");
             }
-
             System.Type[] typeArguments = new System.Type[] { query.db_type, query.tb_type };
             object[] parameters = new object[] { query };
             return (int)_getCount.MakeGenericMethod(typeArguments).Invoke(null, parameters);

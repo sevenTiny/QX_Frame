@@ -31,8 +31,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.2.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da" />
+    <Reference Include="QX_Frame.App.Web">
+      <HintPath>..\QX_Frame.Reference\QX_Frame.App.Web\QX_Frame.App.Web.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Http">
+      <HintPath>..\QX_Frame.Reference\QX_Frame.App.Web\System.Web.Http.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />

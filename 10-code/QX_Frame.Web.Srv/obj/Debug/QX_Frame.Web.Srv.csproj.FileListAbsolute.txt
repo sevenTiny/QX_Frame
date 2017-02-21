@@ -46,3 +46,12 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\System.Web.
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\QX_Frame.App.Base.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\Autofac.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\LinqKit.xml
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\QX_Frame.Data.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\QX_Frame.Data.Service.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\QX_Frame.Data.Contract.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\QX_Frame.Data.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\QX_Frame.Data.Service.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\QX_Frame.Data.Contract.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\EntityFramework.SqlServer.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\EntityFramework.xml
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\EntityFramework.SqlServer.xml

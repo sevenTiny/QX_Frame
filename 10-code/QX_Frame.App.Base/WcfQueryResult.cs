@@ -8,7 +8,7 @@ namespace QX_Frame.App.Base
         {
             this.Data = data;
         }
-        public object Data { get; set; }
+        protected object Data { get; set; }
         public int TotalCount { get; set; }
         public TResult Cast<TResult>() where TResult : class
         {

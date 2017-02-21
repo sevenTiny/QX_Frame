@@ -22,32 +22,52 @@ namespace QX_Frame.ConsoleApp
 
         static void Main(string[] args)
         {
-            DateTime timesStart = DateTime.Now;
+            new ClassRegisters();//register classes
+            #region test
+            //DateTime timesStart = DateTime.Now;
 
-            UserAccountQueryObject query = new UserAccountQueryObject();
+            //UserAccountQueryObject query = new UserAccountQueryObject();
 
-            AppBase.Register(c => new UserAccountService());
+            //AppBase.Register(c => new UserAccountService());
+
+            //using (var fact = Wcf<UserAccountService>())
+            //{
+            //    var channel = fact.CreateChannel();
+            //    List<tb_userAccount> list = channel.QueryAll(query).Cast<List<tb_userAccount>>();
+            //    foreach (var item in list)
+            //    {
+            //        Console.WriteLine(item.loginId);
+            //    }
+            //}
+
+            //DateTime timeEnd = DateTime.Now;
+            //TimeSpan span = timeEnd.Subtract(timesStart);
+            //Console.WriteLine($"time total use {span.TotalMilliseconds}");
+
+            //string a = "123";
+            //int aa = a.ToInt32();
+            #endregion
+
+           
 
             using (var fact = Wcf<UserAccountService>())
             {
                 var channel = fact.CreateChannel();
-                List<tb_userAccount> list = channel.QueryAll(query).Cast<List<tb_userAccount>>();
-                foreach (var item in list)
+
+                int count;
+                List<tb_userAccount> userAccountList = channel.QueryAll(new UserAccountQueryObject()).Cast<List<tb_userAccount>>(out count);
+
+                foreach (var item in userAccountList)
                 {
                     Console.WriteLine(item.loginId);
                 }
+                Console.WriteLine("count = "+count);
             }
 
-            DateTime timeEnd = DateTime.Now;
-            TimeSpan span = timeEnd.Subtract(timesStart);
-            Console.WriteLine($"time total use {span.TotalMilliseconds}");
-
-            string a = "123";
-            int aa = a.ToInt32();
+            Console.WriteLine(1^3);
 
             Console.WriteLine("any key to exit ...");
             Console.ReadKey();
         }
-        
     }
 }

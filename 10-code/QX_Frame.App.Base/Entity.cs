@@ -11,13 +11,13 @@ namespace QX_Frame.App.Base
     public class Entity<TEntity>: IEntity
     {
         //New Entity Instance
-        public static TEntity Build()
+        protected static TEntity Build()
         {
             var t = Activator.CreateInstance<TEntity>();
             return t;
         }
 
-        public static TEntity Build(params dynamic[] valueParms)
+        protected static TEntity Build(params dynamic[] valueParms)
         {
             TEntity entity = Activator.CreateInstance<TEntity>();        // new instance of TEntity
             PropertyInfo[] propertyInfos = entity.GetType().GetProperties();    //get the all public Properties
@@ -26,6 +26,6 @@ namespace QX_Frame.App.Base
                 propertyInfos[i].SetValue(entity, valueParms[i]);               //set value for properties
             return entity;
         }
-        public Type EntityType { get { return typeof(TEntity); } }
+        protected Type EntityType { get { return typeof(TEntity); } }
     }
 }

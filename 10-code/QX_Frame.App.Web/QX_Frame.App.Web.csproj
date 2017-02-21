@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChannelFactory.cs" />
     <Compile Include="Dependency.cs" />
     <Compile Include="Extends\HttpRouteCollectionExtends.cs" />
     <Compile Include="Filters\CrossSiteAttribute_DG.cs" />

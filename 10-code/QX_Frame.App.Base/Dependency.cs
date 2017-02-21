@@ -64,5 +64,6 @@ namespace QX_Frame.App.Base
         /// </summary>
         /// <returns></returns>
         protected static IContainer Factory() => builder.Build();
+
     }
 }

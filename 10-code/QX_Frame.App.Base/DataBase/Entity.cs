@@ -9,12 +9,12 @@ namespace QX_Frame.App.Base
     public class Entity<DataBaseEntity, TEntity>:IEntity<DataBaseEntity, TEntity> where DataBaseEntity : DbContext
     {
         //New Entity Instance
-        public static TEntity Build()
+        protected static TEntity Build()
         {
             return Activator.CreateInstance<TEntity>();
         }
 
-        public static TEntity Build(params dynamic[] valueParms)
+        protected static TEntity Build(params dynamic[] valueParms)
         {
             TEntity entity = System.Activator.CreateInstance<TEntity>();        // new instance of TEntity
             PropertyInfo[] propertyInfos = entity.GetType().GetProperties();    //get the all public Properties
@@ -25,8 +25,8 @@ namespace QX_Frame.App.Base
             return entity;
         }
 
-        public Type DataBaseType { get { return typeof(DataBaseEntity); } }
-        public Type EntityType { get { return typeof(TEntity); } }
+        protected Type DataBaseType { get { return typeof(DataBaseEntity); } }
+        protected Type EntityType { get { return typeof(TEntity); } }
 
         //Entity to SqlServer DataBase
         public Boolean Add()

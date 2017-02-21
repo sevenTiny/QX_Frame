@@ -4,6 +4,7 @@ using Owin;
 using System.Web.Http;
 using System.Web.Http.Dispatcher;
 using QX_Frame.App.Web.Extends;
+using QX_Frame.WebAPI.config;
 
 namespace QX_Frame.Web.Srv
 {
@@ -20,8 +21,8 @@ namespace QX_Frame.Web.Srv
             try
             {
                 WebApp.Start<StartUp>(url: baseAddress);
-                Console.WriteLine("baseAddress:"+baseAddress);
-                Console.WriteLine("Application Started ...");
+                Console.WriteLine("BaseIpAddress is "+baseAddress);
+                Console.WriteLine("\nApplication Started !");
             }
             catch (Exception ex)
             {
@@ -56,6 +57,8 @@ namespace QX_Frame.Web.Srv
 
             //if config the global filter input there need not write the attributes
             //config.Filters.Add(new App.Web.Filters.ExceptionAttribute_DG());
+
+            new ClassRegisters(); //register ioc menbers
 
             appBuilder.UseWebApi(config);
 

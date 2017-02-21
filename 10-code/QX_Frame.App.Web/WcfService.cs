@@ -4,8 +4,8 @@ using System.Linq;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using QX_Frame.Helper_DG_Framework;
-using QX_Frame.App.Base;
 using System.Data.Entity;
+using QX_Frame.App.Base;
 
 namespace QX_Frame.App.Web
 {
@@ -14,10 +14,26 @@ namespace QX_Frame.App.Web
     public abstract class WcfService : Dependency, IWcfService
     {
         private static IContainer _container;
+
+        private static int ExecuteTimes = 0;    //register execute times
+
         static WcfService()
         {
-            _container = Dependency.Factory();
+
         }
+        /// <summary>
+        /// RegisterComplex  execute when register complex !
+        /// </summary>
+        protected static void RegisterComplex()
+        {
+            if (ExecuteTimes > 0)
+            {
+                throw new Exception(nameof(RegisterComplex) + " Method can not be used more than one times in a class -- QX_Frame");
+            }
+            _container = Dependency.Factory();
+            ExecuteTimes++;
+        }
+
         protected static ChannelFactory<TService> Wcf<TService>()
         {
             return new ChannelFactory<TService>(_container);

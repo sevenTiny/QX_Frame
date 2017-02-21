@@ -22,6 +22,10 @@ namespace QX_Frame.Data.QueryObject
             {
                 func = func.And(t => t.loginId.Contains(loginId));
             }
+            if (!string.IsNullOrEmpty(pwd))
+            {
+                func = func.And(t => t.pwd == "123");
+            }
             return func;
         }
         protected override Expression<Func<tb_userAccount, dynamic>> OrderBy

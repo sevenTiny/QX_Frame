@@ -81,8 +81,6 @@ namespace QX_Frame.Helper_DG_Framework
             {
                 return default(int);
             }
-
-
         }
         /// <summary>
         /// 执行sql命令，返回受影响的行数。
@@ -109,8 +107,6 @@ namespace QX_Frame.Helper_DG_Framework
             {
                 return default(int);
             }
-
-
         }
         #endregion
 

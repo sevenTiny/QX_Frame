@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace QX_Frame.Data.Service.QX_Frame
 {
-    public class UserAccountService :WcfService, IUserAccountService
+    public class UserAccountService : WcfService, IUserAccountService
     {
         private tb_userAccount _tb_userAccount;
         public UserAccountService()
@@ -18,17 +18,19 @@ namespace QX_Frame.Data.Service.QX_Frame
         {
             this._tb_userAccount = tb_userAccount;
         }
-        public bool Add()
+        public bool Add(tb_userAccount tb_userAccount)
         {
-            return this._tb_userAccount.Add();
+            return tb_userAccount.Add();
         }
-        public bool Update()
+        public bool Update(tb_userAccount tb_userAccount)
         {
-            return this._tb_userAccount.Update();
+            return tb_userAccount.Update();
         }
-        public bool Delete()
+        public bool Delete(tb_userAccount tb_userAccount)
         {
-            return this._tb_userAccount.Delete();
+            return tb_userAccount.Delete();
         }
+
+
     }
 }
