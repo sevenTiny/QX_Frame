@@ -1,0 +1,32 @@
+QX_Frame windows General development template framework platform
+
+1.Frame DLL     -- build into QX_Frame.Reference
+
+QX_Frame.App.Base               QX_Frame.Console base class include Entities`s base class, DataBase operation base class,Ioc containers
+QX_Frame.App.Form               QX_Frame.FormApp base class
+QX_Frame.App.Web                QX_Frame.WebAPI  base class include common web Exception filters
+QX_Frame.Helper_DG_Framework    common helper classes
+
+2.Project DLL   --  refrence by QX_Frame.Reference
+
+QX_Frame.Data           frame object class include DTO/Entities/Options/QueryObject  
+QX_Frame.Data.Contract  business logic Service interface class
+QX_Frame.Data.Service   business logic Service class
+QX_Frame.ConsoleApp     console application
+QX_Frame.FormApp        windows form application
+QX_Frame.Web            web application, html structure by AngularJS2 match up with TypeScript
+QX_Frame.Web.Srv        WebAPI service structure by OWIN
+QX_Frame.WebAPI         WebAPI application
+QX_Frame.WebAPI.Test    WebAPI Test application
+
+QX_Frame technology argument
+
+Ioc container by Autofac
+Aop technology by Web.Http.Filters
+web host by OWIN
+DB operate match up with EntityFramework Code First ORM
+Cache use web service cache
+common data dispose channel
+
+api interface use async/await Task programme
+common api return values format
