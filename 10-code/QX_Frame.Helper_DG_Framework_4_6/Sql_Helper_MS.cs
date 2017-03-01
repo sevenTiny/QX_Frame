@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Xml;
 /********************************************|
  * 
- * 类：SqlHelper_MS数据访问工具类                  
+ * 类：Sql_Helper_MS数据访问工具类                  
  * 分享者：远方(explore6688@sina.cn)           
  * csdn:http://blog.csdn.net/sn_explore6688  |
  ********************************************/
@@ -15,11 +15,11 @@ namespace QX_Frame.Helper_DG_Framework
     /// <summary> 
     /// SqlServer数据访问帮助类 
     /// </summary> 
-    public sealed class SqlHelper_MS
+    public sealed class Sql_Helper_MS
     {
         #region 私有构造函数和方法
 
-        private SqlHelper_MS() { }
+        private Sql_Helper_MS() { }
 
         /// <summary> 
         /// 将SqlParameter参数数组(参数值)分配给SqlCommand命令. 
@@ -190,7 +190,7 @@ namespace QX_Frame.Helper_DG_Framework
         /// <returns></returns> 
         public static SqlConnection GetConnection()
         {
-            SqlConnection Connection = new SqlConnection(SqlHelper_MS.GetConnSting());
+            SqlConnection Connection = new SqlConnection(Sql_Helper_MS.GetConnSting());
             return Connection;
         }
         #endregion
@@ -259,7 +259,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // 从探索存储过程参数(加载到缓存)并分配给存储过程参数数组. 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connectionString, spName);
 
                 // 给存储过程参数赋值 
                 AssignParameterValues(commandParameters, parameterValues);
@@ -341,7 +341,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // 从缓存中加载存储过程参数 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connection, spName);
 
                 // 给存储过程分配参数值 
                 AssignParameterValues(commandParameters, parameterValues);
@@ -422,7 +422,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // 给存储过程参数赋值 
                 AssignParameterValues(commandParameters, parameterValues);
@@ -503,7 +503,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // 从缓存中检索存储过程参数 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connectionString, spName);
 
                 // 给存储过程参数分配值 
                 AssignParameterValues(commandParameters, parameterValues);
@@ -590,7 +590,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // 比缓存中加载存储过程参数 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connection, spName);
 
                 // 给存储过程参数分配值 
                 AssignParameterValues(commandParameters, parameterValues);
@@ -672,7 +672,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // 从缓存中加载存储过程参数 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // 给存储过程参数分配值 
                 AssignParameterValues(commandParameters, parameterValues);
@@ -690,11 +690,11 @@ namespace QX_Frame.Helper_DG_Framework
         #region ExecuteReader 数据阅读器
 
         /// <summary> 
-        /// 枚举,标识数据库连接是由SqlHelper_MS提供还是由调用者提供 
+        /// 枚举,标识数据库连接是由Sql_Helper_MS提供还是由调用者提供 
         /// </summary> 
         private enum SqlConnectionOwnership
         {
-            /// <summary>由SqlHelper_MS提供连接</summary> 
+            /// <summary>由Sql_Helper_MS提供连接</summary> 
             Internal,
             /// <summary>由调用者提供连接</summary> 
             External
@@ -704,7 +704,7 @@ namespace QX_Frame.Helper_DG_Framework
         /// 执行指定数据库连接对象的数据阅读器. 
         /// </summary> 
         /// <remarks> 
-        /// 如果是SqlHelper_MS打开连接,当连接关闭DataReader也将关闭. 
+        /// 如果是Sql_Helper_MS打开连接,当连接关闭DataReader也将关闭. 
         /// 如果是调用都打开连接,DataReader由调用都管理. 
         /// </remarks> 
         /// <param name="connection">一个有效的数据库连接对象</param> 
@@ -712,7 +712,7 @@ namespace QX_Frame.Helper_DG_Framework
         /// <param name="commandType">命令类型 (存储过程,命令文本或其它)</param> 
         /// <param name="commandText">存储过程名或T-SQL语句</param> 
         /// <param name="commandParameters">SqlParameters参数数组,如果没有参数则为'null'</param> 
-        /// <param name="connectionOwnership">标识数据库连接对象是由调用者提供还是由SqlHelper_MS提供</param> 
+        /// <param name="connectionOwnership">标识数据库连接对象是由调用者提供还是由Sql_Helper_MS提供</param> 
         /// <returns>返回包含结果集的SqlDataReader</returns> 
         private static SqlDataReader ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, string commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership)
         {
@@ -831,7 +831,7 @@ namespace QX_Frame.Helper_DG_Framework
 
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connectionString, spName);
 
                 AssignParameterValues(commandParameters, parameterValues);
 
@@ -895,7 +895,7 @@ namespace QX_Frame.Helper_DG_Framework
 
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connection, spName);
 
                 AssignParameterValues(commandParameters, parameterValues);
 
@@ -965,7 +965,7 @@ namespace QX_Frame.Helper_DG_Framework
             // 如果有参数值 
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 AssignParameterValues(commandParameters, parameterValues);
 
@@ -1046,7 +1046,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connectionString, spName);
 
                 // 给存储过程参数赋值 
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1134,7 +1134,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connection, spName);
 
                 // 给存储过程参数赋值 
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1219,7 +1219,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // PPull the parameters for this stored procedure from the parameter cache () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // 给存储过程参数赋值 
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1315,7 +1315,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connection, spName);
 
                 // 给存储过程参数赋值 
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1400,7 +1400,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // 给存储过程参数赋值 
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1579,7 +1579,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connection, spName);
 
                 // 给存储过程参数赋值 
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1666,7 +1666,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // 给存储过程参数赋值 
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1832,7 +1832,7 @@ namespace QX_Frame.Helper_DG_Framework
             if ((sourceColumns != null) && (sourceColumns.Length > 0))
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connection, spName);
 
                 // 将源表的列到映射到DataSet命令中. 
                 for (int index = 0; index < sourceColumns.Length; index++)
@@ -1863,16 +1863,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connectionString, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -1892,16 +1892,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connection, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteNonQuery(connection, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteNonQuery(connection, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteNonQuery(connection, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteNonQuery(connection, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -1922,16 +1922,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteNonQuery(transaction, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteNonQuery(transaction, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteNonQuery(transaction, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteNonQuery(transaction, CommandType.StoredProcedure, spName);
             }
         }
         #endregion
@@ -1953,16 +1953,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connectionString, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteDataset(connectionString, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteDataset(connectionString, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteDataset(connectionString, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteDataset(connectionString, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -1983,16 +1983,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connection, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteDataset(connection, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteDataset(connection, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteDataset(connection, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteDataset(connection, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2013,16 +2013,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteDataset(transaction, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteDataset(transaction, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteDataset(transaction, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteDataset(transaction, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2045,16 +2045,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connectionString, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteReader(connectionString, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteReader(connectionString, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteReader(connectionString, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteReader(connectionString, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2075,16 +2075,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connection, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteReader(connection, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteReader(connection, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteReader(connection, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteReader(connection, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2105,16 +2105,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteReader(transaction, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteReader(transaction, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteReader(transaction, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteReader(transaction, CommandType.StoredProcedure, spName);
             }
         }
         #endregion
@@ -2136,16 +2136,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connectionString, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteScalar(connectionString, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteScalar(connectionString, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteScalar(connectionString, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteScalar(connectionString, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2165,16 +2165,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connection, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteScalar(connection, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteScalar(connection, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteScalar(connection, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteScalar(connection, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2195,16 +2195,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteScalar(transaction, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteScalar(transaction, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteScalar(transaction, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteScalar(transaction, CommandType.StoredProcedure, spName);
             }
         }
         #endregion
@@ -2226,16 +2226,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(connection, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteXmlReader(connection, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteXmlReader(connection, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteXmlReader(connection, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteXmlReader(connection, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2256,16 +2256,16 @@ namespace QX_Frame.Helper_DG_Framework
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // 从缓存中加载存储过程参数,如果缓存中不存在则从数据库中检索参数信息并加载到缓存中. () 
-                SqlParameter[] commandParameters = SqlHelper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = Sql_Helper_MSParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // 分配参数值 
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper_MS.ExecuteXmlReader(transaction, CommandType.StoredProcedure, spName, commandParameters);
+                return Sql_Helper_MS.ExecuteXmlReader(transaction, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper_MS.ExecuteXmlReader(transaction, CommandType.StoredProcedure, spName);
+                return Sql_Helper_MS.ExecuteXmlReader(transaction, CommandType.StoredProcedure, spName);
             }
         }
         #endregion
@@ -2273,13 +2273,13 @@ namespace QX_Frame.Helper_DG_Framework
     }
 
     /// <summary> 
-    /// SqlHelper_MSParameterCache提供缓存存储过程参数,并能够在运行时从存储过程中探索参数. 
+    /// Sql_Helper_MSParameterCache提供缓存存储过程参数,并能够在运行时从存储过程中探索参数. 
     /// </summary> 
-    public sealed class SqlHelper_MSParameterCache
+    public sealed class Sql_Helper_MSParameterCache
     {
         #region 私有方法,字段,构造函数
         // 私有构造函数,妨止类被实例化. 
-        private SqlHelper_MSParameterCache() { }
+        private Sql_Helper_MSParameterCache() { }
 
         // 这个方法要注意 
         private static Hashtable paramCache = Hashtable.Synchronized(new Hashtable());

@@ -1,9 +1,10 @@
 ﻿using LinqKit; //AsExpandable() in linqkit.dll
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Data.Entity;
+using System.Runtime.Remoting.Messaging;
+using System.Transactions;
 
 namespace QX_Frame.Helper_DG_Framework
 {
@@ -17,25 +18,41 @@ namespace QX_Frame.Helper_DG_Framework
     public abstract class EF_Helper_DG<Db> where Db : DbContext
     {
         /*the singleton Db */
-        private volatile static Db db = null;   //volatile find Db in memory not in cache
+        //private volatile static Db db = null;   //volatile find Db in memory not in cache
 
         #region The Singleton to new DBEntity_DG
 
-        private static readonly object lockHelper = new object();
-        static EF_Helper_DG()
-        {
-            if (db == null)
-            {
-                lock (lockHelper)
-                {
-                    if (db == null)
-                        db = System.Activator.CreateInstance<Db>();
-                }
-            }
-            //close the Validate of EF OnSaveEnabled
-            db.Configuration.ValidateOnSaveEnabled = false;
-        }
+        //private static readonly object lockHelper = new object();
+        //static EF_Helper_DG()
+        //{
+        //    if (db == null)
+        //    {
+        //        lock (lockHelper)
+        //        {
+        //            if (db == null)
+        //                db = System.Activator.CreateInstance<Db>();
+        //        }
+        //    }
 
+        //    //close the Validate of EF OnSaveEnabled
+        //    db.Configuration.ValidateOnSaveEnabled = false;
+        //}
+
+        #endregion
+
+        #region get current dbContext
+        public static DbContext GetCurrentDbContext()
+        {
+            //CallContext：是线程内部唯一的独用的数据槽（一块内存空间）  
+            Db dbContext = CallContext.GetData("DbContext") as Db;
+            if (dbContext == null)  //线程在内存中没有此上下文  
+            {
+                //create a dbContext to memory if dbContext have not exist
+                dbContext = System.Activator.CreateInstance<Db>();
+                CallContext.SetData("DbContext", dbContext);
+            }
+            return dbContext;
+        }
         #endregion
 
         #region Cache Strategy
@@ -92,6 +109,7 @@ namespace QX_Frame.Helper_DG_Framework
                 IQueryable<T> iqueryable = Cache_Helper_DG.Cache_Get(nameof(T)) as IQueryable<T>;
                 if (iqueryable == null)
                 {
+                    DbContext db = GetCurrentDbContext();
                     iqueryable = db.Set<T>().AsExpandable();
                     Cache_Helper_DG.Cache_Add(nameof(T), iqueryable, null, DateTime.Now.AddMinutes(CacheExpirationTime_Minutes), TimeSpan.Zero);
                 }
@@ -99,6 +117,7 @@ namespace QX_Frame.Helper_DG_Framework
             }
             else
             {
+                DbContext db = GetCurrentDbContext();
                 return db.Set<T>().AsExpandable();
             }
         }
@@ -109,12 +128,14 @@ namespace QX_Frame.Helper_DG_Framework
 
         public static Boolean Add<T>(T entity) where T : class
         {
+            DbContext db = GetCurrentDbContext();
             CacheChanges<T>();
             db.Entry<T>(entity).State = EntityState.Added;
             return db.SaveChanges() > 0;
         }
         public static Boolean Add<T>(T entity, out T outEntity) where T : class
         {
+            DbContext db = GetCurrentDbContext();
             CacheChanges<T>();
             db.Entry<T>(entity).State = EntityState.Added;
             outEntity = entity;
@@ -122,6 +143,7 @@ namespace QX_Frame.Helper_DG_Framework
         }
         public static Boolean Add<T>(IQueryable<T> entities) where T : class
         {
+            DbContext db = GetCurrentDbContext();
             CacheChanges<T>();
             db.Set<T>().AddRange(entities);
             return db.SaveChanges() > 0;
@@ -133,6 +155,7 @@ namespace QX_Frame.Helper_DG_Framework
 
         public static Boolean Update<T>(T entity) where T : class
         {
+            DbContext db = GetCurrentDbContext();
             CacheChanges<T>();
             if (db.Entry<T>(entity).State == EntityState.Detached)
             {
@@ -143,6 +166,7 @@ namespace QX_Frame.Helper_DG_Framework
         }
         public static Boolean Update<T>(T entity, out T outEntity) where T : class
         {
+            DbContext db = GetCurrentDbContext();
             CacheChanges<T>();
             db.Set<T>().Attach(entity);
             db.Entry<T>(entity).State = EntityState.Modified;
@@ -155,6 +179,7 @@ namespace QX_Frame.Helper_DG_Framework
 
         public static Boolean Delete<T>(T entity) where T : class
         {
+            DbContext db = GetCurrentDbContext();
             CacheChanges<T>();
             db.Set<T>().Attach(entity);
             db.Entry<T>(entity).State = EntityState.Deleted;
@@ -162,16 +187,29 @@ namespace QX_Frame.Helper_DG_Framework
         }
         public static Boolean Delete<T>(IQueryable<T> entities) where T : class
         {
+            DbContext db = GetCurrentDbContext();
             CacheChanges<T>();
             db.Set<T>().RemoveRange(entities);
             return db.SaveChanges() > 0;
         }
         public static Boolean Delete<T>(Expression<Func<T, bool>> deleteWhere) where T : class
         {
+            DbContext db = GetCurrentDbContext();
             CacheChanges<T>();
             IQueryable<T> entitys = GetIQuerybleByCache<T>().Where(deleteWhere);
             entitys.ForEach(m => db.Entry<T>(m).State = EntityState.Deleted);
             return db.SaveChanges() > 0;
+        }
+        #endregion
+
+        #region Trasaction
+        public static void Trasaction(Action action)
+        {
+            using (TransactionScope trans=new TransactionScope ())
+            {
+                action();
+                trans.Complete();
+            }
         }
         #endregion
 

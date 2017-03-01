@@ -15,7 +15,7 @@ namespace QX_Frame.Helper_DG_Framework
     /// author qixiao;
     /// release Time :20160506;
     /// </summary>
-    public abstract class SqlHelper_DG
+    public abstract class Sql_Helper_DG
     {
         #region ConStr链接字符串---ConStr链接字符串声明
         /// <summary>
@@ -289,9 +289,9 @@ namespace QX_Frame.Helper_DG_Framework
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return null;
+                throw ex;
             }
         }
         /// <summary>
@@ -320,9 +320,9 @@ namespace QX_Frame.Helper_DG_Framework
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return null;
+                throw ex;
             }
         }
         /// <summary>
@@ -351,9 +351,9 @@ namespace QX_Frame.Helper_DG_Framework
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return null;
+                throw ex;
             }
         }
         #endregion
@@ -378,7 +378,7 @@ namespace QX_Frame.Helper_DG_Framework
             cmd.Connection = conn;
             cmd.CommandType = commandType;
             cmd.CommandText = commandTextOrSpName;
-            cmd.CommandTimeout = 20;
+            cmd.CommandTimeout = 60;
         }
         /// <summary>
         /// 设置一个等待执行的SqlCommand对象
@@ -400,7 +400,7 @@ namespace QX_Frame.Helper_DG_Framework
             cmd.Connection = conn;
             cmd.CommandType = commandType;
             cmd.CommandText = commandTextOrSpName;
-            cmd.CommandTimeout = 20;
+            cmd.CommandTimeout = 60;
 
             cmd.Parameters.Clear();
             if (parms != null)
@@ -429,7 +429,7 @@ namespace QX_Frame.Helper_DG_Framework
             cmd.Connection = conn;
             cmd.CommandType = commandType;
             cmd.CommandText = commandTextOrSpName;
-            cmd.CommandTimeout = 20;
+            cmd.CommandTimeout = 60;
 
             cmd.Parameters.Clear();
             if (parms != null)

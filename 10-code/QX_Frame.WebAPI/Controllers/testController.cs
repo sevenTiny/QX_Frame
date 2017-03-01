@@ -3,15 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace QX_Frame.WebAPI.Controllers
 {
-    public class testController : ApiController
+    public class TestController : ApiController
     {
         #region RESTful Test
-        //url: http://localhost:3999/api/test
+        //url: http://localhost:3999/api/Test
         public IHttpActionResult GetQX()
         {
             var result = new { TFMark = true, Msg = "this is HttpGET Method" };

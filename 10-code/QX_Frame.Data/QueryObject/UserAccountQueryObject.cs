@@ -1,10 +1,6 @@
 ﻿using QX_Frame.App.Base;
 using QX_Frame.Data.Entities.QX_Frame;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Linq.Expressions;
 
 namespace QX_Frame.Data.QueryObject
@@ -28,12 +24,6 @@ namespace QX_Frame.Data.QueryObject
             }
             return func;
         }
-        protected override Expression<Func<tb_userAccount, dynamic>> OrderBy
-        {
-            get
-            {
-                return t =>t.loginId;
-            }
-        }
+
     }
 }

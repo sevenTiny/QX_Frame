@@ -5,6 +5,7 @@ using System.Web.Http;
 using System.Web.Http.Dispatcher;
 using QX_Frame.App.Web.Extends;
 using QX_Frame.WebAPI.config;
+using System.Web.Http.Cors;
 
 namespace QX_Frame.Web.Srv
 {
@@ -43,8 +44,8 @@ namespace QX_Frame.Web.Srv
             HttpConfiguration config = new HttpConfiguration();
 
             // Web API configuration and services
-            //跨域配置
-            //config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+            //跨域配置 //need reference from nuget
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
             // Web API routes
 
             config.Routes.MapHttpRoute(

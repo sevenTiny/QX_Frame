@@ -11,13 +11,12 @@ namespace QX_Frame.App.Base
     public class Entity<TEntity>: IEntity
     {
         //New Entity Instance
-        protected static TEntity Build()
+        public static TEntity Build()
         {
-            var t = Activator.CreateInstance<TEntity>();
-            return t;
+            return Activator.CreateInstance<TEntity>();
         }
 
-        protected static TEntity Build(params dynamic[] valueParms)
+        public static TEntity Build(params dynamic[] valueParms)
         {
             TEntity entity = Activator.CreateInstance<TEntity>();        // new instance of TEntity
             PropertyInfo[] propertyInfos = entity.GetType().GetProperties();    //get the all public Properties

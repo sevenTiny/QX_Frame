@@ -66,7 +66,11 @@
     </Reference>
     <Reference Include="QX_Frame.App.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\QX_Frame.Reference\QX_Frame.App.Base\QX_Frame.App.Base.dll</HintPath>
+      <HintPath>..\QX_Frame.Reference\QX_Frame.App.Web\QX_Frame.App.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="QX_Frame.App.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QX_Frame.Reference\QX_Frame.App.Web\QX_Frame.App.Web.dll</HintPath>
     </Reference>
     <Reference Include="QX_Frame.Helper_DG_Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -109,9 +113,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="config\ClassRegisters.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SecretKeyController.cs" />
-    <Compile Include="Controllers\testController.cs" />
+    <Compile Include="Controllers\Test1Controller.cs" />
+    <Compile Include="Controllers\Test2Controller.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Filters\AuthByQueryAttribute_DG.cs" />
     <Compile Include="Filters\LimitsAttribute_DG.cs" />
@@ -135,10 +139,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\QX_Frame.App.Web\QX_Frame.App.Web.csproj">
-      <Project>{44f973d1-c837-4801-a8ca-6bb97552bcd5}</Project>
-      <Name>QX_Frame.App.Web</Name>
-    </ProjectReference>
     <ProjectReference Include="..\QX_Frame.Data.Service\QX_Frame.Data.Service.csproj">
       <Project>{80378a61-fd07-4af0-b09c-8f39be12ca61}</Project>
       <Name>QX_Frame.Data.Service</Name>

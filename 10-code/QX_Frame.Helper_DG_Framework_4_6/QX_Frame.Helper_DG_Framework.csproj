@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
@@ -66,7 +67,6 @@
     <Compile Include="ListPaging_Helper_DG.cs" />
     <Compile Include="Log_Helper_DG.cs" />
     <Compile Include="options\msg_options_DG.cs" />
-    <Compile Include="Path_Helper_DG.cs" />
     <Compile Include="PredicateBuilder_Helper_DG.cs" />
     <Compile Include="ProcessFlow_Helper_DG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

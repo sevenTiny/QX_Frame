@@ -2,20 +2,24 @@
 using Autofac;
 using System.Linq;
 using System.Diagnostics.CodeAnalysis;
+using System.Data.Entity;
 using System.Reflection;
 using QX_Frame.Helper_DG_Framework;
-using System.Data.Entity;
+using System.Linq.Expressions;
 using QX_Frame.App.Base;
 
 namespace QX_Frame.App.Web
 {
     //author:qixiao
     //time:2017-1-13 14:09:05
-    public abstract class WcfService : Dependency, IWcfService
+    /**
+     * there WcfService can not implement IWcfService if done,influnce the RESTFul Controller Action Post method match -- qx_frame 2017-2-27 09:59:17
+     **/
+    public abstract class WcfService : Dependency
     {
         private static IContainer _container;
 
-        private static int ExecuteTimes = 0;    //register execute times
+        private static int ExecuteTimes = 0;    //rigister execute times
 
         static WcfService()
         {
@@ -26,14 +30,16 @@ namespace QX_Frame.App.Web
         /// </summary>
         protected static void RegisterComplex()
         {
-            if (ExecuteTimes > 0)
+            if (ExecuteTimes <= 0)
             {
-                throw new Exception(nameof(RegisterComplex) + " Method can not be used more than one times in a class -- QX_Frame");
+                _container = Dependency.Factory();
+                ExecuteTimes++;
             }
-            _container = Dependency.Factory();
-            ExecuteTimes++;
+            else
+            {
+                new Exception(nameof(RegisterComplex) + " Method can not be used more than one times in a class -- QX_Frame");
+            }
         }
-
         protected static ChannelFactory<TService> Wcf<TService>()
         {
             return new ChannelFactory<TService>(_container);
@@ -41,7 +47,9 @@ namespace QX_Frame.App.Web
         //use reflector to getMethod
         private static readonly MethodInfo _getCount = typeof(WcfService).GetMethod("GetCount", BindingFlags.NonPublic | BindingFlags.Static);
         private static readonly MethodInfo _getEntities = typeof(WcfService).GetMethod("GetEntities", BindingFlags.NonPublic | BindingFlags.Static);
+        private static readonly MethodInfo _getEntitiesPaging = typeof(WcfService).GetMethod("GetEntitiesPaging", BindingFlags.NonPublic | BindingFlags.Static);
         private static readonly MethodInfo _getEntity = typeof(WcfService).GetMethod("GetEntity", BindingFlags.NonPublic | BindingFlags.Static);
+
         private static int _totalCount { get; set; } = 0;//the query result count
 
         private static int GetCount<DBEntity, TBEntity>(WcfQueryObject<DBEntity, TBEntity> query) where DBEntity : DbContext where TBEntity : class
@@ -55,20 +63,22 @@ namespace QX_Frame.App.Web
         {
             IQueryable<TBEntity> source = null;
             int count = 0;
-            if (query.QueryOrderBy != null)
+            source = EF_Helper_DG<DBEntity>.selectAll(query.BuildQueryFunc<TBEntity>(), out count);
+            _totalCount = count;
+            return source.ToList();
+        }
+
+        private static object GetEntitiesPaging<DBEntity, TBEntity, TKey>(WcfQueryObject<DBEntity, TBEntity> query, Expression<Func<TBEntity, TKey>> orderBy) where DBEntity : DbContext where TBEntity : class
+        {
+            IQueryable<TBEntity> source = null;
+            int count = 0;
+            if (query.PageIndex >= 0 && query.PageSize > 0)
             {
-                if (query.PageIndex >= 0 && query.PageSize > 0)
-                {
-                    source = EF_Helper_DG<DBEntity>.selectAllPaging(query.PageIndex, query.PageSize, query.QueryOrderBy, query.BuildQueryFunc<TBEntity>(), out count, query.IsDESC);
-                }
-                else
-                {
-                    source = EF_Helper_DG<DBEntity>.selectAll(query.QueryOrderBy, query.BuildQueryFunc<TBEntity>(), out count, query.IsDESC);
-                }
+                source = EF_Helper_DG<DBEntity>.selectAllPaging(query.PageIndex, query.PageSize, orderBy, query.BuildQueryFunc<TBEntity>(), out count, query.IsDESC);
             }
             else
             {
-                source = EF_Helper_DG<DBEntity>.selectAll(query.BuildQueryFunc<TBEntity>(), out count);
+                source = EF_Helper_DG<DBEntity>.selectAll(orderBy, query.BuildQueryFunc<TBEntity>(), out count, query.IsDESC);
             }
             _totalCount = count;
             return source.ToList();
@@ -81,7 +91,8 @@ namespace QX_Frame.App.Web
         }
 
         //query method
-        public WcfQueryResult QueryAll(WcfQueryObject query)
+
+        protected WcfQueryResult QueryAll(WcfQueryObject query)
         {
             if (query == null)
             {
@@ -91,20 +102,33 @@ namespace QX_Frame.App.Web
             object[] parameters = new object[] { query };
             return new WcfQueryResult(_getEntities.MakeGenericMethod(typeArguments).Invoke(null, parameters)) { TotalCount = _totalCount };
         }
-
-        public int QueryCount(WcfQueryObject query)
+        protected WcfQueryResult QueryAllPaging<TBEntity, TKey>(WcfQueryObject query, Expression<Func<TBEntity, TKey>> orderBy) where TBEntity : class
         {
             if (query == null)
             {
                 throw new ArgumentNullException("query");
             }
+            if (orderBy == null)
+            {
+                throw new ArgumentNullException("if you want to paging must use OrderBy arguments  -- QX_Frame");
+            }
+            System.Type[] typeArguments = new System.Type[] { query.db_type, query.tb_type, typeof(TKey) };
+            object[] parameters = new object[] { query, orderBy };
+            return new WcfQueryResult(_getEntitiesPaging.MakeGenericMethod(typeArguments).Invoke(null, parameters)) { TotalCount = _totalCount };
+        }
 
+        protected int QueryCount(WcfQueryObject query)
+        {
+            if (query == null)
+            {
+                throw new ArgumentNullException("query");
+            }
             System.Type[] typeArguments = new System.Type[] { query.db_type, query.tb_type };
             object[] parameters = new object[] { query };
             return (int)_getCount.MakeGenericMethod(typeArguments).Invoke(null, parameters);
         }
 
-        public WcfQueryResult QuerySingle(WcfQueryObject query)
+        protected WcfQueryResult QuerySingle(WcfQueryObject query)
         {
             if (query == null)
             {

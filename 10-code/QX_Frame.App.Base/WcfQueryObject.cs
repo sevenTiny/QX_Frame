@@ -17,7 +17,5 @@ namespace QX_Frame.App.Base
         {
             throw new NotImplementedException("QueryFunc must be Implemented ! --QX_Frame");
         }
-        public Expression<Func<TB_Entity, dynamic>> QueryOrderBy { get { return this.OrderBy; } }
-        protected virtual Expression<Func<TB_Entity, dynamic>> OrderBy { get; } = null;
     }
 }

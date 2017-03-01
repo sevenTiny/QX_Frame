@@ -55,3 +55,8 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\QX_Frame.Da
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\EntityFramework.SqlServer.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\EntityFramework.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\EntityFramework.SqlServer.xml
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\Microsoft.Owin.Cors.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\System.Web.Cors.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\System.Web.Http.Cors.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\Microsoft.Owin.Cors.xml
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\System.Web.Http.Cors.xml

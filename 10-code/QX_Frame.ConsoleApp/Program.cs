@@ -22,49 +22,36 @@ namespace QX_Frame.ConsoleApp
 
         static void Main(string[] args)
         {
-            new ClassRegisters();//register classes
-            #region test
-            //DateTime timesStart = DateTime.Now;
+            new ClassRegisters();   //register classes
 
-            //UserAccountQueryObject query = new UserAccountQueryObject();
-
-            //AppBase.Register(c => new UserAccountService());
-
-            //using (var fact = Wcf<UserAccountService>())
-            //{
-            //    var channel = fact.CreateChannel();
-            //    List<tb_userAccount> list = channel.QueryAll(query).Cast<List<tb_userAccount>>();
-            //    foreach (var item in list)
-            //    {
-            //        Console.WriteLine(item.loginId);
-            //    }
-            //}
-
-            //DateTime timeEnd = DateTime.Now;
-            //TimeSpan span = timeEnd.Subtract(timesStart);
-            //Console.WriteLine($"time total use {span.TotalMilliseconds}");
-
-            //string a = "123";
-            //int aa = a.ToInt32();
-            #endregion
-
-           
 
             using (var fact = Wcf<UserAccountService>())
             {
                 var channel = fact.CreateChannel();
 
-                int count;
+                int count = 0;
+
                 List<tb_userAccount> userAccountList = channel.QueryAll(new UserAccountQueryObject()).Cast<List<tb_userAccount>>(out count);
 
                 foreach (var item in userAccountList)
                 {
                     Console.WriteLine(item.loginId);
                 }
-                Console.WriteLine("count = "+count);
+
+                //for (int i = 0; i < 100; i++)
+                //{
+                //    tb_userAccount userAccount = tb_userAccount.Build();
+                //    userAccount.uid = Guid.NewGuid();
+                //    userAccount.loginId = "qixiao" + i.ToString("D3");
+                //    userAccount.pwd = "qx" + i.ToString("D3");
+
+                //    bool isSave = channel.Add(userAccount);
+                //    Console.WriteLine($"-> {i} item saved ! the result = {isSave}");
+                //}
+
+                Console.WriteLine("\ncount = " + count);
             }
 
-            Console.WriteLine(1^3);
 
             Console.WriteLine("any key to exit ...");
             Console.ReadKey();

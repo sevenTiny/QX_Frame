@@ -25,7 +25,5 @@ namespace QX_Frame.Data.Service.QX_Frame
         {
             return tb_userAccount.Delete();
         }
-
-
     }
 }
