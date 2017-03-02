@@ -17,5 +17,19 @@ namespace QX_Frame.App.Base
         {
             throw new NotImplementedException("QueryFunc must be Implemented ! --QX_Frame");
         }
+        public string BuildQuerySqlStatement
+        {
+            get
+            {
+                return this.QuerySqlStatement;
+            }
+        }
+        protected virtual string QuerySqlStatement
+        {
+            get
+            {
+                throw new NotImplementedException("QuerySqlStatement must be Implemented ! --QX_Frame");
+            }
+        }
     }
 }

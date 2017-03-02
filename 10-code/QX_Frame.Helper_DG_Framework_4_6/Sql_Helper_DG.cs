@@ -51,9 +51,9 @@ namespace QX_Frame.Helper_DG_Framework
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return default(int);
+                throw ex;
             }
         }
         /// <summary>
@@ -77,9 +77,9 @@ namespace QX_Frame.Helper_DG_Framework
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return default(int);
+                throw ex;
             }
         }
         /// <summary>
@@ -103,14 +103,14 @@ namespace QX_Frame.Helper_DG_Framework
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return default(int);
+                throw ex;
             }
         }
         #endregion
 
-        #region ExecuteScalar 执行sql语句或者存储过程,执行单条语句，返回自增的id---ScalarExecuteScalar
+        #region ExecuteScalar 执行sql语句或者存储过程,执行单条语句，返回单个结果---ScalarExecuteScalar
         /// <summary>
         /// 执行sql语句或存储过程 返回ExecuteScalar （返回自增的ID）不带参数
         /// </summary>
@@ -131,9 +131,9 @@ namespace QX_Frame.Helper_DG_Framework
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return default(int);
+                throw ex;
             }
         }
         /// <summary>
@@ -158,9 +158,9 @@ namespace QX_Frame.Helper_DG_Framework
 
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return default(int);
+                throw ex;
             }
         }
         /// <summary>
@@ -184,10 +184,9 @@ namespace QX_Frame.Helper_DG_Framework
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                return default(int);
+                throw ex;
             }
         }
         #endregion
@@ -210,9 +209,9 @@ namespace QX_Frame.Helper_DG_Framework
                 PreparCommand(conn, cmd, commandTextOrSpName, commandType);
                 return cmd.ExecuteReader(CommandBehavior.CloseConnection);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return null;
+                throw ex;
             }
         }
         /// <summary>
@@ -233,9 +232,9 @@ namespace QX_Frame.Helper_DG_Framework
                 PreparCommand(conn, cmd, commandTextOrSpName, commandType, parms);
                 return cmd.ExecuteReader(CommandBehavior.CloseConnection);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return null;
+                throw ex;
             }
         }
         /// <summary>
@@ -256,14 +255,127 @@ namespace QX_Frame.Helper_DG_Framework
                 PreparCommand(conn, cmd, commandTextOrSpName, commandType, obj);
                 return cmd.ExecuteReader(CommandBehavior.CloseConnection);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return null;
+                throw ex;
             }
         }
         #endregion
 
-        #region ExecuteDataset 执行sql语句或者存储过程,返回一个DataSet---DataSet
+        #region ExecuteDataTable 执行sql语句或者存储过程,返回一个DataTable---DataTable
+
+        /**
+         * Update At 2017-3-2 14:58:45
+         * Add the ExecuteDataTable Method into Sql_Helper_DG  
+         **/
+
+        /// <summary>
+        /// 执行sql语句或存储过程，返回DataTable不带参数
+        /// </summary>
+        /// <param name="ConnString">连接字符串，可以自定义，可以以使用SqlHelper_DG.ConnString</param>
+        /// <param name="commandTextOrSpName">sql语句或存储过程名称</param>
+        /// <param name="commandType">命令类型 有默认值CommandType.Text</param>
+        /// <returns></returns>
+        public static DataTable ExecuteDataTable(string ConnString, string commandTextOrSpName, CommandType commandType = CommandType.Text)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnString))
+                {
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                        PreparCommand(conn, cmd, commandTextOrSpName, commandType);
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            DataSet ds = new DataSet();
+                            da.Fill(ds);
+                            if (ds.Tables.Count>0)
+                            {
+                                return ds.Tables[0];
+                            }
+                            return default(DataTable);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        /// <summary>
+        /// 执行sql语句或存储过程，返回DataTable
+        /// </summary>
+        /// <param name="ConnString">连接字符串，可以自定义，可以以使用SqlHelper_DG.ConnString</param>
+        /// <param name="commandTextOrSpName">sql语句或存储过程名称</param>
+        /// <param name="commandType">命令类型</param>
+        /// <param name="parms">SqlParameter[]参数数组，允许空</param>
+        /// <returns></returns>
+        public static DataTable ExecuteDataTable(string ConnString, string commandTextOrSpName, CommandType commandType, params SqlParameter[] parms)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnString))
+                {
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                        PreparCommand(conn, cmd, commandTextOrSpName, commandType, parms);
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            DataSet ds = new DataSet();
+                            da.Fill(ds);
+                            if (ds.Tables.Count > 0)
+                            {
+                                return ds.Tables[0];
+                            }
+                            return default(DataTable);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        /// <summary>
+        /// 执行sql语句或存储过程，返回DataTable
+        /// </summary>
+        /// <param name="ConnString">连接字符串，可以自定义，可以以使用SqlHelper_DG.ConnString</param>
+        /// <param name="commandTextOrSpName">sql语句或存储过程名称</param>
+        /// <param name="commandType">命令类型 </param>
+        /// <param name="obj">object[]参数数组，允许空</param>
+        /// <returns></returns>
+        public static DataTable ExecuteDataTable(string ConnString, string commandTextOrSpName, CommandType commandType, params object[] obj)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnString))
+                {
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                        PreparCommand(conn, cmd, commandTextOrSpName, commandType, obj);
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            DataSet ds = new DataSet();
+                            da.Fill(ds);
+                            if (ds.Tables.Count > 0)
+                            {
+                                return ds.Tables[0];
+                            }
+                            return default(DataTable);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region ExecuteDataSet 执行sql语句或者存储过程,返回一个DataSet---DataSet
         /// <summary>
         /// 执行sql语句或存储过程，返回DataSet 不带参数
         /// </summary>
@@ -490,9 +602,9 @@ namespace QX_Frame.Helper_DG_Framework
                 }
                 return list;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return null;
+                throw ex;
             }
         }
         /// <summary>
@@ -539,9 +651,9 @@ namespace QX_Frame.Helper_DG_Framework
                 }
                 return default(T);//返回引用类型和值类型的默认值0或null
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return default(T);//返回引用类型和值类型的默认值0或null
+                throw ex;
             }
         }
         #endregion

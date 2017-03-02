@@ -30,3 +30,8 @@ common data dispose channel
 
 api interface use async/await Task programme
 common api return values format
+
+后台数据库操作 添加多线程操作方法 运用线程池技术 ThreadPool.QueueUserWorkItem
+后台查询数据服务器缓存技术Cache
+框架兼容EF查询或者Sql查询多种方式，切换方便
+框架融合Autofac Ioc容器
