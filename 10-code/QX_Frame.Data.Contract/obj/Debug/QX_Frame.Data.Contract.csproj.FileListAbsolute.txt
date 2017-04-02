@@ -84,3 +84,4 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Contract\bin\Debug\Newto
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Contract\obj\Debug\QX_Frame.Data.Contract.csprojResolveAssemblyReference.cache
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Contract\obj\Debug\QX_Frame.Data.Contract.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Contract\obj\Debug\QX_Frame.Data.Contract.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Contract\bin\Debug\QX_Frame.App.Base.dll.config

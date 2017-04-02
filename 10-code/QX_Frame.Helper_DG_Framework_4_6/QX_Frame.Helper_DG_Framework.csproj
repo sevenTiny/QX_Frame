@@ -74,6 +74,7 @@
     <Compile Include="Sql_Helper_DG.cs" />
     <Compile Include="Sql_Helper_MS.cs" />
     <Compile Include="String_Helper_DG.cs" />
+    <Compile Include="Transaction_Helper_DG.cs" />
     <Compile Include="Txt_Helper_DG.cs" />
   </ItemGroup>
   <ItemGroup>

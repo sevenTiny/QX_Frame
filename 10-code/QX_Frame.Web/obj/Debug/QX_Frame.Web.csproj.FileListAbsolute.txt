@@ -221,6 +221,7 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web\bin\System.Web.Http.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web\bin\Newtonsoft.Json.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web\bin\LinqKit.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web\bin\QX_Frame.App.Base.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web\bin\QX_Frame.App.Base.dll.config
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web\bin\QX_Frame.App.Web.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web\bin\Autofac.xml

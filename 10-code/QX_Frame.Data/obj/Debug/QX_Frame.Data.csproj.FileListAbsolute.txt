@@ -85,3 +85,4 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\Newtonsoft.Jso
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\obj\Debug\QX_Frame.Data.csprojResolveAssemblyReference.cache
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\obj\Debug\QX_Frame.Data.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\obj\Debug\QX_Frame.Data.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\QX_Frame.App.Base.dll.config

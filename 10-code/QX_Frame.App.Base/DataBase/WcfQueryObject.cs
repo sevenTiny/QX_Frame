@@ -1,5 +1,8 @@
 ﻿using QX_Frame.App.Base.options;
+using QX_Frame.Helper_DG_Framework;
 using System;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace QX_Frame.App.Base
 {
@@ -37,12 +40,12 @@ namespace QX_Frame.App.Base
                 return _db_type;
             }
         }
-        public QueryType SqlQueryType { get; set; } = QueryType.EntityFrameWork;   //the query type of query from db //QueryType.EntityFrameWork default
-
         #region sql query
-        public string SqlConnectionString { get; set; } = null; // the sql query connstr // String.Null default
-        public string SqlStatementSign { get; set; } = null;   //the sql statement sign of sql statement choice // String.Null default
-        public ExecuteType ExecuteType { get; set; } = ExecuteType._ChooseOthers_IfYouChooseThisYouWillGetAnException; //the sql execute type // _ChooseOthers_IfYouChooseThisYouWillGetAnException default
+        public string SqlConnectionString { get; set; } = Sql_Helper_DG.ConnString; // the sql query connstr // QX_Frame_Default default
+        public string SqlStatementTextOrSpName { get; set; } = null;   //the sql statement // String.Null default
+        public CommandType SqlCommandType { get; set; } = CommandType.Text;    //the CommandType //CommandType.Text default
+        public ExecuteType SqlExecuteType { get; set; } = ExecuteType._ChooseOthers_IfYouChooseThisYouWillGetAnException; //the sql execute type // _ChooseOthers_IfYouChooseThisYouWillGetAnException default
+        public SqlParameter[] SqlParameters { get; set; } = null;  //the sql parameter //Null default
         #endregion
     }
 }

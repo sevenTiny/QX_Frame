@@ -8,7 +8,7 @@ namespace QX_Frame.App.Base
         {
             this.Data = data;
         }
-        protected object Data { get; set; }
+        public object Data { get; set; }
         public int TotalCount { get; set; }
         public TResult Cast<TResult>() where TResult : class
         {
@@ -27,7 +27,6 @@ namespace QX_Frame.App.Base
                 list.Add(obj2);
             }
         }
-
         public void Fill(IList list, out int totalCount)
         {
             IEnumerable data = this.Data as IEnumerable;

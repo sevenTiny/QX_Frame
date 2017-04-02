@@ -21,7 +21,7 @@ namespace QX_Frame.Helper_DG_Framework
         /// <summary>
         /// 连接字符串 ConnString 公共静态只读 不允许进行修改 在后续调用中目前不支持代码修改链接字符串
         /// </summary>
-        public static readonly string ConnString = ConfigurationManager.ConnectionStrings["ConStr"].ConnectionString;
+        public static readonly string ConnString = ConfigurationManager.ConnectionStrings["QX_Frame_Default"].ConnectionString;
         /// <summary>
         /// Get ConnString By Connection Name
         /// </summary>
@@ -289,7 +289,7 @@ namespace QX_Frame.Helper_DG_Framework
                         {
                             DataSet ds = new DataSet();
                             da.Fill(ds);
-                            if (ds.Tables.Count>0)
+                            if (ds.Tables.Count > 0)
                             {
                                 return ds.Tables[0];
                             }
@@ -514,9 +514,9 @@ namespace QX_Frame.Helper_DG_Framework
             cmd.CommandText = commandTextOrSpName;
             cmd.CommandTimeout = 60;
 
-            cmd.Parameters.Clear();
             if (parms != null)
             {
+                cmd.Parameters.Clear();
                 cmd.Parameters.AddRange(parms);
             }
         }

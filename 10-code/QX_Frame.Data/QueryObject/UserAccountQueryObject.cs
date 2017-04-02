@@ -24,6 +24,5 @@ namespace QX_Frame.Data.QueryObject
             }
             return func;
         }
-
     }
 }

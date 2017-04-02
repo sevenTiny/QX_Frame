@@ -96,38 +96,34 @@ namespace QX_Frame.App.Base
             {
                 throw new Exception("SqlConnectionString can not be null ! -- QX_Frame");
             }
-            if (String.IsNullOrEmpty(query.BuildQuerySqlStatement))
+            if (String.IsNullOrEmpty(query.SqlStatementTextOrSpName))
             {
-                throw new Exception("QuerySqlStatement can not be null ! -- QX_Frame");
-            }
-            if (query.SqlQueryType!=options.QueryType.SqlStatements)
-            {
-                throw new Exception("if you not choose QueryType.SqlStatements please use others query method ! -- QX_Frame");
+                throw new Exception("QuerySqlStatementTextOrSpName can not be null ! -- QX_Frame");
             }
             //query execute
             object executeResult = new object() ;
-            switch (query.ExecuteType)
+            switch (query.SqlExecuteType)
             {
                 case options.ExecuteType.ExecuteNonQuery:
-                    executeResult = Sql_Helper_DG.ExecuteNonQuery(query.SqlConnectionString, query.BuildQuerySqlStatement);
+                    executeResult = Sql_Helper_DG.ExecuteNonQuery(query.SqlConnectionString, query.SqlStatementTextOrSpName,query.SqlCommandType,query.SqlParameters);
                     break;
                 case options.ExecuteType.ExecuteScalar:
-                    executeResult = Sql_Helper_DG.ExecuteScalar(query.SqlConnectionString, query.BuildQuerySqlStatement);
+                    executeResult = Sql_Helper_DG.ExecuteScalar(query.SqlConnectionString, query.SqlStatementTextOrSpName, query.SqlCommandType, query.SqlParameters);
                     break;
                 case options.ExecuteType.ExecuteReader:
-                    executeResult = Sql_Helper_DG.ExecuteReader(query.SqlConnectionString, query.BuildQuerySqlStatement);
+                    executeResult = Sql_Helper_DG.ExecuteReader(query.SqlConnectionString, query.SqlStatementTextOrSpName, query.SqlCommandType, query.SqlParameters);
                     break;
                 case options.ExecuteType.ExecuteDataTable:
-                    executeResult = Sql_Helper_DG.ExecuteDataTable(query.SqlConnectionString, query.BuildQuerySqlStatement);
+                    executeResult = Sql_Helper_DG.ExecuteDataTable(query.SqlConnectionString, query.SqlStatementTextOrSpName, query.SqlCommandType, query.SqlParameters);
                     break;
                 case options.ExecuteType.ExecuteDataSet:
-                    executeResult = Sql_Helper_DG.ExecuteDataSet(query.SqlConnectionString, query.BuildQuerySqlStatement);
+                    executeResult = Sql_Helper_DG.ExecuteDataSet(query.SqlConnectionString, query.SqlStatementTextOrSpName, query.SqlCommandType, query.SqlParameters);
                     break;
                 case options.ExecuteType.Execute_Model_T:
-                    executeResult = Sql_Helper_DG.Return_T_ByDataReader<TBEntity>(Sql_Helper_DG.ExecuteReader(query.SqlConnectionString, query.BuildQuerySqlStatement));
+                    executeResult = Sql_Helper_DG.Return_T_ByDataReader<TBEntity>(Sql_Helper_DG.ExecuteReader(query.SqlConnectionString, query.SqlStatementTextOrSpName, query.SqlCommandType, query.SqlParameters));
                     break;
                 case options.ExecuteType.Execute_List_T:
-                    executeResult = Sql_Helper_DG.Return_List_T_ByDataSet<TBEntity>(Sql_Helper_DG.ExecuteDataSet(query.SqlConnectionString, query.BuildQuerySqlStatement));
+                    executeResult = Sql_Helper_DG.Return_List_T_ByDataSet<TBEntity>(Sql_Helper_DG.ExecuteDataSet(query.SqlConnectionString, query.SqlStatementTextOrSpName,query.SqlCommandType,query.SqlParameters));
                     break;
                 case options.ExecuteType._ChooseOthers_IfYouChooseThisYouWillGetAnException:
                     throw new Exception("must choose the right ExecuteType ! -- QX_Frame");
@@ -144,23 +140,9 @@ namespace QX_Frame.App.Base
             {
                 throw new ArgumentNullException("query");
             }
-            if (query.SqlQueryType==options.QueryType.EntityFrameWork)
-            {
-                //ef type
-                System.Type[] typeArguments = new System.Type[] { query.db_type, query.tb_type };
-                object[] parameters = new object[] { query };
-                return new WcfQueryResult(_getEntities.MakeGenericMethod(typeArguments).Invoke(null, parameters)) { TotalCount = _totalCount };
-            }
-            else if (query.SqlQueryType == options.QueryType.SqlStatements)
-            {
-                //sql type
-                throw new Exception("if you choose QueryType.SqlStatements please use QuerySql method ! -- QX_Frame");
-            }
-            else
-            {
-                throw new Exception("must choose options.QueryType first -- QX_Frame");
-            }
-            
+            System.Type[] typeArguments = new System.Type[] { query.db_type, query.tb_type };
+            object[] parameters = new object[] { query };
+            return new WcfQueryResult(_getEntities.MakeGenericMethod(typeArguments).Invoke(null, parameters)) { TotalCount = _totalCount };
         }
         public WcfQueryResult QueryAllPaging<TBEntity, TKey>(WcfQueryObject query, Expression<Func<TBEntity, TKey>> orderBy) where TBEntity : class
         {

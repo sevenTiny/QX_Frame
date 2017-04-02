@@ -202,10 +202,10 @@ namespace QX_Frame.Helper_DG_Framework
         }
         #endregion
 
-        #region Trasaction
-        public static void Trasaction(Action action)
+        #region Transaction
+        public static void Transaction(Action action)
         {
-            using (TransactionScope trans=new TransactionScope ())
+            using (TransactionScope trans = new TransactionScope())
             {
                 action();
                 trans.Complete();

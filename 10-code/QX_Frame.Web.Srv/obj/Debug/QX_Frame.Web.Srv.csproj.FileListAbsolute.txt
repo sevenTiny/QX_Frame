@@ -60,3 +60,5 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\System.Web.
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\System.Web.Http.Cors.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\Microsoft.Owin.Cors.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\System.Web.Http.Cors.xml
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\QX_Frame.WebAPI.dll.config
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Web.Srv\bin\Debug\QX_Frame.App.Base.dll.config

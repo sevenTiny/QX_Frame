@@ -13,3 +13,4 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\Newtonsoft
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\obj\Debug\QX_Frame.App.Form.csprojResolveAssemblyReference.cache
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\obj\Debug\QX_Frame.App.Form.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\obj\Debug\QX_Frame.App.Form.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\QX_Frame.App.Base.dll.config

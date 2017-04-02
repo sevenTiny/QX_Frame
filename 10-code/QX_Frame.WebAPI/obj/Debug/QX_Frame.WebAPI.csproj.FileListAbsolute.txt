@@ -220,3 +220,4 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.Data.Cont
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\obj\Debug\QX_Frame.WebAPI.csprojResolveAssemblyReference.cache
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\obj\Debug\QX_Frame.WebAPI.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\obj\Debug\QX_Frame.WebAPI.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.App.Base.dll.config

@@ -9,7 +9,7 @@ namespace QX_Frame.Helper_DG_Framework
     public static class ToTypesExtends
     {
         #region Convert to T from String
-        /// convert string to int
+        
         public static Int32 ToInt(this string str)
         {
             return Convert.ToInt32(str);    //default int32
@@ -26,10 +26,34 @@ namespace QX_Frame.Helper_DG_Framework
         {
             return Convert.ToInt64(str);
         }
-        //convert string to DateTime
         public static DateTime ToDateTime(this string str)
         {
             return Convert.ToDateTime(str);
+        }
+
+        #endregion
+
+        #region Convert to T from object
+
+        public static Int32 ToInt(this object obj)
+        {
+            return Convert.ToInt32(obj);    //default int32
+        }
+        public static Int16 ToInt16(this object obj)
+        {
+            return Convert.ToInt16(obj);
+        }
+        public static Int32 ToInt32(this object obj)
+        {
+            return Convert.ToInt32(obj);
+        }
+        public static Int64 ToInt64(this object obj)
+        {
+            return Convert.ToInt64(obj);
+        }
+        public static DateTime ToDateTime(this object obj)
+        {
+            return Convert.ToDateTime(obj);
         }
 
         #endregion
