@@ -7,22 +7,8 @@ namespace QX_Frame.Data.QueryObject
 {
     public class UserAccountQueryObject : WcfQueryObject<db_qx_frame, tb_userAccount>
     {
-        public Guid uid { get; set; }
-        public string loginId { get; set; }
-        public string pwd { get; set; }
-        protected override Expression<Func<TProxy, bool>> QueryFunc<TProxy>()
-        {
-            Expression<Func<TProxy, bool>> func = t => true;
-
-            if (!string.IsNullOrEmpty(loginId))
-            {
-                func = func.And(t => t.loginId.Contains(loginId));
-            }
-            if (!string.IsNullOrEmpty(pwd))
-            {
-                func = func.And(t => t.pwd == "123");
-            }
-            return func;
-        }
+        //query condition // true default
+        public override Expression<Func<tb_userAccount, bool>> QueryCondition { get => base.QueryCondition; set => base.QueryCondition = value; }
     }
+    
 }

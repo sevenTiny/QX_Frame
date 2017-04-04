@@ -25,7 +25,7 @@ namespace QX_Frame.Helper_DG_Framework
                 {
                     Directory.CreateDirectory(LogLocation_DG);
                 }
-                using (StreamWriter log = new StreamWriter($"{LogLocation_DG}Log_{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}.Log", isAppend))
+                using (StreamWriter log = new StreamWriter($"{LogLocation_DG}Log_{DateTime.Now.ToDateString()}.Log", isAppend))
                 {
                     log.WriteLine();
                     log.WriteLine($"{DateTime_Helper_DG.Get_DateTime_Now_24HourType()}   ---- {logTitle} Log !------");
@@ -54,7 +54,7 @@ namespace QX_Frame.Helper_DG_Framework
                 {
                     Directory.CreateDirectory(LogLocation_DG);
                 }
-                using (StreamWriter log = new StreamWriter($"{LogLocation_DG}Log_{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}.Log", isAppend))
+                using (StreamWriter log = new StreamWriter($"{LogLocation_DG}Log_{DateTime.Now.ToDateString()}.Log", isAppend))
                 {
                     log.WriteLine();
                     log.WriteLine($"{DateTime_Helper_DG.Get_DateTime_Now_24HourType()}   ---- {logTitle} Log !------");
@@ -83,7 +83,7 @@ namespace QX_Frame.Helper_DG_Framework
                 {
                     Directory.CreateDirectory(LogLocation_DG);
                 }
-                using (StreamWriter log = new StreamWriter($"{LogLocation_DG}Log_{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}.Log", isAppend))
+                using (StreamWriter log = new StreamWriter($"{LogLocation_DG}Log_{DateTime.Now.ToDateString()}.Log", isAppend))
                 {
                     log.WriteLine();
                     log.WriteLine($"{DateTime_Helper_DG.Get_DateTime_Now_24HourType()}   ---- {logTitle} Log !------");

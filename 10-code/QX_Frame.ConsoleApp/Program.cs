@@ -32,12 +32,12 @@ namespace QX_Frame.ConsoleApp
                 var channel = fact.CreateChannel();
 
                 int count = 0;
-                //List<tb_userAccount> userAccountList = channel.QueryAll(new UserAccountQueryObject()).Cast<List<tb_userAccount>>(out count);
+                List<tb_userAccount> userAccountList = channel.QueryAll(new UserAccountQueryObject() { QueryCondition = t => t.loginId.Contains("123") }).Cast<List<tb_userAccount>>(out count);
 
-                //foreach (var item in userAccountList)
-                //{
-                //    Console.WriteLine(item.loginId);
-                //}
+                foreach (var item in userAccountList)
+                {
+                    Console.WriteLine(item.loginId);
+                }
 
                 //for (int i = 0; i < 100; i++)
                 //{
@@ -52,21 +52,20 @@ namespace QX_Frame.ConsoleApp
 
                 //List<tb_userAccount> userAccountList = channel.QuerySql(new UserAccountQueryObject() { SqlStatementTextOrSpName = "select * from tb_userAccount order by loginId", SqlExecuteType=ExecuteType.Execute_List_T}).Cast<List<tb_userAccount>>(out count);
 
-                int result = channel.QuerySql(new UserAccountQueryObject() {
-                    SqlStatementTextOrSpName = "insert into tb_userAccount values(@uid,@loginId,@pwd)",
-                    SqlParameters = new SqlParameter[] {
-                        new SqlParameter("@uid", Guid.NewGuid()),
-                        new SqlParameter("@loginId","123123"),
-                        new SqlParameter("@pwd","123456")
-                    },
-                    SqlExecuteType = ExecuteType.ExecuteNonQuery }).Cast<dynamic>();
-
-                //foreach (var item in userAccountList)
+                //int result = channel.QuerySql(new UserAccountQueryObject()
                 //{
-                //    Console.WriteLine(item.loginId);
-                //}
-                Console.WriteLine(result);
-                //Console.WriteLine("\ncount = " + count);
+                //    SqlStatementTextOrSpName = "insert into tb_userAccount values(@uid,@loginId,@pwd)",
+                //    SqlParameters = new SqlParameter[] {
+                //        new SqlParameter("@uid", Guid.NewGuid()),
+                //        new SqlParameter("@loginId","123123"),
+                //        new SqlParameter("@pwd","123456")
+                //    },
+                //    SqlExecuteType = ExecuteType.ExecuteNonQuery
+                //}).Cast<dynamic>();
+                //Console.WriteLine(result);
+
+                
+                Console.WriteLine("\ncount = " + count);
             }
 
 

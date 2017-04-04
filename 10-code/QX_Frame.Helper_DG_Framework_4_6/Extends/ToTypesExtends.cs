@@ -59,15 +59,15 @@ namespace QX_Frame.Helper_DG_Framework
         #endregion
 
         #region Convert to string from DateTime
-        public static string ToDateTimeString_24HourType(this DateTime dt,string separatorOfDate="-",string separatorOfTime=":")
+        public static string ToDateTimeString_24HourType(this DateTime dt,string separatorOfDate="",string separatorOfTime=":")
         {
             return dt.ToString($"yyyy{separatorOfDate}MM{separatorOfDate}dd HH{separatorOfTime}mm{separatorOfTime}ss");
         }
-        public static string ToDateTimeString_12HourType(this DateTime dt, string separatorOfDate = "-", string separatorOfTime = ":")
+        public static string ToDateTimeString_12HourType(this DateTime dt, string separatorOfDate = "", string separatorOfTime = ":")
         {
             return dt.ToString($"yyyy{separatorOfDate}MM{separatorOfDate}dd hh{separatorOfTime}mm{separatorOfTime}ss");
         }
-        public static string ToDateString(this DateTime dt, string separatorOfDate = "-")
+        public static string ToDateString(this DateTime dt, string separatorOfDate = "")
         {
             return dt.ToString($"yyyy{separatorOfDate}MM{separatorOfDate}dd");
         }

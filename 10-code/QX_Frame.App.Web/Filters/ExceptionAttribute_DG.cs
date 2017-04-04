@@ -37,9 +37,9 @@ namespace QX_Frame.App.Web.Filters
                 HttpCode = HttpStatusCode.InternalServerError;
             }
 
-            object ErrorObject = Return_Helper_DG.Error_EMsg_Ecode_Elevel_HttpCode($"{actionExecutedContext.Exception.Message}",1,1, HttpCode);
+            object ErrorObject = Return_Helper_DG.Error_EMsg_Ecode_Elevel_HttpCode($"{actionExecutedContext.Exception.Message}",HttpCode.ToInt(),1001, HttpCode);
 
-            actionExecutedContext.Response = actionExecutedContext.Request.CreateResponse(HttpCode, ErrorObject);
+            actionExecutedContext.Response = actionExecutedContext.Request.CreateResponse(ErrorObject);
 
             base.OnException(actionExecutedContext);
         }
