@@ -21,9 +21,13 @@ namespace QX_Frame.App.Base
         /// <returns></returns>
         public Expression<Func<TB_Entity, bool>> BuildQueryFunc<TProxy>()
         {
-            return this.QueryCondition;
+            return this.QueryCondition!=null?this.QueryCondition:this.QueryConditionFunc();
         }
-        //query condition default t=>true
-        public virtual Expression<Func<TB_Entity, bool>> QueryCondition { get; set; } = t => true;
+        //query condition default null
+        public virtual Expression<Func<TB_Entity, bool>> QueryCondition { get; set; } = null;
+        protected virtual Expression<Func<TB_Entity, bool>> QueryConditionFunc()
+        {
+            throw new NotImplementedException("QueryFunc must be Implemented ! --QX_Frame");
+        }
     }
 }

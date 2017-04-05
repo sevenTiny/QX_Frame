@@ -6,24 +6,24 @@ namespace QX_Frame.Data.Service.QX_Frame
 {
     public class UserAccountService : WcfService, IUserAccountService
     {
-        private tb_userAccount _tb_userAccount;
+        private tb_UserAccount _tb_UserAccount;
         public UserAccountService()
         { }
-        public UserAccountService(tb_userAccount tb_userAccount)
+        public UserAccountService(tb_UserAccount tb_UserAccount)
         {
-            this._tb_userAccount = tb_userAccount;
+            this._tb_UserAccount = tb_UserAccount;
         }
-        public bool Add(tb_userAccount tb_userAccount)
+        public bool Add(tb_UserAccount tb_UserAccount)
         {
-            return tb_userAccount.Add();
+            return tb_UserAccount.Add();
         }
-        public bool Update(tb_userAccount tb_userAccount)
+        public bool Update(tb_UserAccount tb_UserAccount)
         {
-            return tb_userAccount.Update();
+            return tb_UserAccount.Update();
         }
-        public bool Delete(tb_userAccount tb_userAccount)
+        public bool Delete(tb_UserAccount tb_UserAccount)
         {
-            return tb_userAccount.Delete();
+            return tb_UserAccount.Delete();
         }
     }
 }

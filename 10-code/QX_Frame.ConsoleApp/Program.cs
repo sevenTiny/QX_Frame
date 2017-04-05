@@ -32,7 +32,8 @@ namespace QX_Frame.ConsoleApp
                 var channel = fact.CreateChannel();
 
                 int count = 0;
-                List<tb_userAccount> userAccountList = channel.QueryAll(new UserAccountQueryObject() { QueryCondition = t => t.loginId.Contains("123") }).Cast<List<tb_userAccount>>(out count);
+
+                List<tb_UserAccount> userAccountList = channel.QueryAll(new tb_UserAccountQueryObject { QueryCondition=t=>t.loginId.Contains("123") }).Cast < List<tb_UserAccount>>(out count);
 
                 foreach (var item in userAccountList)
                 {

@@ -14,7 +14,7 @@ namespace QX_Frame.Helper_DG_Framework
         {
             return new { isSuccess = true, description = description, httpStatusCode = httpStatusCode, data = data, dataCount = dataCount};
         }
-        public static object Error_EMsg_Ecode_Elevel_HttpCode(string errorMessage,int errorCode,int errorLevel=0, HttpStatusCode httpStatusCode = HttpStatusCode.InternalServerError)
+        public static object Error_EMsg_Ecode_Elevel_HttpCode(string errorMessage,int errorCode=0,int errorLevel=0, HttpStatusCode httpStatusCode = HttpStatusCode.InternalServerError)
         {
             return new { isSuccess = false,httpStatusCode = httpStatusCode,errorMessage = errorMessage, errorCode = errorCode, errorLevel = errorLevel };
         }
