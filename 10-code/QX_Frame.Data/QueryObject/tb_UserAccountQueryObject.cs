@@ -33,7 +33,7 @@ namespace QX_Frame.Data.QueryObject
 		public String pwd { get;set; }
 
 		//query condition // null default
-		public override Expression<Func<tb_UserAccount, bool>> QueryCondition { get => base.QueryCondition; set => base.QueryCondition = value; }
+		public override Expression<Func<tb_UserAccount, bool>> QueryCondition { get { return base.QueryCondition; } set { base.QueryCondition = value; } }
 		//query condition func // true default //if QueryCondition != null this will be override !!!
 		protected override Expression<Func<tb_UserAccount, bool>> QueryConditionFunc()
 		{

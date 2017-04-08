@@ -41,3 +41,4 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Helper_DG_Framework_4_6\bin\D
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\Newtonsoft.Json.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Helper_DG_Framework_4_6\obj\Debug\QX_Frame.Helper_DG_Framework.csprojResolveAssemblyReference.cache

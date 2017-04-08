@@ -17,7 +17,7 @@ namespace QX_Frame.WebAPI.Controllers
             using (var fact = Wcf<UserAccountService>())
             {
                 var channel = fact.CreateChannel();
-                List<tb_userAccount> list = channel.QueryAll(new UserAccountQueryObject()).Cast<List<tb_userAccount>>();
+                List<tb_UserAccount> list = channel.QueryAll(new tb_UserAccountQueryObject()).Cast<List<tb_UserAccount>>();
                 return Json(list);
             }
         }
@@ -27,8 +27,8 @@ namespace QX_Frame.WebAPI.Controllers
             {
                 var channel = fact.CreateChannel();
                 int count;
-                List<tb_userAccount> userAccountList = channel.QueryAllPaging<tb_userAccount, string>(new UserAccountQueryObject() { PageIndex = 1, PageSize = 2 }, t => t.loginId).Cast<List<tb_userAccount>>(out count);
-                return Json(Helper_DG_Framework.Return_Helper_DG.Success_Desc_Data_DCount_HttpCode("success return !", userAccountList, count));
+                List<tb_UserAccount> userAccountList = channel.QueryAllPaging<tb_UserAccount, string>(new tb_UserAccountQueryObject() { PageIndex = 1, PageSize = 2 }, t => t.loginId).Cast<List<tb_UserAccount>>(out count);
+                return Json(Helper_DG_Framework.Return_Helper_DG.Success_Msg_Data_DCount_HttpCode("success return !", userAccountList, count));
             }
         }
         public IHttpActionResult PutString()
@@ -36,8 +36,8 @@ namespace QX_Frame.WebAPI.Controllers
             using (var fact = Wcf<UserAccountService>())
             {
                 var channel = fact.CreateChannel();
-                List<tb_userAccount> userAccountList = channel.QuerySql(new UserAccountQueryObject() { SqlStatementTextOrSpName = "select * from tb_userAccount", SqlExecuteType = App.Base.options.ExecuteType.Execute_List_T }).Cast<List<tb_userAccount>>();
-                return Json(Helper_DG_Framework.Return_Helper_DG.Success_Desc_Data_DCount_HttpCode("user list", userAccountList, userAccountList.Count));
+                List<tb_UserAccount> userAccountList = channel.QuerySql(new tb_UserAccountQueryObject() { SqlStatementTextOrSpName = "select * from tb_UserAccount", SqlExecuteType = App.Base.options.ExecuteType.Execute_List_T }).Cast<List<tb_UserAccount>>();
+                return Json(Helper_DG_Framework.Return_Helper_DG.Success_Msg_Data_DCount_HttpCode("user list", userAccountList, userAccountList.Count));
             }
         }
         public IHttpActionResult DeleteString()
@@ -45,9 +45,9 @@ namespace QX_Frame.WebAPI.Controllers
             using (var fact = Wcf<UserAccountService>())
             {
                 var channel = fact.CreateChannel();
-                int result = channel.QuerySql(new UserAccountQueryObject()
+                int result = channel.QuerySql(new tb_UserAccountQueryObject()
                 {
-                    SqlStatementTextOrSpName = "insert into tb_userAccount values(@uid,@loginId,@pwd)",
+                    SqlStatementTextOrSpName = "insert into tb_UserAccount values(@uid,@loginId,@pwd)",
                     SqlParameters = new SqlParameter[] {
                         new SqlParameter("@uid", Guid.NewGuid()),
                         new SqlParameter("@loginId","4444"),
@@ -55,7 +55,7 @@ namespace QX_Frame.WebAPI.Controllers
                     },
                     SqlExecuteType = App.Base.options.ExecuteType.ExecuteNonQuery
                 }).Cast<dynamic>();
-                return Json(Helper_DG_Framework.Return_Helper_DG.Success_Desc_Data_DCount_HttpCode("user list", result));
+                return Json(Helper_DG_Framework.Return_Helper_DG.Success_Msg_Data_DCount_HttpCode("user list", result));
             }
         }
     }

@@ -2,21 +2,24 @@
 
 namespace QX_Frame.Helper_DG_Framework
 {
-    /*2016-11-3 00:19:31 author:qixiao*/
-    /*2017-1-19 11:48:47 author:qixiao -- update*/
+    /**
+     * 2016-11-3 00:19:31   author:qixiao -- create
+     * 2017-1-19 11:48:47   author:qixiao -- update
+     * 2017-4-6 20:28:11    author:qixiao -- update
+     * */
     public abstract class Return_Helper_DG
     {
-        public static object Object_Success_Desc_Data_DCount_HttpCode_EMsg_ECode_ELevel(bool isSuccess, string description,dynamic data,int dataCount, HttpStatusCode httpStatusCode,string errorMessage,int errorCode,int errorLevel=0)
+        public static object IsSuccess_Msg_Data_HttpCode(bool isSuccess, string msg,dynamic data, HttpStatusCode httpCode=HttpStatusCode.OK)
         {
-            return new { isSuccess = isSuccess,description= description, httpStatusCode = httpStatusCode, data= data, dataCount= dataCount, errorMessage = errorMessage, errorCode= errorCode, errorLevel= errorLevel };
+            return new { isSuccess = isSuccess,msg= msg, httpCode = httpCode, data= data};
         }
-        public static object Success_Desc_Data_DCount_HttpCode(string description, dynamic data = null, int dataCount = 0, HttpStatusCode httpStatusCode = HttpStatusCode.OK)
+        public static object Success_Msg_Data_DCount_HttpCode(string msg, dynamic data = null, int dataCount = 0, HttpStatusCode httpCode = HttpStatusCode.OK)
         {
-            return new { isSuccess = true, description = description, httpStatusCode = httpStatusCode, data = data, dataCount = dataCount};
+            return new { isSuccess = true, msg = msg, httpCode = httpCode, data = data, dataCount = dataCount};
         }
-        public static object Error_EMsg_Ecode_Elevel_HttpCode(string errorMessage,int errorCode=0,int errorLevel=0, HttpStatusCode httpStatusCode = HttpStatusCode.InternalServerError)
+        public static object Error_Msg_Ecode_Elevel_HttpCode(string msg,int errorCode=0,int errorLevel=0, HttpStatusCode httpCode = HttpStatusCode.InternalServerError)
         {
-            return new { isSuccess = false,httpStatusCode = httpStatusCode,errorMessage = errorMessage, errorCode = errorCode, errorLevel = errorLevel };
+            return new { isSuccess = false,msg = msg, httpCode = httpCode, errorCode = errorCode, errorLevel = errorLevel};
         }
     }
 }

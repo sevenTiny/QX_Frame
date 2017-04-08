@@ -13,7 +13,6 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\QX_Frame.Ap
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\QX_Frame.Helper_DG_Framework.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\LinqKit.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\QX_Frame.App.Base.pdb
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\QX_Frame.App.Base.dll.config
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\QX_Frame.Helper_DG_Framework.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\bin\Debug\Autofac.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Web\obj\Debug\QX_Frame.App.Web.csprojResolveAssemblyReference.cache

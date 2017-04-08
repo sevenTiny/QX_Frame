@@ -17,6 +17,8 @@ using QX_Frame.Data.Entities.QX_Frame;
 using System.Data;
 using QX_Frame.App.Base.options;
 using System.Data.SqlClient;
+using System.Net.Mail;
+using System.Data.Entity;
 
 namespace QX_Frame.ConsoleApp
 {
@@ -24,55 +26,25 @@ namespace QX_Frame.ConsoleApp
     {
         static void Main(string[] args)
         {
+            #region Wcf Test
             new ClassRegisters();   //register classes
 
+            //using (var fact = Wcf<UserAccountService>())
+            //{
+            //    var channel = fact.CreateChannel();
 
-            using (var fact = Wcf<UserAccountService>())
-            {
-                var channel = fact.CreateChannel();
+            //    tb_UserAccount userAccount = tb_UserAccount.Build();
+            //    userAccount.uid = Guid.NewGuid();
+            //    userAccount.loginId = "222";
+            //    userAccount.pwd = "111";
+            //    Console.WriteLine(channel.Add(userAccount));
+            //}
 
-                int count = 0;
-
-                List<tb_UserAccount> userAccountList = channel.QueryAll(new tb_UserAccountQueryObject { QueryCondition=t=>t.loginId.Contains("123") }).Cast < List<tb_UserAccount>>(out count);
-
-                foreach (var item in userAccountList)
-                {
-                    Console.WriteLine(item.loginId);
-                }
-
-                //for (int i = 0; i < 100; i++)
-                //{
-                //    tb_userAccount userAccount = tb_userAccount.Build();
-                //    userAccount.uid = Guid.NewGuid();
-                //    userAccount.loginId = "qixiao" + i.ToString("D3");
-                //    userAccount.pwd = "qx" + i.ToString("D3");
-
-                //    bool isSave = channel.Add(userAccount);
-                //    Console.WriteLine($"-> {i} item saved ! the result = {isSave}");
-                //}
-
-                //List<tb_userAccount> userAccountList = channel.QuerySql(new UserAccountQueryObject() { SqlStatementTextOrSpName = "select * from tb_userAccount order by loginId", SqlExecuteType=ExecuteType.Execute_List_T}).Cast<List<tb_userAccount>>(out count);
-
-                //int result = channel.QuerySql(new UserAccountQueryObject()
-                //{
-                //    SqlStatementTextOrSpName = "insert into tb_userAccount values(@uid,@loginId,@pwd)",
-                //    SqlParameters = new SqlParameter[] {
-                //        new SqlParameter("@uid", Guid.NewGuid()),
-                //        new SqlParameter("@loginId","123123"),
-                //        new SqlParameter("@pwd","123456")
-                //    },
-                //    SqlExecuteType = ExecuteType.ExecuteNonQuery
-                //}).Cast<dynamic>();
-                //Console.WriteLine(result);
-
-                
-                Console.WriteLine("\ncount = " + count);
-            }
-
-
+            #endregion
 
             Console.WriteLine("any key to exit ...");
             Console.ReadKey();
         }
+
     }
 }

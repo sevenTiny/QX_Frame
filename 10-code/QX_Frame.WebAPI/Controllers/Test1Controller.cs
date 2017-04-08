@@ -1,4 +1,5 @@
 ﻿using QX_Frame.App.Web;
+using QX_Frame.Helper_DG_Framework.Extends;
 using System.Web.Http;
 
 namespace QX_Frame.WebAPI.Controllers
@@ -12,6 +13,7 @@ namespace QX_Frame.WebAPI.Controllers
         //access http://localhost:3999/api/Test1  get method
         public IHttpActionResult GetTest()
         {
+            throw new Exception_DG("login id , pwd", "argumets can not be null", 11111, 2222);
             return Json(new { IsSuccess = true, Msg = "this is get method" });
         }
         //access http://localhost:3999/api/Test1  post method

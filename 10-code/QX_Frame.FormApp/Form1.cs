@@ -22,12 +22,7 @@ namespace QX_Frame.FormApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (var fact = Wcf<UserAccountService>())
-            {
-                var channel = fact.CreateChannel();
-                tb_userAccount userAccount = channel.QuerySingle(new UserAccountQueryObject()).Cast<tb_userAccount>();
-                MessageBox.Show(userAccount.loginId);
-            }
+
 
         }
     }

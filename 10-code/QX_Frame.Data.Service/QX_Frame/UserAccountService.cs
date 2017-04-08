@@ -15,15 +15,15 @@ namespace QX_Frame.Data.Service.QX_Frame
         }
         public bool Add(tb_UserAccount tb_UserAccount)
         {
-            return tb_UserAccount.Add();
+            return tb_UserAccount.Add(tb_UserAccount);
         }
         public bool Update(tb_UserAccount tb_UserAccount)
         {
-            return tb_UserAccount.Update();
+            return tb_UserAccount.Update(tb_UserAccount);
         }
         public bool Delete(tb_UserAccount tb_UserAccount)
         {
-            return tb_UserAccount.Delete();
+            return tb_UserAccount.Delete(tb_UserAccount);
         }
     }
 }

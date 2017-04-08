@@ -36,7 +36,7 @@ namespace QX_Frame.App.Base
         protected Type EntityType { get { return typeof(TEntity); } }
 
         //Entity to SqlServer DataBase
-        public Boolean Add()
+        public Boolean Add<TEntity2>(TEntity2 entity) where TEntity2 : class
         {
             if (this == null)
             {
@@ -44,11 +44,11 @@ namespace QX_Frame.App.Base
             }
             lock (locker)
             {
-                return EF_Helper_DG<DataBaseEntity>.Add(this);
+                return EF_Helper_DG<DataBaseEntity>.Add(entity);
             }
         }
 
-        public void Add_ThreadPool()
+        public void Add_ThreadPool<TEntity2>(TEntity2 entity) where TEntity2 : class
         {
             if (this == null)
             {
@@ -56,11 +56,11 @@ namespace QX_Frame.App.Base
             }
             lock (locker)
             {
-                ThreadPool.QueueUserWorkItem(obj => EF_Helper_DG<DataBaseEntity>.Add(this));
+                ThreadPool.QueueUserWorkItem(obj => EF_Helper_DG<DataBaseEntity>.Add(entity));
             }
         }
 
-        public Boolean Update()
+        public Boolean Update<TEntity2>(TEntity2 entity) where TEntity2 : class
         {
             if (this == null)
             {
@@ -68,10 +68,10 @@ namespace QX_Frame.App.Base
             }
             lock (locker)
             {
-                return EF_Helper_DG<DataBaseEntity>.Update(this);
+                return EF_Helper_DG<DataBaseEntity>.Update(entity);
             }
         }
-        public void Update_ThreadPool()
+        public void Update_ThreadPool<TEntity2>(TEntity2 entity) where TEntity2 : class
         {
             if (this == null)
             {
@@ -79,10 +79,10 @@ namespace QX_Frame.App.Base
             }
             lock (locker)
             {
-                ThreadPool.QueueUserWorkItem(obj => EF_Helper_DG<DataBaseEntity>.Update(this));
+                ThreadPool.QueueUserWorkItem(obj => EF_Helper_DG<DataBaseEntity>.Update(entity));
             }
         }
-        public Boolean Delete()
+        public Boolean Delete<TEntity2>(TEntity2 entity) where TEntity2:class
         {
             if (this == null)
             {
@@ -90,10 +90,10 @@ namespace QX_Frame.App.Base
             }
             lock (locker)
             {
-                return EF_Helper_DG<DataBaseEntity>.Delete(this);
+                return EF_Helper_DG<DataBaseEntity>.Delete(entity);
             }
         }
-        public void Delete_ThreadPool()
+        public void Delete_ThreadPool<TEntity2>(TEntity2 entity) where TEntity2 : class
         {
             if (this == null)
             {
@@ -101,7 +101,7 @@ namespace QX_Frame.App.Base
             }
             lock (locker)
             {
-                ThreadPool.QueueUserWorkItem(obj => EF_Helper_DG<DataBaseEntity>.Delete(this));
+                ThreadPool.QueueUserWorkItem(obj => EF_Helper_DG<DataBaseEntity>.Delete(entity));
             }
         }
     }

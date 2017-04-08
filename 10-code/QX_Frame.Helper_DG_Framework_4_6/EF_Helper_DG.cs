@@ -202,20 +202,11 @@ namespace QX_Frame.Helper_DG_Framework
         }
         #endregion
 
-        #region Transaction
-        public static void Transaction(Action action)
-        {
-            using (TransactionScope trans = new TransactionScope())
-            {
-                action();
-                trans.Complete();
-            }
-        }
-        #endregion
 
         #region Select 
 
         public static Boolean Exist<T>(Expression<Func<T, Boolean>> selectWhere) where T : class
+
         {
             return GetIQuerybleByCache<T>().Where(selectWhere).FirstOrDefault<T>() == null ? false : true;
         }
@@ -307,6 +298,32 @@ namespace QX_Frame.Helper_DG_Framework
                 return IQueryable.OrderByDescending(orderBy).Skip((pageIndex - 1 < 0 ? 0 : pageIndex - 1) * (pageSize < 0 ? 0 : pageSize)).Take(pageSize < 0 ? 0 : pageSize);
             else
                 return IQueryable.OrderBy(orderBy).Skip((pageIndex - 1 < 0 ? 0 : pageIndex - 1) * (pageSize < 0 ? 0 : pageSize)).Take(pageSize < 0 ? 0 : pageSize);
+        }
+
+        #endregion
+
+        #region Transaction
+        public static void Transaction(Action action)
+        {
+            using (TransactionScope trans = new TransactionScope())
+            {
+                action();
+                trans.Complete();
+            }
+        }
+        #endregion
+
+        #region ExecuteSqlCommand
+
+        public static void ExecuteSqlCommand(string sqlCommand)
+        {
+            DbContext db = GetCurrentDbContext();
+            db.Database.ExecuteSqlCommand(sqlCommand);
+        }
+        public static void ExecuteSqlCommand(string sqlCommand,params object[] parameters)
+        {
+            DbContext db = GetCurrentDbContext();
+            db.Database.ExecuteSqlCommand(sqlCommand,parameters);
         }
 
         #endregion
