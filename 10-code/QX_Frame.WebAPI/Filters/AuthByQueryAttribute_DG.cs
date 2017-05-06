@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
 
-namespace QX_Frame.WebAPI.Filters
+namespace QX_Frame.WebApi.Filters
 {
     [AttributeUsage(AttributeTargets.All, AllowMultiple = false)]//use multiple
     public class AuthByQueryAttribute_DG : ActionFilterAttribute

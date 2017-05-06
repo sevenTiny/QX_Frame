@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Web.Http;
 
-namespace QX_Frame.WebAPI.Controllers
+namespace QX_Frame.WebApi.Controllers
 {
     public class TestController : ApiController
     {

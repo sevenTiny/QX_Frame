@@ -1,7 +1,7 @@
-﻿using QX_Frame.App.Web;
+﻿using QX_Frame.App.WebApi;
 using QX_Frame.Data.Service.QX_Frame;
 
-namespace QX_Frame.WebAPI.config
+namespace QX_Frame.WebApi.config
 {
     /**
      * author:qixiao 

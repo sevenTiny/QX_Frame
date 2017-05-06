@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace QX_Frame.WebAPI.Filters
+namespace QX_Frame.WebApi.Filters
 {
     public class SubmitRepeatAttribute_DG
     {

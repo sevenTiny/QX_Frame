@@ -1,4 +1,4 @@
-﻿using QX_Frame.App.Web;
+﻿using QX_Frame.App.WebApi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace QX_Frame.WebAPI.Controllers
+namespace QX_Frame.WebApi.Controllers
 {
     /*
      * author:qixiao

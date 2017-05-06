@@ -1,4 +1,4 @@
-﻿using QX_Frame.App.Web;
+﻿using QX_Frame.App.WebApi;
 using QX_Frame.Data.Entities.QX_Frame;
 using QX_Frame.Data.QueryObject;
 using QX_Frame.Data.Service.QX_Frame;
@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using System.Web.Http;
 //using the static class  support in .NET FrameWork 4.6.*
 
-namespace QX_Frame.WebAPI.Controllers
+namespace QX_Frame.WebApi.Controllers
 {
     public class AccountController : WebApiControllerBase
     {

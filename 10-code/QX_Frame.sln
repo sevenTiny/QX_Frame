@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.App.Base", "QX_Frame.App.Base\QX_Frame.App.Base.csproj", "{0046A768-ADA2-4314-B7CC-391919ED71CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.App.Web", "QX_Frame.App.Web\QX_Frame.App.Web.csproj", "{44F973D1-C837-4801-A8CA-6BB97552BCD5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.ConsoleApp", "QX_Frame.ConsoleApp\QX_Frame.ConsoleApp.csproj", "{692DB482-EB2E-4F3E-B4B0-13A6DEE25A6A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.Data", "QX_Frame.Data\QX_Frame.Data.csproj", "{38486536-3824-4E1B-8106-3159B31CACA7}"
@@ -17,15 +15,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.Data.Service", "QX
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.Web", "QX_Frame.Web\QX_Frame.Web.csproj", "{973C2F10-28ED-47EA-8938-583813A754BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.WebAPI", "QX_Frame.WebAPI\QX_Frame.WebAPI.csproj", "{7436894E-9F27-4A67-9AB5-51A4E8F7F60E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.WebAPI.Test", "QX_Frame.WebAPI.Test\QX_Frame.WebAPI.Test.csproj", "{B4680C40-20EF-47F4-9971-CEF6560FC6B7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.Web.Srv", "QX_Frame.Web.Srv\QX_Frame.Web.Srv.csproj", "{B1791C9D-D9D9-4E44-B228-4325FBE8C931}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.FormApp", "QX_Frame.FormApp\QX_Frame.FormApp.csproj", "{0730EE4D-13F5-4E8F-BD00-D3175BA5F39B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.App.Form", "QX_Frame.App.Form\QX_Frame.App.Form.csproj", "{2650D19D-C97E-48EC-84E2-B7CF4748F136}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.WebApi.Srv", "QX_Frame.WebApi.Srv\QX_Frame.WebApi.Srv.csproj", "{A6EBD8D8-431A-40BA-B876-3CCBF88E1411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.WebApi", "QX_Frame.WebApi\QX_Frame.WebApi.csproj", "{58888ADE-887A-4B84-9CEA-B9893C1F96F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.App.WebApi", "QX_Frame.App.WebApi\QX_Frame.App.WebApi.csproj", "{8B767DEF-75B6-433D-9B03-F6EA18FE0615}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,6 @@ Global
 		{0046A768-ADA2-4314-B7CC-391919ED71CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0046A768-ADA2-4314-B7CC-391919ED71CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0046A768-ADA2-4314-B7CC-391919ED71CD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44F973D1-C837-4801-A8CA-6BB97552BCD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44F973D1-C837-4801-A8CA-6BB97552BCD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44F973D1-C837-4801-A8CA-6BB97552BCD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44F973D1-C837-4801-A8CA-6BB97552BCD5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{692DB482-EB2E-4F3E-B4B0-13A6DEE25A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{692DB482-EB2E-4F3E-B4B0-13A6DEE25A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{692DB482-EB2E-4F3E-B4B0-13A6DEE25A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -61,18 +57,10 @@ Global
 		{973C2F10-28ED-47EA-8938-583813A754BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{973C2F10-28ED-47EA-8938-583813A754BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{973C2F10-28ED-47EA-8938-583813A754BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7436894E-9F27-4A67-9AB5-51A4E8F7F60E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7436894E-9F27-4A67-9AB5-51A4E8F7F60E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7436894E-9F27-4A67-9AB5-51A4E8F7F60E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7436894E-9F27-4A67-9AB5-51A4E8F7F60E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B4680C40-20EF-47F4-9971-CEF6560FC6B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B4680C40-20EF-47F4-9971-CEF6560FC6B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4680C40-20EF-47F4-9971-CEF6560FC6B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4680C40-20EF-47F4-9971-CEF6560FC6B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B1791C9D-D9D9-4E44-B228-4325FBE8C931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B1791C9D-D9D9-4E44-B228-4325FBE8C931}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B1791C9D-D9D9-4E44-B228-4325FBE8C931}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B1791C9D-D9D9-4E44-B228-4325FBE8C931}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0730EE4D-13F5-4E8F-BD00-D3175BA5F39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0730EE4D-13F5-4E8F-BD00-D3175BA5F39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0730EE4D-13F5-4E8F-BD00-D3175BA5F39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -81,6 +69,18 @@ Global
 		{2650D19D-C97E-48EC-84E2-B7CF4748F136}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2650D19D-C97E-48EC-84E2-B7CF4748F136}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2650D19D-C97E-48EC-84E2-B7CF4748F136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6EBD8D8-431A-40BA-B876-3CCBF88E1411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6EBD8D8-431A-40BA-B876-3CCBF88E1411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6EBD8D8-431A-40BA-B876-3CCBF88E1411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6EBD8D8-431A-40BA-B876-3CCBF88E1411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58888ADE-887A-4B84-9CEA-B9893C1F96F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58888ADE-887A-4B84-9CEA-B9893C1F96F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58888ADE-887A-4B84-9CEA-B9893C1F96F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58888ADE-887A-4B84-9CEA-B9893C1F96F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B767DEF-75B6-433D-9B03-F6EA18FE0615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B767DEF-75B6-433D-9B03-F6EA18FE0615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B767DEF-75B6-433D-9B03-F6EA18FE0615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B767DEF-75B6-433D-9B03-F6EA18FE0615}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
