@@ -28,4 +28,3 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.FormApp\bin\Debug\EntityFrame
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.FormApp\bin\Debug\QX_Frame.Data.Contract.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.FormApp\bin\Debug\EntityFramework.SqlServer.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.FormApp\bin\Debug\EntityFramework.SqlServer.xml
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.FormApp\bin\Debug\QX_Frame.App.Base.dll.config

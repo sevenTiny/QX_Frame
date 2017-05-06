@@ -1,16 +1,10 @@
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\QX_Frame.App.Form.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\QX_Frame.App.Form.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\Autofac.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\EntityFramework.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\QX_Frame.App.Base.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\QX_Frame.Helper_DG_Framework.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\Newtonsoft.Json.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\LinqKit.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\QX_Frame.App.Base.pdb
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\QX_Frame.Helper_DG_Framework.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\Autofac.xml
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\Newtonsoft.Json.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\obj\Debug\QX_Frame.App.Form.csprojResolveAssemblyReference.cache
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\obj\Debug\QX_Frame.App.Form.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\obj\Debug\QX_Frame.App.Form.pdb
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\QX_Frame.App.Base.dll.config
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\QX_Frame.Helper_DG.dll

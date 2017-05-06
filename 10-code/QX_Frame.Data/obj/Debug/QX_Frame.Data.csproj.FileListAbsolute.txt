@@ -72,7 +72,6 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\QX_Frame.Data.
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\EntityFramework.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\EntityFramework.SqlServer.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\QX_Frame.App.Base.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\QX_Frame.Helper_DG_Framework.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\Autofac.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\Newtonsoft.Json.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\LinqKit.dll

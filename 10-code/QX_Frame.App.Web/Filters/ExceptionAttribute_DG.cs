@@ -1,5 +1,4 @@
-﻿using QX_Frame.Helper_DG_Framework;
-using QX_Frame.Helper_DG_Framework.Extends;
+﻿using QX_Frame.Helper_DG;
 using System;
 using System.Net;
 using System.Net.Http;

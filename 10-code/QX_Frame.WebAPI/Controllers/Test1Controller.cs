@@ -1,5 +1,5 @@
 ﻿using QX_Frame.App.Web;
-using QX_Frame.Helper_DG_Framework.Extends;
+using QX_Frame.Helper_DG;
 using System.Web.Http;
 
 namespace QX_Frame.WebAPI.Controllers

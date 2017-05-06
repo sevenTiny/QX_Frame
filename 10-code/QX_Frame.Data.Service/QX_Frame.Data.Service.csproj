@@ -61,10 +61,6 @@
       <Project>{38486536-3824-4e1b-8106-3159b31caca7}</Project>
       <Name>QX_Frame.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\QX_Frame.Helper_DG_Framework_4_6\QX_Frame.Helper_DG_Framework.csproj">
-      <Project>{3803982f-aca9-4c7d-9fd8-c0f842893a7b}</Project>
-      <Name>QX_Frame.Helper_DG_Framework</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

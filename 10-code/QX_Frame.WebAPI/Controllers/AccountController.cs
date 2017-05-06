@@ -28,7 +28,7 @@ namespace QX_Frame.WebAPI.Controllers
                 var channel = fact.CreateChannel();
                 int count;
                 List<tb_UserAccount> userAccountList = channel.QueryAllPaging<tb_UserAccount, string>(new tb_UserAccountQueryObject() { PageIndex = 1, PageSize = 2 }, t => t.loginId).Cast<List<tb_UserAccount>>(out count);
-                return Json(Helper_DG_Framework.Return_Helper_DG.Success_Msg_Data_DCount_HttpCode("success return !", userAccountList, count));
+                return Json(Helper_DG.Return_Helper_DG.Success_Msg_Data_DCount_HttpCode("success return !", userAccountList, count));
             }
         }
         public IHttpActionResult PutString()
@@ -37,7 +37,7 @@ namespace QX_Frame.WebAPI.Controllers
             {
                 var channel = fact.CreateChannel();
                 List<tb_UserAccount> userAccountList = channel.QuerySql(new tb_UserAccountQueryObject() { SqlStatementTextOrSpName = "select * from tb_UserAccount", SqlExecuteType = App.Base.options.ExecuteType.Execute_List_T }).Cast<List<tb_UserAccount>>();
-                return Json(Helper_DG_Framework.Return_Helper_DG.Success_Msg_Data_DCount_HttpCode("user list", userAccountList, userAccountList.Count));
+                return Json(Helper_DG.Return_Helper_DG.Success_Msg_Data_DCount_HttpCode("user list", userAccountList, userAccountList.Count));
             }
         }
         public IHttpActionResult DeleteString()
@@ -55,7 +55,7 @@ namespace QX_Frame.WebAPI.Controllers
                     },
                     SqlExecuteType = App.Base.options.ExecuteType.ExecuteNonQuery
                 }).Cast<dynamic>();
-                return Json(Helper_DG_Framework.Return_Helper_DG.Success_Msg_Data_DCount_HttpCode("user list", result));
+                return Json(Helper_DG.Return_Helper_DG.Success_Msg_Data_DCount_HttpCode("user list", result));
             }
         }
     }

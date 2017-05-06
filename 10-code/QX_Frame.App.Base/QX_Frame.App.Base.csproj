@@ -43,6 +43,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="QX_Frame.Helper_DG">
+      <HintPath>..\QX_Frame.Reference\QX_Frame.Helper_DG_Framework\QX_Frame.Helper_DG.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -79,12 +82,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\QX_Frame.Helper_DG_Framework_4_6\QX_Frame.Helper_DG_Framework.csproj">
-      <Project>{3803982F-ACA9-4C7D-9FD8-C0F842893A7B}</Project>
-      <Name>QX_Frame.Helper_DG_Framework</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

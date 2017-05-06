@@ -4,7 +4,7 @@ using System.Linq;
 using System.Diagnostics.CodeAnalysis;
 using System.Data.Entity;
 using System.Reflection;
-using QX_Frame.Helper_DG_Framework;
+using QX_Frame.Helper_DG;
 using System.Linq.Expressions;
 
 namespace QX_Frame.App.Base

@@ -1,5 +1,5 @@
 ﻿using QX_Frame.App.Base.options;
-using QX_Frame.Helper_DG_Framework;
+using QX_Frame.Helper_DG;
 using System;
 using System.Data;
 using System.Data.SqlClient;

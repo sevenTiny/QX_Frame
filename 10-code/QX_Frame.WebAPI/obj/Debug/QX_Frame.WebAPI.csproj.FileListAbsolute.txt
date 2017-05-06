@@ -196,13 +196,11 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\Newtonsoft.Json.dl
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.App.Web.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.Data.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.Data.Service.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.Helper_DG_Framework.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\System.Net.Http.Formatting.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\System.Web.Http.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\System.Web.Http.WebHost.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.App.Base.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.Data.Contract.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\LinqKit.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.Data.Service.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.Data.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\Autofac.xml
@@ -220,4 +218,5 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.Data.Cont
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\obj\Debug\QX_Frame.WebAPI.csprojResolveAssemblyReference.cache
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\obj\Debug\QX_Frame.WebAPI.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\obj\Debug\QX_Frame.WebAPI.pdb
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.App.Base.dll.config
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.Helper_DG.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebAPI\bin\QX_Frame.Helper_DG_Framework.dll

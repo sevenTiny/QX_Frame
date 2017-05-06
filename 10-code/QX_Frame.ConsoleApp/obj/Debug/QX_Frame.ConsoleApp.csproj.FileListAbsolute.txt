@@ -99,9 +99,6 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame.Data.Contract.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame.Data.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame.Data.Service.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame.Helper_DG_Framework.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\Newtonsoft.Json.dll
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\LinqKit.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame.Data.Contract.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame.Data.Service.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame.Data.pdb
@@ -110,7 +107,9 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\EntityFr
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\EntityFramework.SqlServer.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame.App.Base.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame.Helper_DG_Framework.pdb
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\Newtonsoft.Json.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\obj\Debug\QX_Frame.ConsoleApp.csprojResolveAssemblyReference.cache
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\obj\Debug\QX_Frame.ConsoleApp.exe
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\obj\Debug\QX_Frame.ConsoleApp.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame.Helper_DG.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame.Helper_DG_Framework.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\obj\Debug\QX_Frame.ConsoleApp.csproj.QX_Frame.ConsoleApp.exe.config
