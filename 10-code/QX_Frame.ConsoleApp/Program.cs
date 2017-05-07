@@ -29,20 +29,21 @@ namespace QX_Frame.ConsoleApp
             #region Wcf Test
             new ClassRegisters();   //register classes
 
-            //using (var fact = Wcf<UserAccountService>())
-            //{
-            //    var channel = fact.CreateChannel();
+            using (var fact = Wcf<UserAccountService>())
+            {
+                var channel = fact.CreateChannel();
 
-            //    tb_UserAccount userAccount = tb_UserAccount.Build();
-            //    userAccount.uid = Guid.NewGuid();
-            //    userAccount.loginId = "222";
-            //    userAccount.pwd = "111";
-            //    Console.WriteLine(channel.Add(userAccount));
-            //}
+                List<tb_UserAccount> userAccountList = channel.QueryAll(new tb_UserAccountQueryObject()).Cast<List<tb_UserAccount>>();
+               // List<tb_UserAccount> userAccountList = channel.QuerySql(new tb_UserAccountQueryObject { SqlConnectionString =Config_Helper_DG.ConnectionString_Get("db_qx_frame"), SqlStatementTextOrSpName = "select * from tb_UserAccount", SqlExecuteType = ExecuteType.Execute_List_T }).Cast<List<tb_UserAccount>>();
+
+                foreach (var item in userAccountList)
+                {
+                    Console.WriteLine(item.loginId);
+                }
+            }
 
             #endregion
 
-            Console.WriteLine(DateTime_Helper_DG.GetCurrentTimeStamp());
 
             Console.WriteLine("any key to exit ...");
             Console.ReadKey();

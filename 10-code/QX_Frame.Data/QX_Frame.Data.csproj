@@ -38,13 +38,13 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="QX_Frame.App.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\QX_Frame.Reference\QX_Frame.App.Base\QX_Frame.App.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="QX_Frame.Helper_DG_Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\QX_Frame.Reference\QX_Frame.Helper_DG_Framework\QX_Frame.Helper_DG_Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -64,21 +64,34 @@
     <Compile Include="Entities\QX_Frame\tb_Authentication.cs" />
     <Compile Include="Entities\QX_Frame\tb_BloodType.cs" />
     <Compile Include="Entities\QX_Frame\tb_Sex.cs" />
-    <Compile Include="Entities\QX_Frame\tb_UserAccount.cs" />
+    <Compile Include="Entities\QX_Frame\tb_userAccount.cs" />
     <Compile Include="Entities\QX_Frame\tb_UserAccountInfo.cs" />
-    <Compile Include="Entities\QX_Frame\tb_UserFunction.cs" />
-    <Compile Include="Entities\QX_Frame\tb_UserPasswordProtectionQuestion.cs" />
+    <Compile Include="Entities\QX_Frame\tb_userFunction.cs" />
+    <Compile Include="Entities\QX_Frame\tb_userPasswordProtectionQuestion.cs" />
     <Compile Include="Entities\QX_Frame\tb_UserRole.cs" />
-    <Compile Include="Entities\QX_Frame\tb_UserRoleAttribute.cs" />
+    <Compile Include="Entities\QX_Frame\tb_userRoleAttribute.cs" />
     <Compile Include="Entities\QX_Frame\tb_UserStatus.cs" />
-    <Compile Include="Entities\QX_Frame\tb_UserStatusAttribute.cs" />
+    <Compile Include="Entities\QX_Frame\tb_userStatusAttribute.cs" />
     <Compile Include="Options\opt_AccountRoleLevel.cs" />
     <Compile Include="Options\opt_AccountStatusLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueryObject\tb_UserAccountQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\tb_AuthenticationQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\tb_BloodTypeQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\tb_SexQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\tb_UserAccountInfoQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\tb_UserAccountQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\tb_UserFunctionQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\tb_UserPasswordProtectionQuestionQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\tb_UserRoleAttributeQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\tb_UserRoleQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\tb_UserStatusAttributeQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\tb_UserStatusQueryObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Configs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

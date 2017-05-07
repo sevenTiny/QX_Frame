@@ -9,13 +9,13 @@ namespace QX_Frame.Data.QueryObject
 	/// copyright qixiao code builder ->
 	/// version:4.2.0
 	/// author:qixiao(柒小)
-	/// time:2017-04-05 10:24:59
+	/// time:2017-04-05 10:41:30
 	/// </summary>
 
 	/// <summary>
 	///class tb_UserAccountQueryObject
 	/// </summary>
-	public class tb_UserAccountQueryObject:WcfQueryObject<db_qx_frame, tb_UserAccount>
+	public class tb_UserAccountQueryObject:WcfQueryObject<db_qx_frame,tb_UserAccount>
 	{
 		/// <summary>
 		/// construction method
@@ -34,14 +34,15 @@ namespace QX_Frame.Data.QueryObject
 
 		//query condition // null default
 		public override Expression<Func<tb_UserAccount, bool>> QueryCondition { get { return base.QueryCondition; } set { base.QueryCondition = value; } }
-		//query condition func // true default //if QueryCondition != null this will be override !!!
-		protected override Expression<Func<tb_UserAccount, bool>> QueryConditionFunc()
+
+        //query condition func // true default //if QueryCondition != null this will be override !!!
+        protected override Expression<Func<tb_UserAccount, bool>> QueryConditionFunc()
 		{
 			Expression<Func<tb_UserAccount, bool>> func = t => true;
 
-			if (!string.IsNullOrEmpty(loginId))
+			if (!string.IsNullOrEmpty(""))
 			{
-				func = func.And(t => t.loginId.Contains(loginId));
+				func = func.And(t => true);
 			}
 
 			return func;

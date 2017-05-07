@@ -1,4 +1,3 @@
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\obj\Debug\QX_Frame.WebApi.csprojResolveAssemblyReference.cache
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\QX_Frame.WebApi.dll.config
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\QX_Frame.WebApi.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\QX_Frame.WebApi.pdb
@@ -13,6 +12,7 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\System.Web.H
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\System.Web.Mvc.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\QX_Frame.Data.Contract.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\EntityFramework.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\LinqKit.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\QX_Frame.Data.Service.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\QX_Frame.Data.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\Autofac.xml
@@ -21,5 +21,7 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\QX_Frame.App
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\QX_Frame.App.WebApi.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\QX_Frame.Data.Contract.pdb
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\EntityFramework.xml
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\LinqKit.xml
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\obj\Debug\QX_Frame.WebApi.csprojResolveAssemblyReference.cache
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\obj\Debug\QX_Frame.WebApi.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\obj\Debug\QX_Frame.WebApi.pdb

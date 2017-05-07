@@ -1,4 +1,3 @@
-G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\obj\Debug\QX_Frame.App.WebApi.csprojResolveAssemblyReference.cache
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\QX_Frame.App.WebApi.dll.config
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\QX_Frame.App.WebApi.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\QX_Frame.App.WebApi.pdb
@@ -8,10 +7,13 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\EntityFr
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\Newtonsoft.Json.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\QX_Frame.App.Base.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\QX_Frame.Helper_DG.dll
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\LinqKit.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\Autofac.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\EntityFramework.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\EntityFramework.SqlServer.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\Newtonsoft.Json.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\QX_Frame.App.Base.pdb
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\LinqKit.xml
+G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\obj\Debug\QX_Frame.App.WebApi.csprojResolveAssemblyReference.cache
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\obj\Debug\QX_Frame.App.WebApi.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\obj\Debug\QX_Frame.App.WebApi.pdb
