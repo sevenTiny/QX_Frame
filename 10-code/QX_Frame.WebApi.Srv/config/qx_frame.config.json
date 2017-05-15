@@ -1,0 +1,24 @@
+{
+  "$schema": "qx_frame.config.json",
+  "description": "configuration file about qx_frame app start",
+  "database": {
+    "connectionStrings": {
+      "QX_Frame_Default": "data source=.;initial catalog=db_qx_frame;user id=sa;password=Sa123456;MultipleActiveResultSets=True;App=EntityFramework",
+      "db_qx_frame": "data source=.;initial catalog=db_qx_frame;user id=sa;password=Sa123456;MultipleActiveResultSets=True;App=EntityFramework"
+    }
+  },
+  "log": {
+    "Log_Location_General": "Log_QX_Frame/Log_QX_Frame_General/",
+    "Log_Location_Error": "Log_QX_Frame/Log_QX_Frame_Error/",
+    "Log_Location_Use": "Log_QX_Frame/Log_QX_Frame_Use/"
+  },
+  "cache": {
+    "IsCache": 1,
+    "CacheExpirationTime_Minutes": 10
+  },
+  "authentication": {
+    "Auth_Token_expireTime_days": 0,
+    "Auth_Token_expireTime_hours": 0,
+    "Auth_Token_expireTime_minutes": 30
+  }
+}

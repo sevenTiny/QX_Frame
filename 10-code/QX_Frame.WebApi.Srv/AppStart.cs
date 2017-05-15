@@ -5,6 +5,7 @@ using System.Web.Http;
 using System.Web.Http.Dispatcher;
 using QX_Frame.App.WebApi.Extends;
 using System.Web.Http.Cors;
+using QX_Frame.WebApi.Config;
 
 namespace QX_Frame.WebApi.Srv
 {
@@ -17,7 +18,7 @@ namespace QX_Frame.WebApi.Srv
             try
             {
                 WebApp.Start<StartUp>(url: baseAddress);
-                Console.WriteLine("BaseIpAddress is " + baseAddress);
+                Console.WriteLine("\nBaseIpAddress is " + baseAddress);
                 Console.WriteLine("\nApplication Started !");
             }
             catch (Exception ex)
@@ -50,12 +51,13 @@ namespace QX_Frame.WebApi.Srv
                 defaults: new { id = RouteParameter.Optional },
                 namespaces: new string[] { "QX_Frame.WebApi.Controllers" }
             );
-            config.Services.Replace(typeof(IHttpControllerSelector), new QX_Frame.WebApi.config.WebApiControllerSelector(config));
+            config.Services.Replace(typeof(IHttpControllerSelector), new QX_Frame.WebApi.Config.WebApiControllerSelector(config));
 
             //if config the global filter input there need not write the attributes
             //config.Filters.Add(new App.Web.Filters.ExceptionAttribute_DG());
 
-            //new ClassRegisters(); //register ioc menbers
+            new ConfigBootStrap();  //configuration bootstrap
+            new ClassRegisters();   //register ioc menbers
 
             appBuilder.UseWebApi(config);
         }

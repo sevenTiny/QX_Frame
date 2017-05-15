@@ -1,14 +1,14 @@
 ﻿using QX_Frame.App.WebApi;
 using QX_Frame.Data.Service.QX_Frame;
 
-namespace QX_Frame.WebApi.config
+/**
+ * author:qixiao 
+ * create：2017-2-21 14:21:41
+ **/
+namespace QX_Frame.WebApi.Config
 {
-    /**
-     * author:qixiao 
-     * time：2017-2-21 14:21:41
-     **/
     //class registers
-    public class ClassRegisters:WebApiControllerBase
+    public class ClassRegisters : WebApiControllerBase
     {
         public ClassRegisters()
         {

@@ -45,7 +45,7 @@
       <HintPath>..\QX_Frame.Reference\QX_Frame.App.WebApi\QX_Frame.App.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="QX_Frame.Helper_DG">
-      <HintPath>..\QX_Frame.Reference\QX_Frame.Helper_DG_Framework\QX_Frame.Helper_DG.dll</HintPath>
+      <HintPath>..\QX_Frame.Reference\QX_Frame.Helper_DG\QX_Frame.Helper_DG.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -70,8 +70,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="config\ClassRegisters.cs" />
-    <Compile Include="config\Global.cs" />
+    <Compile Include="Config\ClassRegisters.cs" />
+    <Compile Include="Config\ConfigBootStrap.cs" />
+    <Compile Include="Config\Global.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Test1Controller.cs" />
     <Compile Include="Controllers\Test2Controller.cs" />

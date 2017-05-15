@@ -46,6 +46,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\QX_Frame.Reference\QX_Frame.App.Base\QX_Frame.App.Base.dll</HintPath>
     </Reference>
+    <Reference Include="QX_Frame.Helper_DG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QX_Frame.Reference\QX_Frame.Helper_DG\QX_Frame.Helper_DG.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -59,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configs\QX_Frame_Data_Config.cs" />
     <Compile Include="DTO\UserViewModel.cs" />
     <Compile Include="Entities\QX_Frame\db_qx_frame.cs" />
     <Compile Include="Entities\QX_Frame\tb_Authentication.cs" />
@@ -87,9 +92,7 @@
     <Compile Include="QueryObject\QX_Frame\tb_UserStatusAttributeQueryObject.cs" />
     <Compile Include="QueryObject\QX_Frame\tb_UserStatusQueryObject.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configs\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

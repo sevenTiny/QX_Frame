@@ -25,3 +25,4 @@ G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\bin\Debug\LinqKit.xml
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\obj\Debug\QX_Frame.WebApi.csprojResolveAssemblyReference.cache
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\obj\Debug\QX_Frame.WebApi.dll
 G:\AProject\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\obj\Debug\QX_Frame.WebApi.pdb
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi\obj\Debug\QX_Frame.WebApi.csprojResolveAssemblyReference.cache

@@ -43,8 +43,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="QX_Frame.Helper_DG">
-      <HintPath>..\QX_Frame.Reference\QX_Frame.Helper_DG_Framework\QX_Frame.Helper_DG.dll</HintPath>
+    <Reference Include="QX_Frame.Helper_DG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QX_Frame.Reference\QX_Frame.Helper_DG\QX_Frame.Helper_DG.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />

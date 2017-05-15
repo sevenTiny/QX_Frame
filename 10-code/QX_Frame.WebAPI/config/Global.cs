@@ -8,7 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http.Controllers;
 
-namespace QX_Frame.WebApi.config
+namespace QX_Frame.WebApi.Config
 {
     /**
      * author:qixiao
