@@ -19,7 +19,7 @@ namespace QX_Frame.WebApi.Controllers
                 var channel = fact.CreateChannel();
                 List<tb_UserAccount> list = channel.QueryAll(new tb_UserAccountQueryObject()).Cast<List<tb_UserAccount>>();
                 return Json(list);
-            }
+            } 
         }
         public IHttpActionResult PostString()
         {
@@ -36,7 +36,7 @@ namespace QX_Frame.WebApi.Controllers
             using (var fact = Wcf<UserAccountService>())
             {
                 var channel = fact.CreateChannel();
-                List<tb_UserAccount> userAccountList = channel.QuerySql(new tb_UserAccountQueryObject() { SqlStatementTextOrSpName = "select * from tb_UserAccount", SqlExecuteType = App.Base.options.ExecuteType.Execute_List_T }).Cast<List<tb_UserAccount>>();
+                List<tb_UserAccount> userAccountList = channel.QuerySql(new tb_UserAccountQueryObject() { SqlStatementTextOrSpName = "select * from tb_UserAccount", SqlExecuteType = App.Base.Options.ExecuteType.Execute_List_T }).Cast<List<tb_UserAccount>>();
                 return Json(Helper_DG.Return_Helper_DG.Success_Msg_Data_DCount_HttpCode("user list", userAccountList, userAccountList.Count));
             }
         }
@@ -53,7 +53,7 @@ namespace QX_Frame.WebApi.Controllers
                         new SqlParameter("@loginId","4444"),
                         new SqlParameter("@pwd","5555")
                     },
-                    SqlExecuteType = App.Base.options.ExecuteType.ExecuteNonQuery
+                    SqlExecuteType = App.Base.Options.ExecuteType.ExecuteNonQuery
                 }).Cast<dynamic>();
                 return Json(Helper_DG.Return_Helper_DG.Success_Msg_Data_DCount_HttpCode("user list", result));
             }

@@ -1,4 +1,4 @@
-﻿namespace QX_Frame.App.Base.options
+﻿namespace QX_Frame.App.Base.Options
 {
     /**
      * author:qixiao

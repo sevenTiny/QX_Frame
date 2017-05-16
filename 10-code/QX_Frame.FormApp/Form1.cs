@@ -11,6 +11,7 @@ namespace QX_Frame.FormApp
     {
         public Form1()
         {
+
             new ClassRegisters();// class register 
             InitializeComponent();
         }

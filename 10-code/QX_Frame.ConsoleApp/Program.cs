@@ -15,7 +15,7 @@ using QX_Frame.App.Base.AOP;
 using QX_Frame.Data.Service.QX_Frame;
 using QX_Frame.Data.Entities.QX_Frame;
 using System.Data;
-using QX_Frame.App.Base.options;
+using QX_Frame.App.Base.Options;
 using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Data.Entity;
@@ -27,19 +27,29 @@ namespace QX_Frame.ConsoleApp
         static void Main(string[] args)
         {
             #region Wcf Test
-            new ClassRegisters();   //register classes
+            new Config.ClassRegisters();   //register classes
+            new Config.ConfigBootStrap();
 
             using (var fact = Wcf<UserAccountService>())
             {
                 var channel = fact.CreateChannel();
 
-                List<tb_UserAccount> userAccountList = channel.QueryAll(new tb_UserAccountQueryObject()).Cast<List<tb_UserAccount>>();
-               // List<tb_UserAccount> userAccountList = channel.QuerySql(new tb_UserAccountQueryObject { SqlConnectionString =Config_Helper_DG.ConnectionString_Get("db_qx_frame"), SqlStatementTextOrSpName = "select * from tb_UserAccount", SqlExecuteType = ExecuteType.Execute_List_T }).Cast<List<tb_UserAccount>>();
+                // List<tb_UserAccount> userAccountList = channel.QueryAll(new tb_UserAccountQueryObject()).Cast<List<tb_UserAccount>>();
+                //List<tb_UserAccount> userAccountList = channel.QuerySql(
+                //    new tb_UserAccountQueryObject
+                //    {
+                //        SqlStatementTextOrSpName = "select * from tb_UserAccount",
+                //        SqlExecuteType = ExecuteType.Execute_List_T
+                //    }).Cast<List<tb_UserAccount>>();
 
-                foreach (var item in userAccountList)
-                {
-                    Console.WriteLine(item.loginId);
-                }
+                //foreach (var item in userAccountList)
+                //{
+                //    Console.WriteLine(item.loginId);
+                //}
+
+
+                Console.WriteLine(Internationalization.GetString("MSG_1001"));
+
             }
 
             #endregion

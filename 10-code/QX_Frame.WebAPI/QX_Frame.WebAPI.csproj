@@ -38,8 +38,9 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="QX_Frame.App.Base">
-      <HintPath>..\QX_Frame.Reference\QX_Frame.App.WebApi\QX_Frame.App.Base.dll</HintPath>
+    <Reference Include="QX_Frame.App.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QX_Frame.Reference\QX_Frame.App.Base\QX_Frame.App.Base.dll</HintPath>
     </Reference>
     <Reference Include="QX_Frame.App.WebApi">
       <HintPath>..\QX_Frame.Reference\QX_Frame.App.WebApi\QX_Frame.App.WebApi.dll</HintPath>

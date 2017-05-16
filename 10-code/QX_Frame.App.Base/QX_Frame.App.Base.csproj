@@ -43,6 +43,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="QX_Frame.Helper_DG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\QX_Frame.Reference\QX_Frame.Helper_DG\QX_Frame.Helper_DG.dll</HintPath>
@@ -61,15 +64,18 @@
     <Compile Include="AOP\EntityNullCheck.cs" />
     <Compile Include="AppBase.cs" />
     <Compile Include="ChannelFactory.cs" />
+    <Compile Include="Configs\QX_Frame_Config.cs" />
     <Compile Include="DataBase\Entity.cs" />
     <Compile Include="Dependency.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="IDependency.cs" />
     <Compile Include="DataBase\IEntity.cs" />
     <Compile Include="IEntity.cs" />
+    <Compile Include="Internationalization.cs" />
     <Compile Include="IWcfService.cs" />
-    <Compile Include="options\ExecuteType.cs" />
-    <Compile Include="options\QueryType.cs" />
+    <Compile Include="Options\ExecuteType.cs" />
+    <Compile Include="Options\InternationalizationLanguage.cs" />
+    <Compile Include="Options\QueryType.cs" />
     <Compile Include="PredicateExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WcfQueryObject.cs" />
@@ -77,9 +83,7 @@
     <Compile Include="WcfQueryResult.cs" />
     <Compile Include="WcfService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configs\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

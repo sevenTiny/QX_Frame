@@ -1,4 +1,4 @@
-﻿using QX_Frame.App.Base.options;
+﻿using QX_Frame.App.Base.Options;
 using QX_Frame.Helper_DG;
 using System;
 using System.Data;

@@ -72,6 +72,8 @@
     <Compile Include="Entities\QX_Frame\tb_userAccount.cs" />
     <Compile Include="Entities\QX_Frame\tb_UserAccountInfo.cs" />
     <Compile Include="Entities\QX_Frame\tb_userFunction.cs" />
+    <Compile Include="Entities\QX_Frame\tb_UserMoney.cs" />
+    <Compile Include="Entities\QX_Frame\tb_UserMoneyBill.cs" />
     <Compile Include="Entities\QX_Frame\tb_userPasswordProtectionQuestion.cs" />
     <Compile Include="Entities\QX_Frame\tb_UserRole.cs" />
     <Compile Include="Entities\QX_Frame\tb_userRoleAttribute.cs" />
@@ -80,17 +82,19 @@
     <Compile Include="Options\opt_AccountRoleLevel.cs" />
     <Compile Include="Options\opt_AccountStatusLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueryObject\QX_Frame\tb_AuthenticationQueryObject.cs" />
-    <Compile Include="QueryObject\QX_Frame\tb_BloodTypeQueryObject.cs" />
-    <Compile Include="QueryObject\QX_Frame\tb_SexQueryObject.cs" />
-    <Compile Include="QueryObject\QX_Frame\tb_UserAccountInfoQueryObject.cs" />
-    <Compile Include="QueryObject\QX_Frame\tb_UserAccountQueryObject.cs" />
-    <Compile Include="QueryObject\QX_Frame\tb_UserFunctionQueryObject.cs" />
-    <Compile Include="QueryObject\QX_Frame\tb_UserPasswordProtectionQuestionQueryObject.cs" />
-    <Compile Include="QueryObject\QX_Frame\tb_UserRoleAttributeQueryObject.cs" />
-    <Compile Include="QueryObject\QX_Frame\tb_UserRoleQueryObject.cs" />
-    <Compile Include="QueryObject\QX_Frame\tb_UserStatusAttributeQueryObject.cs" />
-    <Compile Include="QueryObject\QX_Frame\tb_UserStatusQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\QX_Frame\tb_AuthenticationQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\QX_Frame\tb_BloodTypeQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\QX_Frame\tb_SexQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\QX_Frame\tb_UserAccountInfoQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\QX_Frame\tb_UserAccountQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\QX_Frame\tb_UserFunctionQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\QX_Frame\tb_UserMoneyBillQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\QX_Frame\tb_UserMoneyQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\QX_Frame\tb_UserPasswordProtectionQuestionQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\QX_Frame\tb_UserRoleAttributeQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\QX_Frame\tb_UserRoleQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\QX_Frame\tb_UserStatusAttributeQueryObject.cs" />
+    <Compile Include="QueryObject\QX_Frame\QX_Frame\tb_UserStatusQueryObject.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

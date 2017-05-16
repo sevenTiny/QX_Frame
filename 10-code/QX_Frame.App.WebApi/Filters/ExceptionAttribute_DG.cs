@@ -3,7 +3,6 @@ using QX_Frame.Helper_DG.Extends;
 using System;
 using System.Net;
 using System.Net.Http;
-using System.Reflection;
 using System.Web.Http.Filters;
 
 namespace QX_Frame.App.WebApi.Filters
@@ -22,25 +21,29 @@ namespace QX_Frame.App.WebApi.Filters
             HttpStatusCode HttpCode = HttpStatusCode.InternalServerError;   //the default HttpStatusCode
             int ErrorCode = 0;
             int ErrorLevel = 0;
-            string arguments = string.Empty;
 
 
             if (actionExecutedContext.Exception is Exception_DG)
             {
-                try
+                Exception_DG exception = actionExecutedContext.Exception as Exception_DG;   //实例化一个T类型对象
+                ErrorCode = exception.ErrorCode;
+                ErrorLevel = exception.ErrorLevel;
+
+                if (!string.IsNullOrEmpty(exception.Arguments))
                 {
-                    Exception_DG exception = actionExecutedContext.Exception as Exception_DG;   //实例化一个T类型对象
-                    ErrorCode = exception.ErrorCode;
-                    ErrorLevel = exception.ErrorLevel;
-                    if (!string.IsNullOrEmpty(exception.Arguments))
-                    {
-                        Message = Message + " Arguments:" + exception.Arguments;
-                    }
+                    Message = Message + " Arguments:" + exception.Arguments;
                 }
-                catch (Exception)
+            }
+            else if (actionExecutedContext.Exception is Exception_DG_Internationalization)
+            {
+                Exception_DG_Internationalization exception = actionExecutedContext.Exception as Exception_DG_Internationalization;   //实例化一个T类型对象
+                ErrorCode = exception.ErrorCode;
+                ErrorLevel = exception.ErrorLevel;
+                Message = exception.Message_DG;
+
+                if (!string.IsNullOrEmpty(exception.Arguments))
                 {
-                    ErrorCode = 0;
-                    ErrorLevel = 0;
+                    Message = Message + " Arguments:" + exception.Arguments;
                 }
             }
             else if (actionExecutedContext.Exception is NotImplementedException)
@@ -54,6 +57,10 @@ namespace QX_Frame.App.WebApi.Filters
             else if (actionExecutedContext.Exception is ArgumentException)
             {
                 HttpCode = HttpStatusCode.MethodNotAllowed;
+            }
+            else if (actionExecutedContext.Exception is System.IO.FileNotFoundException)
+            {
+                HttpCode = HttpStatusCode.NotFound;
             }
 
             //.....

@@ -104,28 +104,28 @@ namespace QX_Frame.App.Base
             object executeResult = new object() ;
             switch (query.SqlExecuteType)
             {
-                case options.ExecuteType.ExecuteNonQuery:
+                case Options.ExecuteType.ExecuteNonQuery:
                     executeResult = Sql_Helper_DG.ExecuteNonQuery(query.SqlConnectionString, query.SqlStatementTextOrSpName,query.SqlCommandType,query.SqlParameters);
                     break;
-                case options.ExecuteType.ExecuteScalar:
+                case Options.ExecuteType.ExecuteScalar:
                     executeResult = Sql_Helper_DG.ExecuteScalar(query.SqlConnectionString, query.SqlStatementTextOrSpName, query.SqlCommandType, query.SqlParameters);
                     break;
-                case options.ExecuteType.ExecuteReader:
+                case Options.ExecuteType.ExecuteReader:
                     executeResult = Sql_Helper_DG.ExecuteReader(query.SqlConnectionString, query.SqlStatementTextOrSpName, query.SqlCommandType, query.SqlParameters);
                     break;
-                case options.ExecuteType.ExecuteDataTable:
+                case Options.ExecuteType.ExecuteDataTable:
                     executeResult = Sql_Helper_DG.ExecuteDataTable(query.SqlConnectionString, query.SqlStatementTextOrSpName, query.SqlCommandType, query.SqlParameters);
                     break;
-                case options.ExecuteType.ExecuteDataSet:
+                case Options.ExecuteType.ExecuteDataSet:
                     executeResult = Sql_Helper_DG.ExecuteDataSet(query.SqlConnectionString, query.SqlStatementTextOrSpName, query.SqlCommandType, query.SqlParameters);
                     break;
-                case options.ExecuteType.Execute_Model_T:
+                case Options.ExecuteType.Execute_Model_T:
                     executeResult = Sql_Helper_DG.Return_T_ByDataReader<TBEntity>(Sql_Helper_DG.ExecuteReader(query.SqlConnectionString, query.SqlStatementTextOrSpName, query.SqlCommandType, query.SqlParameters));
                     break;
-                case options.ExecuteType.Execute_List_T:
+                case Options.ExecuteType.Execute_List_T:
                     executeResult = Sql_Helper_DG.Return_List_T_ByDataSet<TBEntity>(Sql_Helper_DG.ExecuteDataSet(query.SqlConnectionString, query.SqlStatementTextOrSpName,query.SqlCommandType,query.SqlParameters));
                     break;
-                case options.ExecuteType._ChooseOthers_IfYouChooseThisYouWillGetAnException:
+                case Options.ExecuteType._ChooseOthers_IfYouChooseThisYouWillGetAnException:
                     throw new Exception("must choose the right ExecuteType ! -- QX_Frame");
             }
             return executeResult;

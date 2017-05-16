@@ -14,7 +14,7 @@ namespace QX_Frame.WebApi.Controllers
         //access http://localhost:3999/api/Test1  get method
         public IHttpActionResult GetTest()
         {
-            throw new Exception_DG("login id , pwd", "argumets can not be null", 11111, 2222);
+            throw new Exception_DG_Internationalization(1001);
             return Json(new { IsSuccess = true, Msg = "this is get method" });
         }
         //access http://localhost:3999/api/Test1  post method

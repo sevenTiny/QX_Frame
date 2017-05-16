@@ -54,7 +54,7 @@ namespace QX_Frame.WebApi.Srv
             config.Services.Replace(typeof(IHttpControllerSelector), new QX_Frame.WebApi.Config.WebApiControllerSelector(config));
 
             //if config the global filter input there need not write the attributes
-            //config.Filters.Add(new App.Web.Filters.ExceptionAttribute_DG());
+            config.Filters.Add(new App.WebApi.Filters.ExceptionAttribute_DG());
 
             new ConfigBootStrap();  //configuration bootstrap
             new ClassRegisters();   //register ioc menbers

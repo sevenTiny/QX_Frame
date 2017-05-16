@@ -103,3 +103,12 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\Autofac.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\LinqKit.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\obj\Debug\QX_Frame.Data.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\obj\Debug\QX_Frame.Data.pdb
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\NPOI.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\NPOI.OOXML.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\ICSharpCode.SharpZipLib.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\NPOI.OpenXmlFormats.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\NPOI.OpenXml4Net.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\QX_Frame.Helper_DG.pdb
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\QX_Frame.Helper_DG.dll.config
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\NPOI.xml
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\obj\Debug\QX_Frame.Data.csprojResolveAssemblyReference.cache

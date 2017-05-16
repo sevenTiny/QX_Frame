@@ -1,14 +1,11 @@
 namespace QX_Frame.Data.Entities.QX_Frame
 {
-    using System;
     using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
 
     public partial class db_qx_frame : DbContext
     {
         public db_qx_frame()
-            : base("name=db_qx_frame")
+            : base(Configs.QX_Frame_Data_Config.ConnectionString_db_qx_frame)
         {
         }
 
@@ -23,6 +20,8 @@ namespace QX_Frame.Data.Entities.QX_Frame
         public virtual DbSet<tb_UserRoleAttribute> tb_UserRoleAttribute { get; set; }
         public virtual DbSet<tb_UserStatus> tb_UserStatus { get; set; }
         public virtual DbSet<tb_UserStatusAttribute> tb_UserStatusAttribute { get; set; }
+        public virtual DbSet<tb_UserMoney> tb_UserMoney { get; set; }
+        public virtual DbSet<tb_UserMoneyBill> tb_UserMoneyBill { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
