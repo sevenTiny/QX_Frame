@@ -37,6 +37,9 @@
     <Reference Include="EntityFramework">
       <HintPath>..\QX_Frame.Helper_DG_Framework_4_6\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="QX_Frame.Helper_DG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\QX_Frame.Reference\QX_Frame.Helper_DG\QX_Frame.Helper_DG.dll</HintPath>
