@@ -14,7 +14,9 @@
   },
   "cache": {
     "IsCache": 1,
-    "CacheExpirationTime_Minutes": 10
+    "CacheExpirationTime_Minutes": 10,
+    "Cache_Redis_Host": "127.0.0.1",
+    "Cache_Redis_Port": 6379
   },
   "authentication": {
     "Auth_Token_expireTime_days": 0,

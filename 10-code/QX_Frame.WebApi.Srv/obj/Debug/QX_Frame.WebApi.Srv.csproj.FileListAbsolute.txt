@@ -102,3 +102,10 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.Helper_DG.dll.config
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\NPOI.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.App.Base.dll.config
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\ServiceStack.Interfaces.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\ServiceStack.Redis.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\ServiceStack.Text.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\ServiceStack.Common.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\ServiceStack.Redis.xml
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\ServiceStack.Text.xml
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\ServiceStack.Common.xml

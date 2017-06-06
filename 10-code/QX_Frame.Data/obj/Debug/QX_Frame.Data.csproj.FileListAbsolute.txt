@@ -112,3 +112,10 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\QX_Frame.Helper
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\QX_Frame.Helper_DG.dll.config
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\NPOI.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\obj\Debug\QX_Frame.Data.csprojResolveAssemblyReference.cache
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\ServiceStack.Interfaces.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\ServiceStack.Redis.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\ServiceStack.Text.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\ServiceStack.Common.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\ServiceStack.Redis.xml
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\ServiceStack.Text.xml
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\ServiceStack.Common.xml

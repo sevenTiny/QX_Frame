@@ -33,3 +33,10 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\LinqKit.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\obj\Debug\QX_Frame.App.Form.csprojResolveAssemblyReference.cache
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\obj\Debug\QX_Frame.App.Form.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\obj\Debug\QX_Frame.App.Form.pdb
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\ServiceStack.Interfaces.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\ServiceStack.Redis.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\ServiceStack.Text.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\ServiceStack.Common.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\ServiceStack.Redis.xml
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\ServiceStack.Text.xml
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Form\bin\Debug\ServiceStack.Common.xml

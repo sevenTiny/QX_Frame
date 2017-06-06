@@ -53,7 +53,7 @@ namespace QX_Frame.App.Form
         private static int GetCount<DBEntity, TBEntity>(WcfQueryObject<DBEntity, TBEntity> query) where DBEntity : DbContext where TBEntity : class
         {
             int count = 0;
-            IQueryable<TBEntity> source = EF_Helper_DG<DBEntity>.selectAll<TBEntity>(query.BuildQueryFunc<TBEntity>(), out count);
+            IQueryable<TBEntity> source = EF_Helper_DG<DBEntity>.SelectAll<TBEntity>(query.BuildQueryFunc<TBEntity>(), out count);
             return count;
         }
 
@@ -61,7 +61,7 @@ namespace QX_Frame.App.Form
         {
             IQueryable<TBEntity> source = null;
             int count = 0;
-            source = EF_Helper_DG<DBEntity>.selectAll(query.BuildQueryFunc<TBEntity>(), out count);
+            source = EF_Helper_DG<DBEntity>.SelectAll(query.BuildQueryFunc<TBEntity>(), out count);
             _totalCount = count;
             return source.ToList();
         }
@@ -72,11 +72,11 @@ namespace QX_Frame.App.Form
             int count = 0;
             if (query.PageIndex >= 0 && query.PageSize > 0)
             {
-                source = EF_Helper_DG<DBEntity>.selectAllPaging(query.PageIndex, query.PageSize, orderBy, query.BuildQueryFunc<TBEntity>(), out count, query.IsDESC);
+                source = EF_Helper_DG<DBEntity>.SelectAllPaging(query.PageIndex, query.PageSize, orderBy, query.BuildQueryFunc<TBEntity>(), out count, query.IsDESC);
             }
             else
             {
-                source = EF_Helper_DG<DBEntity>.selectAll(orderBy, query.BuildQueryFunc<TBEntity>(), out count, query.IsDESC);
+                source = EF_Helper_DG<DBEntity>.SelectAll(orderBy, query.BuildQueryFunc<TBEntity>(), out count, query.IsDESC);
             }
             _totalCount = count;
             return source.ToList();
@@ -85,7 +85,7 @@ namespace QX_Frame.App.Form
         [SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "type")]
         private static object GetEntity<DBEntity, TBEntity>(WcfQueryObject<DBEntity, TBEntity> query) where DBEntity : DbContext where TBEntity : class
         {
-            return EF_Helper_DG<DBEntity>.selectSingle(query.BuildQueryFunc<TBEntity>());
+            return EF_Helper_DG<DBEntity>.SelectSingle(query.BuildQueryFunc<TBEntity>());
         }
         //sql query
         private static object ExecuteSql<DBEntity, TBEntity>(WcfQueryObject<DBEntity, TBEntity> query) where DBEntity : DbContext where TBEntity : class
