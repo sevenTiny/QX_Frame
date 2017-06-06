@@ -78,14 +78,11 @@
     <Compile Include="Controllers\Test1Controller.cs" />
     <Compile Include="Controllers\Test2Controller.cs" />
     <Compile Include="Controllers\TestController.cs" />
-    <Compile Include="Filters\AuthByQueryAttribute_DG.cs" />
-    <Compile Include="Filters\LimitsAttribute_DG.cs" />
-    <Compile Include="Filters\Power_Filter.cs" />
     <Compile Include="Filters\SubmitRepeatAttribute_DG.cs" />
-    <Compile Include="Helpers\Return_Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Helpers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

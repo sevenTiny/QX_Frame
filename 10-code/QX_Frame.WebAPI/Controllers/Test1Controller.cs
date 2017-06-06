@@ -14,8 +14,8 @@ namespace QX_Frame.WebApi.Controllers
         //access http://localhost:3999/api/Test1  get method
         public IHttpActionResult GetTest()
         {
-            throw new Exception_DG_Internationalization(1001);
-            return Json(new { IsSuccess = true, Msg = "this is get method" });
+            //throw new Exception_DG_Internationalization(1001);
+            return OK("Get Test");
         }
         //access http://localhost:3999/api/Test1  post method
         public IHttpActionResult PostTest(dynamic queryData)

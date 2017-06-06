@@ -2,7 +2,6 @@
 using QX_Frame.Data.Entities.QX_Frame;
 using QX_Frame.Data.QueryObject;
 using QX_Frame.Data.Service.QX_Frame;
-using QX_Frame.WebApi.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;

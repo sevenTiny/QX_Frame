@@ -2,12 +2,18 @@
 using QX_Frame.Helper_DG;
 using QX_Frame.Helper_DG.Configs;
 using QX_Frame.Helper_DG.Extends;
+using System.Web.Http;
 
 namespace QX_Frame.App.WebApi
 {
     public abstract class WebApiControllerBase: WcfService
     {
-        protected static string GetLB_XXX(int LB_Code)
+        /// <summary>
+        /// GetLB_XXX from config json file
+        /// </summary>
+        /// <param name="LB_Code"></param>
+        /// <returns></returns>
+        protected string GetLB_XXX(int LB_Code)
         {
             if (string.IsNullOrEmpty(QX_Frame_Helper_DG_Config.International_ConfigFileLocation))
             {
@@ -16,7 +22,13 @@ namespace QX_Frame.App.WebApi
             JObject jobject = File_Helper_DG.Json_GetJObjectFromJsonFile(QX_Frame_Helper_DG_Config.International_ConfigFileLocation);//get json configuration file
             return jobject[QX_Frame_Helper_DG_Config.International_Language][$"LB_{LB_Code}"].ToString();
         }
-        protected static string GetMSG_XXX(int MSG_Code)
+
+        /// <summary>
+        /// GetMSG_XXX from config json file
+        /// </summary>
+        /// <param name="MSG_Code"></param>
+        /// <returns></returns>
+        protected string GetMSG_XXX(int MSG_Code)
         {
             if (string.IsNullOrEmpty(QX_Frame_Helper_DG_Config.International_ConfigFileLocation))
             {
@@ -25,7 +37,13 @@ namespace QX_Frame.App.WebApi
             JObject jobject = File_Helper_DG.Json_GetJObjectFromJsonFile(QX_Frame_Helper_DG_Config.International_ConfigFileLocation);//get json configuration file
             return jobject[QX_Frame_Helper_DG_Config.International_Language][$"MSG_{MSG_Code}"].ToString();
         }
-        protected static string GetERROR_XXX(int ERROR_Code)
+
+        /// <summary>
+        /// GetERROR_XXX from config json file
+        /// </summary>
+        /// <param name="ERROR_Code"></param>
+        /// <returns></returns>
+        protected string GetERROR_XXX(int ERROR_Code)
         {
             if (string.IsNullOrEmpty(QX_Frame_Helper_DG_Config.International_ConfigFileLocation))
             {
@@ -34,5 +52,32 @@ namespace QX_Frame.App.WebApi
             JObject jobject = File_Helper_DG.Json_GetJObjectFromJsonFile(QX_Frame_Helper_DG_Config.International_ConfigFileLocation);//get json configuration file
             return jobject[QX_Frame_Helper_DG_Config.International_Language][$"ERROR_{ERROR_Code}"].ToString();
         }
+
+        /// <summary>
+        /// OK
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <param name="data"></param>
+        /// <param name="dataCount"></param>
+        /// <param name="httpCode"></param>
+        /// <returns></returns>
+        protected IHttpActionResult OK(string msg, dynamic data = null, int dataCount = 0, System.Net.HttpStatusCode httpCode = System.Net.HttpStatusCode.OK)
+        {
+            return Json(Return_Helper_DG.Success_Msg_Data_DCount_HttpCode(msg, data, dataCount, httpCode));
+        }
+
+        /// <summary>
+        /// ERROR
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <param name="errorCode"></param>
+        /// <param name="errorLevel"></param>
+        /// <param name="httpCode"></param>
+        /// <returns></returns>
+        protected IHttpActionResult ERROR(string msg, int errorCode = 0, int errorLevel = 0, System.Net.HttpStatusCode httpCode = System.Net.HttpStatusCode.InternalServerError)
+        {
+            return Json(Return_Helper_DG.Error_Msg_Ecode_Elevel_HttpCode(msg, errorCode, errorLevel, httpCode));
+        }
+
     }
 }
