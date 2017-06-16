@@ -56,9 +56,6 @@
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="QX_Frame.App.WebApi">
-      <HintPath>..\QX_Frame.Reference\QX_Frame.App.WebApi\QX_Frame.App.WebApi.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -99,6 +96,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\QX_Frame.App.WebApi\QX_Frame.App.WebApi.csproj">
+      <Project>{8b767def-75b6-433d-9b03-f6ea18fe0615}</Project>
+      <Name>QX_Frame.App.WebApi</Name>
+    </ProjectReference>
     <ProjectReference Include="..\QX_Frame.WebApi\QX_Frame.WebApi.csproj">
       <Project>{58888ade-887a-4b84-9cea-b9893c1f96f6}</Project>
       <Name>QX_Frame.WebApi</Name>

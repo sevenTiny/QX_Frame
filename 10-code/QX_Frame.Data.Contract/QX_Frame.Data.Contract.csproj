@@ -46,7 +46,7 @@
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\QX_Frame.App.Base\QX_Frame.App.Base.csproj">
-      <Project>{0046A768-ADA2-4314-B7CC-391919ED71CD}</Project>
+      <Project>{0046a768-ada2-4314-b7cc-391919ed71cd}</Project>
       <Name>QX_Frame.App.Base</Name>
     </ProjectReference>
     <ProjectReference Include="..\QX_Frame.Data\QX_Frame.Data.csproj">

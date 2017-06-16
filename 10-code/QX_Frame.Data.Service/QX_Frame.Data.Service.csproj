@@ -30,10 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=4.2.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da" />
-    <Reference Include="QX_Frame.App.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Autofac, Version=4.2.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\QX_Frame.Reference\QX_Frame.App.Base\QX_Frame.App.Base.dll</HintPath>
+      <HintPath>..\QX_Frame.Reference\QX_Frame.App.WebApi\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="QX_Frame.Helper_DG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -41,8 +40,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web.Http">
-      <HintPath>..\QX_Frame.Reference\QX_Frame.App.Web\System.Web.Http.dll</HintPath>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QX_Frame.Reference\QX_Frame.App.WebApi\System.Web.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -59,6 +59,10 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\QX_Frame.App.Base\QX_Frame.App.Base.csproj">
+      <Project>{0046a768-ada2-4314-b7cc-391919ed71cd}</Project>
+      <Name>QX_Frame.App.Base</Name>
+    </ProjectReference>
     <ProjectReference Include="..\QX_Frame.Data.Contract\QX_Frame.Data.Contract.csproj">
       <Project>{b188b868-35c0-4c20-acdd-f6140afbadda}</Project>
       <Name>QX_Frame.Data.Contract</Name>

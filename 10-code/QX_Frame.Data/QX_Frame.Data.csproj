@@ -42,10 +42,6 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="QX_Frame.App.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\QX_Frame.Reference\QX_Frame.App.Base\QX_Frame.App.Base.dll</HintPath>
-    </Reference>
     <Reference Include="QX_Frame.Helper_DG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\QX_Frame.Reference\QX_Frame.Helper_DG\QX_Frame.Helper_DG.dll</HintPath>
@@ -96,7 +92,12 @@
     <Compile Include="QueryObject\QX_Frame\tb_UserStatusAttributeQueryObject.cs" />
     <Compile Include="QueryObject\QX_Frame\tb_UserStatusQueryObject.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\QX_Frame.App.Base\QX_Frame.App.Base.csproj">
+      <Project>{0046a768-ada2-4314-b7cc-391919ed71cd}</Project>
+      <Name>QX_Frame.App.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
