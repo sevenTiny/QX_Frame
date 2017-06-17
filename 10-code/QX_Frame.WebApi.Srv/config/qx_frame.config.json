@@ -18,6 +18,13 @@
     "Cache_Redis_Host": "127.0.0.1",
     "Cache_Redis_Port": 6379
   },
+  "rabbitmq": {
+    "Host": "amqp://127.0.0.1:5672/",
+    "UserName": "guest",
+    "Password": "guest",
+    "VirtualHost": "dnt_mq",
+    "RequestedHeartBeat": 0
+  },
   "authentication": {
     "Auth_Token_expireTime_days": 0,
     "Auth_Token_expireTime_hours": 0,
