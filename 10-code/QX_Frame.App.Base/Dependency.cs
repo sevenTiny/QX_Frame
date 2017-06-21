@@ -28,7 +28,7 @@ namespace QX_Frame.App.Base
         /// Get ContainerBuilder builder
         /// </summary>
         /// <returns>builder</returns>
-        protected static ContainerBuilder GetBuilder() => builder;
+        public static ContainerBuilder GetBuilder() => builder;
         /// <summary>
         /// registerEntity
         /// </summary>
