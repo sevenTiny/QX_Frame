@@ -30,7 +30,7 @@ namespace QX_Frame.App.WebApi
         /// Get ContainerBuilder builder
         /// </summary>
         /// <returns>builder</returns>
-        protected static ContainerBuilder GetBuilder() => builder;
+        public static ContainerBuilder GetBuilder() => builder;
         /// <summary>
         /// registerEntity
         /// </summary>
