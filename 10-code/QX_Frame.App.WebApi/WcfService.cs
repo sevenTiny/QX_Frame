@@ -37,7 +37,7 @@ namespace QX_Frame.App.WebApi
                 new Exception(nameof(RegisterComplex) + " Method can not be used more than one times in a class -- QX_Frame");
             }
         }
-        protected static ChannelFactory<TService> Wcf<TService>()
+        public static ChannelFactory<TService> Wcf<TService>()
         {
             return new ChannelFactory<TService>(_container);
         }

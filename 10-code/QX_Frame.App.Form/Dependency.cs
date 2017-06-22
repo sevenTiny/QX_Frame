@@ -28,7 +28,7 @@ namespace QX_Frame.App.Form
         /// Get ContainerBuilder builder
         /// </summary>
         /// <returns>builder</returns>
-        public static ContainerBuilder GetBuilder() => builder;
+        protected static ContainerBuilder GetBuilder() => builder;
         /// <summary>
         /// registerEntity
         /// </summary>
