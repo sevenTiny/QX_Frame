@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.Data.Service", "QX
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.Web", "QX_Frame.Web\QX_Frame.Web.csproj", "{973C2F10-28ED-47EA-8938-583813A754BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.WebAPI.Test", "QX_Frame.WebAPI.Test\QX_Frame.WebAPI.Test.csproj", "{B4680C40-20EF-47F4-9971-CEF6560FC6B7}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.FormApp", "QX_Frame.FormApp\QX_Frame.FormApp.csproj", "{0730EE4D-13F5-4E8F-BD00-D3175BA5F39B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.App.Form", "QX_Frame.App.Form\QX_Frame.App.Form.csproj", "{2650D19D-C97E-48EC-84E2-B7CF4748F136}"
@@ -26,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.WebApi", "QX_Frame.WebApi\QX_Frame.WebApi.csproj", "{58888ADE-887A-4B84-9CEA-B9893C1F96F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.App.WebApi", "QX_Frame.App.WebApi\QX_Frame.App.WebApi.csproj", "{8B767DEF-75B6-433D-9B03-F6EA18FE0615}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.WebApiIIS", "QX_Frame.WebApiIIS\QX_Frame.WebApiIIS.csproj", "{B1F9663D-DA40-4039-97D7-0BAC9067C53F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,10 +57,6 @@ Global
 		{973C2F10-28ED-47EA-8938-583813A754BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{973C2F10-28ED-47EA-8938-583813A754BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{973C2F10-28ED-47EA-8938-583813A754BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4680C40-20EF-47F4-9971-CEF6560FC6B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4680C40-20EF-47F4-9971-CEF6560FC6B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4680C40-20EF-47F4-9971-CEF6560FC6B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4680C40-20EF-47F4-9971-CEF6560FC6B7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0730EE4D-13F5-4E8F-BD00-D3175BA5F39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0730EE4D-13F5-4E8F-BD00-D3175BA5F39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0730EE4D-13F5-4E8F-BD00-D3175BA5F39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -81,6 +77,10 @@ Global
 		{8B767DEF-75B6-433D-9B03-F6EA18FE0615}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B767DEF-75B6-433D-9B03-F6EA18FE0615}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B767DEF-75B6-433D-9B03-F6EA18FE0615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1F9663D-DA40-4039-97D7-0BAC9067C53F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1F9663D-DA40-4039-97D7-0BAC9067C53F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1F9663D-DA40-4039-97D7-0BAC9067C53F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1F9663D-DA40-4039-97D7-0BAC9067C53F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
