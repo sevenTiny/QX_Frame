@@ -19,7 +19,7 @@ namespace QX_Frame.WebApiIIS.Config
         /// </summary>
         public ConfigBootStrap()
         {
-            JObject jobject_qx_frame_config= File_Helper_DG.Json_GetJObjectFromJsonFile("../../config/qx_frame.config.json");//get json configuration file
+            JObject jobject_qx_frame_config= File_Helper_DG.Json_GetJObjectFromJsonFile(QX_Frame.Helper_DG.IO_Helper_DG.RootPath_MVC+ "Config/qx_frame.config.json");//get json configuration file
 
             QX_Frame_Helper_DG_Config.ConnectionString_DB_QX_Frame_Default = jobject_qx_frame_config["database"]["connectionStrings"]["QX_Frame_Default"].ToString();
             QX_Frame_Helper_DG_Config.Log_Location_General= jobject_qx_frame_config["log"]["Log_Location_General"].ToString();
