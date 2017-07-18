@@ -119,6 +119,7 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Service\bin\Debug\QX_Fram
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Service\bin\Debug\QX_Frame.App.Base.dll.config
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Service\bin\Debug\QX_Frame.Data.Contract.pdb
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Service\bin\Debug\QX_Frame.Data.pdb
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Service\bin\Debug\QX_Frame.Data.dll.config
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Service\bin\Debug\Autofac.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Service\bin\Debug\QX_Frame.Helper_DG.pdb
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Service\bin\Debug\QX_Frame.Helper_DG.dll.config

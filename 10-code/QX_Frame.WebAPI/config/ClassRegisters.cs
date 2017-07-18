@@ -1,5 +1,4 @@
 ﻿using QX_Frame.App.WebApi;
-using QX_Frame.Data.Service.QX_Frame;
 
 /**
  * author:qixiao 
@@ -13,7 +12,7 @@ namespace QX_Frame.WebApi.Config
         public ClassRegisters()
         {
             //register region --
-            WebApiControllerBase.Register(c => new UserAccountService());
+            //WebApiControllerBase.Register(c => new UserAccountService());
 
 
 

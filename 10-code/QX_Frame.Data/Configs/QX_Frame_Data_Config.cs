@@ -6,6 +6,6 @@ namespace QX_Frame.Data.Configs
 {
     public class QX_Frame_Data_Config
     {
-        public static string ConnectionString_db_qx_frame{ get; set; }
+        public static string ConnectionString_DB_QX_Frame_Test{ get; set; }
     }
 }

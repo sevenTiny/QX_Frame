@@ -1,5 +1,5 @@
 ﻿using QX_Frame.App.Base;
-using QX_Frame.Data.Service.QX_Frame;
+using QX_Frame.Data.Service;
 
 namespace QX_Frame.ConsoleApp.Config
 {
@@ -12,7 +12,9 @@ namespace QX_Frame.ConsoleApp.Config
         public ClassRegisters()
         {
             //register region --
-            AppBase.Register(c => new UserAccountService());
+            AppBase.Register(c => new PeopleService());
+            AppBase.Register(c => new ClassNameService());
+            AppBase.Register(c => new ScoreService());
 
 
 

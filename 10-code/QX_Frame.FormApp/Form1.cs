@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using QX_Frame.App.Form;
-using QX_Frame.Data.Service.QX_Frame;
-using QX_Frame.Data.Entities.QX_Frame;
+using QX_Frame.Data.Service;
+using QX_Frame.Data.Entities;
 using QX_Frame.Data.QueryObject;
 
 namespace QX_Frame.FormApp
@@ -11,7 +11,6 @@ namespace QX_Frame.FormApp
     {
         public Form1()
         {
-
             new ClassRegisters();// class register 
             InitializeComponent();
         }

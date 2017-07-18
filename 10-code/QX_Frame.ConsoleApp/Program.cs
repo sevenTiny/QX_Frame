@@ -12,8 +12,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QX_Frame.App.Base.AOP;
-using QX_Frame.Data.Service.QX_Frame;
-using QX_Frame.Data.Entities.QX_Frame;
 using System.Data;
 using QX_Frame.App.Base.Options;
 using System.Data.SqlClient;
@@ -30,25 +28,21 @@ namespace QX_Frame.ConsoleApp
             new Config.ClassRegisters();   //register classes
             new Config.ConfigBootStrap();
 
-            using (var fact = Wcf<UserAccountService>())
+            using (var fact = Wcf<PeopleService>())
             {
                 var channel = fact.CreateChannel();
 
-                // List<tb_UserAccount> userAccountList = channel.QueryAll(new tb_UserAccountQueryObject()).Cast<List<tb_UserAccount>>();
-                //List<tb_UserAccount> userAccountList = channel.QuerySql(
-                //    new tb_UserAccountQueryObject
-                //    {
-                //        SqlStatementTextOrSpName = "select * from tb_UserAccount",
-                //        SqlExecuteType = ExecuteType.Execute_List_T
-                //    }).Cast<List<tb_UserAccount>>();
+                List<V_People> poepleList = channel.QueryAll(new V_PeopleQueryObject()).Cast<List<V_People>>();
 
-                //foreach (var item in userAccountList)
-                //{
-                //    Console.WriteLine(item.loginId);
-                //}
+                foreach (var item in poepleList)
+                {
+                    Console.WriteLine($"{item.Uid} , {item.Name} , {item.Age} , {item.ClassName}");
+                }
+
+                
 
 
-                Console.WriteLine(Internationalization.GetString("MSG_1001"));
+               // Console.WriteLine(Internationalization.GetString("MSG_1001"));
 
             }
 

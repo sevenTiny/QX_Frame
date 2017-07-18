@@ -105,6 +105,7 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Contract\bin\Debug\Servic
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Contract\bin\Debug\QX_Frame.App.Base.pdb
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Contract\bin\Debug\QX_Frame.App.Base.dll.config
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Contract\bin\Debug\QX_Frame.Data.pdb
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Contract\bin\Debug\QX_Frame.Data.dll.config
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Contract\bin\Debug\Newtonsoft.Json.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Contract\bin\Debug\Autofac.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data.Contract\bin\Debug\EntityFramework.xml

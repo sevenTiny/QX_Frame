@@ -1,5 +1,5 @@
 ﻿using QX_Frame.App.Form;
-using QX_Frame.Data.Service.QX_Frame;
+using QX_Frame.Data.Service;
 
 namespace QX_Frame.FormApp
 {
@@ -12,7 +12,7 @@ namespace QX_Frame.FormApp
         public ClassRegisters()
         {
             //register region --
-            FormBase.Register(c => new UserAccountService());
+            //FormBase.Register(c => new UserAccountService());
 
 
 

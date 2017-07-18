@@ -3,8 +3,8 @@
   "description": "configuration file about qx_frame app start",
   "database": {
     "connectionStrings": {
-      "QX_Frame_Default": "data source=.;initial catalog=db_qx_frame;user id=sa;password=Sa123456;MultipleActiveResultSets=True;App=EntityFramework",
-      "db_qx_frame": "data source=.;initial catalog=db_qx_frame;user id=sa;password=Sa123456;MultipleActiveResultSets=True;App=EntityFramework"
+      "QX_Frame_Default": "data source=.;initial catalog=DB_QX_Frame_Test;user id=sa;password=Sa123456;MultipleActiveResultSets=True;App=EntityFramework",
+      "DB_QX_Frame_Test": "data source=.;initial catalog=DB_QX_Frame_Test;user id=sa;password=Sa123456;MultipleActiveResultSets=True;App=EntityFramework"
     }
   },
   "log": {

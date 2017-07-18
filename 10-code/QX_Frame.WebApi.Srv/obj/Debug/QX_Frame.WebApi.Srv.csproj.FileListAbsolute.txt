@@ -64,7 +64,6 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\Autofac.d
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.App.Base.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\EntityFramework.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.Helper_DG.dll
-G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.Data.Service.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.Data.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\System.Web.Http.WebHost.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\NPOI.dll
@@ -72,7 +71,6 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\ServiceSt
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\LinqKit.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\NPOI.OOXML.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\ServiceStack.Redis.dll
-G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.Data.Contract.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\ICSharpCode.SharpZipLib.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\NPOI.OpenXmlFormats.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\NPOI.OpenXml4Net.dll
@@ -97,15 +95,13 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\EntityFramework.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.Helper_DG.pdb
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.Helper_DG.dll.config
-G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.Data.Service.pdb
-G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.Data.Service.dll.config
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.Data.pdb
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\NPOI.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\LinqKit.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\ServiceStack.Redis.xml
-G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.Data.Contract.pdb
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\ServiceStack.Text.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\ServiceStack.Common.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\obj\Debug\QX_Frame.WebApi.Srv.csprojResolveAssemblyReference.cache
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\obj\Debug\QX_Frame.WebApi.Srv.exe
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\obj\Debug\QX_Frame.WebApi.Srv.pdb
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.Data.dll.config

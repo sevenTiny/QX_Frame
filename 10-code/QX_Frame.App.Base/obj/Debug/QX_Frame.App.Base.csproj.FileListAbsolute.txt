@@ -83,6 +83,5 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Base\bin\Debug\LinqKit.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Base\bin\Debug\ServiceStack.Redis.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Base\bin\Debug\ServiceStack.Text.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Base\bin\Debug\ServiceStack.Common.xml
-G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Base\obj\Debug\QX_Frame.App.Base.csprojResolveAssemblyReference.cache
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Base\obj\Debug\QX_Frame.App.Base.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Base\obj\Debug\QX_Frame.App.Base.pdb

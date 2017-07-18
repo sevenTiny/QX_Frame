@@ -156,3 +156,4 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\ServiceSt
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\obj\Debug\QX_Frame.ConsoleApp.csprojResolveAssemblyReference.cache
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\obj\Debug\QX_Frame.ConsoleApp.exe
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\obj\Debug\QX_Frame.ConsoleApp.pdb
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame.Data.dll.config

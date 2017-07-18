@@ -10,7 +10,6 @@ namespace QX_Frame.WebApiIIS
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            // Web API configuration and services
             //跨域配置 //need reference from nuget
             config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
             // Web API routes

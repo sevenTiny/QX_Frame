@@ -75,3 +75,4 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.FormApp\obj\Debug\QX_Frame.For
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.FormApp\obj\Debug\QX_Frame.FormApp.csproj.GenerateResource.Cache
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.FormApp\obj\Debug\QX_Frame.FormApp.exe
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.FormApp\obj\Debug\QX_Frame.FormApp.pdb
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.FormApp\bin\Debug\QX_Frame.Data.dll.config

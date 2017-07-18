@@ -1,0 +1,25 @@
+﻿{
+  "schema": "qx_frame.internationalization.json",
+  "description": "this file let qx_frame support internationalization",
+  "english": {
+    "LB_1001": "hello",
+
+    "MSG_1001": "this is a message",
+
+    "ERROR_1001": "internal exception from internationalization exception config file",
+    "ERROR_1002": "some thing error",
+
+    "ERROR_9999": "The interface is not available"
+
+  },
+  "chinese": {
+    "LB_1001": "你好",
+
+    "MSG_1001": "这是一个消息",
+
+    "ERROR_1001": "服务器错误 来自国际化异常配置文件",
+    "ERROR_1002": "常规错误",
+
+    "ERROR_9999": "接口不可用"
+  }
+}

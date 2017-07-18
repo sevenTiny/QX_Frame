@@ -67,7 +67,6 @@
     <Compile Include="Config\ClassRegisters.cs" />
     <Compile Include="Config\ConfigBootStrap.cs" />
     <Compile Include="Config\Global.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Test1Controller.cs" />
     <Compile Include="Controllers\Test2Controller.cs" />
     <Compile Include="Controllers\TestController.cs" />
