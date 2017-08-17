@@ -85,3 +85,5 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Base\bin\Debug\ServiceStac
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Base\bin\Debug\ServiceStack.Common.xml
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Base\obj\Debug\QX_Frame.App.Base.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Base\obj\Debug\QX_Frame.App.Base.pdb
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Base\bin\Debug\RabbitMQ.Client.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.Base\bin\Debug\RabbitMQ.Client.xml

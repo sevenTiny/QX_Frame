@@ -105,3 +105,5 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\obj\Debug\QX_Frame.
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\obj\Debug\QX_Frame.WebApi.Srv.exe
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\obj\Debug\QX_Frame.WebApi.Srv.pdb
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\QX_Frame.Data.dll.config
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\RabbitMQ.Client.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.WebApi.Srv\bin\Debug\RabbitMQ.Client.xml

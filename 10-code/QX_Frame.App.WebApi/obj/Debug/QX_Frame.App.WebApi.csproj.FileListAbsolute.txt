@@ -52,3 +52,5 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\ServiceSt
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\obj\Debug\QX_Frame.App.WebApi.csprojResolveAssemblyReference.cache
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\obj\Debug\QX_Frame.App.WebApi.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\obj\Debug\QX_Frame.App.WebApi.pdb
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\RabbitMQ.Client.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.App.WebApi\bin\Debug\RabbitMQ.Client.xml

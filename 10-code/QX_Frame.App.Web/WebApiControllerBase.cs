@@ -62,5 +62,33 @@ namespace QX_Frame.App.Web
         {
             return Json(data, JsonRequestBehavior.AllowGet);
         }
+
+        /// <summary>
+        /// OK
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <param name="data"></param>
+        /// <param name="dataCount"></param>
+        /// <param name="httpCode"></param>
+        /// <returns></returns>
+        protected JsonResult OK(string msg, dynamic data = null, int dataCount = 0, System.Net.HttpStatusCode httpCode = System.Net.HttpStatusCode.OK)
+        {
+            return Json(Return_Helper_DG.Success_Msg_Data_DCount_HttpCode(msg, data, dataCount, httpCode), JsonRequestBehavior.AllowGet);
+        }
+
+        /// <summary>
+        /// ERROR
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <param name="errorCode"></param>
+        /// <param name="errorLevel"></param>
+        /// <param name="httpCode"></param>
+        /// <returns></returns>
+        protected JsonResult ERROR(string msg, int errorCode = 0, int errorLevel = 0, System.Net.HttpStatusCode httpCode = System.Net.HttpStatusCode.InternalServerError)
+        {
+            return Json(Return_Helper_DG.Error_Msg_Ecode_Elevel_HttpCode(msg, errorCode, errorLevel, httpCode), JsonRequestBehavior.AllowGet);
+        }
+
+
     }
 }

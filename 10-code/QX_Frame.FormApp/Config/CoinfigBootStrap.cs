@@ -24,8 +24,8 @@ namespace QX_Frame.FormApp.Config
             QX_Frame_Helper_DG_Config.Cache_IsCache = jobject_qx_frame_config["cache"]["IsCache"].ToInt() == 1;
             QX_Frame_Helper_DG_Config.Cache_CacheExpirationTimeSpan_Minutes = jobject_qx_frame_config["cache"]["CacheExpirationTime_Minutes"].ToInt();
             QX_Frame_Helper_DG_Config.Cache_CacheServer = QX_Frame.Helper_DG.Options.Opt_CacheServer.HttpRuntimeCache;
-            QX_Frame_Helper_DG_Config.Cache_Redis_Host = jobject_qx_frame_config["cache"]["Cache_Redis_Host"].ToString();
-            QX_Frame_Helper_DG_Config.Cache_Redis_Port = jobject_qx_frame_config["cache"]["Cache_Redis_Port"].ToInt();
+            QX_Frame_Helper_DG_Config.Cache_Redis_Host_ReadWrite_Array = jobject_qx_frame_config["cache"]["Cache_Redis_Host_ReadWrite_Array"].ToString().Split(',');
+            QX_Frame_Helper_DG_Config.Cache_Redis_Host_OnlyRead_Array = jobject_qx_frame_config["cache"]["Cache_Redis_Host_OnlyRead_Array"].ToString().Split(',');
             QX_Frame_Helper_DG_Config.International_ConfigFileLocation = @"../../config/qx_frame.internationalization.json";
             QX_Frame_Helper_DG_Config.International_Language = "english";
 

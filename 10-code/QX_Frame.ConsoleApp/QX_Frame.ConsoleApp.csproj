@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\ClassRegisters.cs" />
-    <Compile Include="Config\CoinfigBootStrap.cs" />
+    <Compile Include="Config\ConfigBootStrap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

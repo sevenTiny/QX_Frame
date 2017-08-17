@@ -157,3 +157,5 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\obj\Debug\QX_Frame.
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\obj\Debug\QX_Frame.ConsoleApp.exe
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\obj\Debug\QX_Frame.ConsoleApp.pdb
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\QX_Frame.Data.dll.config
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\RabbitMQ.Client.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.ConsoleApp\bin\Debug\RabbitMQ.Client.xml

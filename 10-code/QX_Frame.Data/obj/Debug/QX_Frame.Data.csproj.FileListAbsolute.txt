@@ -120,3 +120,5 @@ G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\ServiceStack.Co
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\obj\Debug\QX_Frame.Data.csprojResolveAssemblyReference.cache
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\obj\Debug\QX_Frame.Data.dll
 G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\obj\Debug\QX_Frame.Data.pdb
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\RabbitMQ.Client.dll
+G:\ACSharp\QX_Frame.FramwWork4.6\10-code\QX_Frame.Data\bin\Debug\RabbitMQ.Client.xml
