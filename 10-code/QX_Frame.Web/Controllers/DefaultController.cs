@@ -19,18 +19,5 @@ namespace QX_Frame.Web.Controllers
             //throw new Exception_DG_Internationalization(9999);
             return View();
         }
-
-
-        public JsonResult GetJson()
-        {
-            using (var fact = Wcf<PeopleService>())
-            {
-                var channel = fact.CreateChannel();
-
-                List<V_People> poepleList = channel.QueryAll(new V_PeopleQueryObject()).Cast<List<V_People>>();
-
-                return Json_DG(poepleList);
-            }
-        }
     }
 }

@@ -1,18 +1,22 @@
+/*********************************************************
+ * CopyRight: QIXIAO CODE BUILDER. 
+ * Version:4.2.0
+ * Author:qixiao(柒小)
+ * Create:2017-08-17 10:30:27
+ * E-mail: dong@qixiao.me | wd8622088@foxmail.com 
+ * Personal WebSit: http://qixiao.me 
+ * Technical WebSit: http://www.cnblogs.com/qixiaoyizhan/ 
+ * Thx , Best Regards ~
+ *********************************************************/
+
 using QX_Frame.App.Base;
 using QX_Frame.Data.Contract;
 using QX_Frame.Data.Entities;
 
-/**
- * copyright qixiao code builder ->
- * version:4.2.0
- * author:qixiao(柒小)
- * create:2017-07-18 09:49:05
- **/
-
 namespace QX_Frame.Data.Service
 {
 	/// <summary>
-	/// class TB_PeopleService
+	/// class PeopleService
 	/// </summary>
 	public class PeopleService:WcfService, IPeopleService
 	{

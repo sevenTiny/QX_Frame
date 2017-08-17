@@ -17,6 +17,7 @@ using QX_Frame.App.Base.Options;
 using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Data.Entity;
+using QX_Frame.Helper_DG.Service;
 
 namespace QX_Frame.ConsoleApp
 {
@@ -32,26 +33,41 @@ namespace QX_Frame.ConsoleApp
             {
                 var channel = fact.CreateChannel();
 
-                List<V_People> poepleList = channel.QueryAll(new V_PeopleQueryObject()).Cast<List<V_People>>();
+                TB_PeopleQueryObject peopleQueryObject = new TB_PeopleQueryObject();
 
-                foreach (var item in poepleList)
+                //peopleQueryObject.Name = "1";
+                //peopleQueryObject.Age = 9;
+
+
+                List<TB_People> peopleList = channel.QueryAll(peopleQueryObject).Cast<List<TB_People>>();
+
+                foreach (var item in peopleList)
                 {
-                    Console.WriteLine($"{item.Uid} , {item.Name} , {item.Age} , {item.ClassName}");
+                    Console.WriteLine($"{item.Uid} , {item.Name} , {item.Age} , {item.ClassId}");
                 }
-
-                
-
-
-               // Console.WriteLine(Internationalization.GetString("MSG_1001"));
-
             }
 
-            #endregion
+                //    //TB_People people = channel.QuerySingle(new TB_PeopleQueryObject { QueryCondition = t => t.Name.Equals("lilongji9") }).Cast<TB_People>();
+
+                //    //Console.WriteLine(people.Name);
+
+                //    //people.Name = "jonnyR";
+
+                //    //if (channel.Update(people))
+                //    //{
+                //    //    Console.WriteLine("success!");
+                //    //}
+
+                //    // Console.WriteLine(Internationalization.GetString("MSG_1001"));
+
+                //}
+
+                #endregion
+
 
 
             Console.WriteLine("any key to exit ...");
             Console.ReadKey();
         }
-
     }
 }

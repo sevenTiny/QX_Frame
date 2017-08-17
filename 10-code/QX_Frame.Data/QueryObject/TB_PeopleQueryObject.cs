@@ -1,14 +1,18 @@
+/*********************************************************
+ * CopyRight: QIXIAO CODE BUILDER. 
+ * Version:4.2.0
+ * Author:qixiao(柒小)
+ * Create:2017-08-17 10:30:27
+ * E-mail: dong@qixiao.me | wd8622088@foxmail.com 
+ * Personal WebSit: http://qixiao.me 
+ * Technical WebSit: http://www.cnblogs.com/qixiaoyizhan/ 
+ * Thx , Best Regards ~
+ *********************************************************/
+
 using QX_Frame.App.Base;
 using QX_Frame.Data.Entities;
 using System;
 using System.Linq.Expressions;
-
-/**
- * copyright qixiao code builder ->
- * version:4.2.0
- * author:qixiao(柒小)
- * create:2017-07-18 09:49:05
- **/
 
 namespace QX_Frame.Data.QueryObject
 {
@@ -47,6 +51,16 @@ namespace QX_Frame.Data.QueryObject
 			{
 				func = func.And(t => true);
 			}
+
+            if (!string.IsNullOrEmpty(this.Name))
+            {
+                func = func.And(tt => tt.Name.Contains(this.Name));
+            }
+
+            if (this.Age!=0)
+            {
+                func = func.And(tt => tt.Age == this.Age);
+            }
 
 			return func;
 		}

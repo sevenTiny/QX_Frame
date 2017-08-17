@@ -38,6 +38,14 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="QX_Frame.App.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QX_Frame.Reference\QX_Frame.App.Base\QX_Frame.App.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="QX_Frame.App.WebApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QX_Frame.Reference\QX_Frame.App.WebApi\QX_Frame.App.WebApi.dll</HintPath>
+    </Reference>
     <Reference Include="QX_Frame.Helper_DG">
       <HintPath>..\QX_Frame.Reference\QX_Frame.Helper_DG\QX_Frame.Helper_DG.dll</HintPath>
     </Reference>
@@ -78,14 +86,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\QX_Frame.App.Base\QX_Frame.App.Base.csproj">
-      <Project>{0046a768-ada2-4314-b7cc-391919ed71cd}</Project>
-      <Name>QX_Frame.App.Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\QX_Frame.App.WebApi\QX_Frame.App.WebApi.csproj">
-      <Project>{8b767def-75b6-433d-9b03-f6ea18fe0615}</Project>
-      <Name>QX_Frame.App.WebApi</Name>
-    </ProjectReference>
     <ProjectReference Include="..\QX_Frame.Data.Service\QX_Frame.Data.Service.csproj">
       <Project>{80378a61-fd07-4af0-b09c-8f39be12ca61}</Project>
       <Name>QX_Frame.Data.Service</Name>
@@ -98,6 +98,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

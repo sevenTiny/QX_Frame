@@ -31,14 +31,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="QX_Frame.App.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QX_Frame.Reference\QX_Frame.App.Base\QX_Frame.App.Base.dll</HintPath>
     </Reference>
     <Reference Include="QX_Frame.Helper_DG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -58,25 +62,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configs\QX_Frame_Data_Config.cs" />
+    <Compile Include="DTO\LimitViewModel.cs" />
     <Compile Include="DTO\UserViewModel.cs" />
     <Compile Include="Entities\DB_QX_Frame_Test.cs" />
     <Compile Include="Entities\TB_ClassName.cs" />
     <Compile Include="Entities\TB_People.cs" />
     <Compile Include="Entities\TB_Score.cs" />
-    <Compile Include="Entities\V_People.cs" />
-    <Compile Include="Options\opt_AccountRoleLevel.cs" />
-    <Compile Include="Options\opt_AccountStatusLevel.cs" />
+    <Compile Include="Options\opt_UserRole.cs" />
+    <Compile Include="Options\opt_UserStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryObject\TB_ClassNameQueryObject.cs" />
     <Compile Include="QueryObject\TB_PeopleQueryObject.cs" />
     <Compile Include="QueryObject\TB_ScoreQueryObject.cs" />
-    <Compile Include="QueryObject\V_PeopleQueryObject.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\QX_Frame.App.Base\QX_Frame.App.Base.csproj">
-      <Project>{0046a768-ada2-4314-b7cc-391919ed71cd}</Project>
-      <Name>QX_Frame.App.Base</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

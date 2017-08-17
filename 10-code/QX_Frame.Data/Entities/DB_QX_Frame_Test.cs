@@ -15,7 +15,6 @@ namespace QX_Frame.Data.Entities
         public virtual DbSet<TB_ClassName> TB_ClassName { get; set; }
         public virtual DbSet<TB_People> TB_People { get; set; }
         public virtual DbSet<TB_Score> TB_Score { get; set; }
-        public virtual DbSet<V_People> V_People { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

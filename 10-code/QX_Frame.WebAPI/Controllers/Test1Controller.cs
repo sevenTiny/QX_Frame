@@ -1,6 +1,11 @@
 ﻿using QX_Frame.App.WebApi;
+using QX_Frame.Data.Entities;
+using QX_Frame.Data.QueryObject;
+using QX_Frame.Data.Service;
 using QX_Frame.Helper_DG;
 using QX_Frame.Helper_DG.Extends;
+using System;
+using System.Collections.Generic;
 using System.Web.Http;
 
 namespace QX_Frame.WebApi.Controllers
@@ -14,8 +19,18 @@ namespace QX_Frame.WebApi.Controllers
         //access http://localhost:3999/api/Test1  get method
         public IHttpActionResult GetTest()
         {
-            //throw new Exception_DG_Internationalization(1001);
-            return OK("Get Test");
+
+            using (var fact = Wcf<PeopleService>())
+            {
+                var channel = fact.CreateChannel();
+
+                TB_PeopleQueryObject peopleQueryObject = new TB_PeopleQueryObject();
+
+                int count = 0;
+                List<TB_People> peopleList = channel.QueryAll(peopleQueryObject).Cast<List<TB_People>>(out count);
+
+                return OK("get people list!", peopleList, count);
+            }
         }
         //access http://localhost:3999/api/Test1  post method
         public IHttpActionResult PostTest(dynamic queryData)

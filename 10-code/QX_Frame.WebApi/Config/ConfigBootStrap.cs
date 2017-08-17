@@ -31,9 +31,9 @@ namespace QX_Frame.WebApi.Config
             QX_Frame_Helper_DG_Config.Cache_Redis_Host_ReadWrite_Array = jobject_qx_frame_config["cache"]["Cache_Redis_Host_ReadWrite_Array"].ToString().Split(',');
             QX_Frame_Helper_DG_Config.Cache_Redis_Host_OnlyRead_Array = jobject_qx_frame_config["cache"]["Cache_Redis_Host_OnlyRead_Array"].ToString().Split(',');
             QX_Frame_Helper_DG_Config.International_ConfigFileLocation = @"../../config/qx_frame.internationalization.json";
-            QX_Frame_Helper_DG_Config.International_Language = "english";
+            QX_Frame_Helper_DG_Config.International_Language = "chinese";
 
-            QX_Frame_Data_Config.ConnectionString_DB_QX_Frame_Test= jobject_qx_frame_config["database"]["connectionStrings"]["DB_QX_Frame_Test"].ToString();
+            QX_Frame_Data_Config.ConnectionString_DB_QX_Frame_Test= jobject_qx_frame_config["database"]["connectionStrings"]["ConnectionString_DB_QX_Frame_Test"].ToString();
 
             Trace.WriteLine("configuration bootstrap succeed !");
         }

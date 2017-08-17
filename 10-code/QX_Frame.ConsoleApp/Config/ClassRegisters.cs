@@ -1,5 +1,6 @@
 ﻿using QX_Frame.App.Base;
 using QX_Frame.Data.Service;
+//using QX_Frame.Data.Service.QX_Frame;
 
 namespace QX_Frame.ConsoleApp.Config
 {
@@ -12,10 +13,10 @@ namespace QX_Frame.ConsoleApp.Config
         public ClassRegisters()
         {
             //register region --
-            AppBase.Register(c => new PeopleService());
+            AppBase.Register(c => new QX_Frame.Helper_DG.Service.RabbitMQ_Service_DG());
             AppBase.Register(c => new ClassNameService());
+            AppBase.Register(c => new PeopleService());
             AppBase.Register(c => new ScoreService());
-
 
 
             //end register region --

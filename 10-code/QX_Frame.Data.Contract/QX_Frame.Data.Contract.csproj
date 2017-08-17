@@ -47,10 +47,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\QX_Frame.App.Base\QX_Frame.App.Base.csproj">
-      <Project>{0046a768-ada2-4314-b7cc-391919ed71cd}</Project>
-      <Name>QX_Frame.App.Base</Name>
-    </ProjectReference>
     <ProjectReference Include="..\QX_Frame.Data\QX_Frame.Data.csproj">
       <Project>{38486536-3824-4e1b-8106-3159b31caca7}</Project>
       <Name>QX_Frame.Data</Name>

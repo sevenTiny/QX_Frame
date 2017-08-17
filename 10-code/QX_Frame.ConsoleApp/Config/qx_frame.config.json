@@ -3,8 +3,8 @@
   "description": "configuration file about qx_frame app start",
   "database": {
     "connectionStrings": {
-      "QX_Frame_Default": "data source=.;initial catalog=DB_QX_Frame_Test;user id=sa;password=Sa123456;MultipleActiveResultSets=True;App=EntityFramework",
-      "DB_QX_Frame_Test": "data source=.;initial catalog=DB_QX_Frame_Test;user id=sa;password=Sa123456;MultipleActiveResultSets=True;App=EntityFramework"
+      "QX_Frame_Default": "data source=.;initial catalog=DB_QX_Frame_Test;persist security info=True;user id=Sa;password=CYj(9yyz*8;MultipleActiveResultSets=True;App=EntityFramework",
+      "ConnectionString_DB_QX_Frame_Test": "data source=123.56.8.95;initial catalog=DB_QX_Frame_Test;persist security info=True;user id=sa;password=CYj(9yyz*8;MultipleActiveResultSets=True;App=EntityFramework"
     }
   },
   "log": {
@@ -15,12 +15,28 @@
   "cache": {
     "IsCache": 1,
     "CacheExpirationTime_Minutes": 10,
-    "Cache_Redis_Host": "127.0.0.1",
-    "Cache_Redis_Port": 6379
+    "Cache_Redis_Host_ReadWrite_Array": [ "101.201.66.247:6379" ],
+    "Cache_Redis_Host_OnlyRead_Array": [ "101.201.66.247:6379" ]
   },
   "authentication": {
-    "Auth_Token_expireTime_days": 0,
-    "Auth_Token_expireTime_hours": 0,
-    "Auth_Token_expireTime_minutes": 30
+    "AuthTokenExpireTime_days": 0,
+    "AuthTokenExpireTime_hours": 2,
+    "AuthTokenExpireTime_minutes": 0
+  },
+  "webconfig": {
+    "AppDomain": "http://localhost:3998/",
+    "ApiDomain": "http://localhost:3999/",
+    "RequestExpireTime": 10
+  },
+  "secret": {
+    "RSA_PublicKey": "",
+    "RSA_PrivateKey": ""
+  },
+  "rabbitmq": {
+    "Host": "amqp://101.201.66.247:5672/",
+    "UserName": "qx_frame",
+    "Password": "CYj(9yyz*8",
+    "VirtualHost": "qx_frame",
+    "RequestedHeartBeat": 0
   }
 }
