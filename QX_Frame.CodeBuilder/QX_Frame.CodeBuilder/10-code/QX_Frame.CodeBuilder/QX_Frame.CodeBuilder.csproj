@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5373156-F43E-482F-94F0-A6932CA65DDA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSharp_FlowchartToCode_DG</RootNamespace>
+    <AssemblyName>CSharp_FlowchartToCode_DG</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://182.254.210.156:9999/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>QX_Frame.Reference\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>QX_Frame.Reference\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>QX_Frame.Reference\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>QX_Frame.Reference\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>QX_Frame.Reference\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="QX_Frame.Bantina, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>QX_Frame.Reference\QX_Frame.Bantina.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeCreate\JavaEntityInstance.cs" />
+    <Compile Include="CodeCreate\NetEntityWithBantina.cs" />
+    <Compile Include="CodeCreate\NetEntityInstance.cs" />
+    <Compile Include="CodeCreate\JavascriptAjaxData.cs" />
+    <Compile Include="CodeCreate\SqlServerSqlStatement.cs" />
+    <Compile Include="CodeCreate\JavaEntity.cs" />
+    <Compile Include="CodeCreate\QX_FrameToDataContract.cs" />
+    <Compile Include="CodeCreate\QX_FrameToDataService.cs" />
+    <Compile Include="CodeCreate\NetEntity.cs" />
+    <Compile Include="CodeCreate\QX_FrameToQueryObject.cs" />
+    <Compile Include="CodeCreate\NetMVCControllers.cs" />
+    <Compile Include="CodeCreate\HTML.cs" />
+    <Compile Include="CodeCreate\JavascriptAjax.cs" />
+    <Compile Include="CodeCreate\QX_FrameToRESTWebApiController.cs" />
+    <Compile Include="CommonVariables.cs" />
+    <Compile Include="config\Info.cs" />
+    <Compile Include="config\MagneticMagnager.cs" />
+    <Compile Include="Controls\ColorRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorRichTextBox.Designer.cs">
+      <DependentUpon>ColorRichTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Parser.cs" />
+    <Compile Include="DataBaseChooseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBaseChooseForm.Designer.cs">
+      <DependentUpon>DataBaseChooseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DataBaseInfo.cs" />
+    <Compile Include="Entities\FieldInfo.cs" />
+    <Compile Include="Entities\ServerInfo.cs" />
+    <Compile Include="Entities\TableInfo.cs" />
+    <Compile Include="MicrosoftSqlServerLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MicrosoftSqlServerLoginForm.Designer.cs">
+      <DependentUpon>MicrosoftSqlServerLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySqlLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySqlLoginForm.Designer.cs">
+      <DependentUpon>MySqlLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\Opt_Language.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CodeCreate\ThreelayeToDAL.cs" />
+    <Compile Include="CodeCreate\ThreelayeToModel.cs" />
+    <Compile Include="CodeCreate\ThreelayeToBLL.cs" />
+    <Compile Include="QX_Frame.Helper\MySqlTypeConvert.cs" />
+    <Compile Include="QX_Frame.Helper\SQLServerTypeConvert.cs" />
+    <Compile Include="QX_Frame.Helper\SqlTypeConvert.cs" />
+    <Compile Include="QX_Frame.Helper\StringFormatHelper.cs" />
+    <Compile Include="QX_Frame.Helper\TypeConvert.cs" />
+    <Compile Include="Tools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools.Designer.cs">
+      <DependentUpon>Tools.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DataBaseChooseForm.resx">
+      <DependentUpon>DataBaseChooseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MicrosoftSqlServerLoginForm.resx">
+      <DependentUpon>MicrosoftSqlServerLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySqlLoginForm.resx">
+      <DependentUpon>MySqlLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools.resx">
+      <DependentUpon>Tools.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\dbview\db.gif" />
+    <Content Include="images\dbview\db.ico" />
+    <Content Include="images\dbview\db.JPG" />
+    <Content Include="images\dbview\db3.ico" />
+    <Content Include="images\dbview\dbadd.gif" />
+    <Content Include="images\dbview\duihao.png" />
+    <Content Include="images\dbview\field.ico" />
+    <Content Include="images\dbview\fild2.gif" />
+    <Content Include="images\dbview\file.gif" />
+    <Content Include="images\dbview\noconnect.gif" />
+    <Content Include="images\dbview\noconnect.jpg" />
+    <Content Include="images\dbview\pk.gif" />
+    <Content Include="images\dbview\refrush.gif" />
+    <Content Include="images\dbview\serAdd.gif" />
+    <Content Include="images\dbview\server.ico" />
+    <Content Include="images\dbview\server0.gif" />
+    <Content Include="images\dbview\server1.gif" />
+    <Content Include="images\dbview\serverlist.gif" />
+    <Content Include="images\dbview\sp.gif" />
+    <Content Include="images\dbview\sp_p.gif" />
+    <Content Include="images\dbview\sp_return.gif" />
+    <Content Include="images\dbview\tab2.gif" />
+    <Content Include="images\dbview\view.gif" />
+    <None Include="images\microsoftsqlserverlogintopback.png" />
+    <None Include="images\MongoDbIco.png" />
+    <None Include="images\mysqlIco.png" />
+    <None Include="images\OracleIco.jpg" />
+    <None Include="images\mysqllogintopback.png" />
+    <Content Include="images\qixiao %282%29.ico" />
+    <Content Include="images\qixiao.png" />
+    <None Include="images\RedisIco.png" />
+    <None Include="images\SqlserverIco.png" />
+    <Content Include="info.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

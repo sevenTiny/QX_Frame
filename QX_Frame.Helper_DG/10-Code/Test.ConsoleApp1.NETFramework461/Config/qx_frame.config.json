@@ -1,0 +1,41 @@
+﻿{
+  "schema": "qx_frame.config.json",
+  "description": "configuration file about qx_frame app start",
+  "database": {
+    "connectionStrings": {
+      "QX_Frame_Default": "data source=.;initial catalog=DB_QX_Frame_MS_User;persist security info=True;user id=Sa;password=Sa123456;MultipleActiveResultSets=True;App=EntityFramework",
+      "DB_QX_Frame_MS_User": "data source=.;initial catalog=DB_QX_Frame_MS_User;persist security info=True;user id=Sa;password=Sa123456;MultipleActiveResultSets=True;App=EntityFramework"
+    }
+  },
+  "log": {
+    "Log_Location_General": "Log_QX_Frame/Log_QX_Frame_General/",
+    "Log_Location_Error": "Log_QX_Frame/Log_QX_Frame_Error/",
+    "Log_Location_Use": "Log_QX_Frame/Log_QX_Frame_Use/"
+  },
+  "cache": {
+    "IsCache": 1,
+    "CacheExpirationTime_Minutes": 10,
+    "Cache_Redis_Host_ReadWrite_Array": [ "101.201.66.247:6379" ],
+    "Cache_Redis_Host_OnlyRead_Array": [ "101.201.66.247:6379" ]
+  },
+  "authentication": {
+    "AuthTokenExpireTime_days": 0,
+    "AuthTokenExpireTime_hours": 2,
+    "AuthTokenExpireTime_minutes": 0
+  },
+  "webconfig": {
+    "AppDomain": "http://localhost:3999/",
+    "RequestExpireTime": 10
+  },
+  "secret": {
+    "RSA_PublicKey": "",
+    "RSA_PrivateKey": ""
+  },
+  "rabbitmq": {
+    "Host": "amqp://101.201.66.247:5672/",
+    "UserName": "qx_frame",
+    "Password": "CYj(9yyz*8",
+    "VirtualHost": "qx_frame",
+    "RequestedHeartBeat": 0
+  }
+}

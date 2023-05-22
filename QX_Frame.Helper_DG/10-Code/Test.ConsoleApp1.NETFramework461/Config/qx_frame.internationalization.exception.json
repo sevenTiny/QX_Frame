@@ -1,0 +1,12 @@
+﻿{
+  "schema": "qx_frame.internationalization.exception.json",
+  "description": "this file let qx_frame exception support internationalization",
+  "english": {
+    "1001": "internal exception",
+    "1002": "some thing error"
+  },
+  "chinese": {
+    "1001": "你好",
+    "1002": "常规错误"
+  }
+}

@@ -1,0 +1,17 @@
+﻿{
+  "schema": "qx_frame.internationalization.json",
+  "description": "this file let qx_frame support internationalization",
+  "english": {
+    "LB_1001": "hello",
+
+
+    "MSG_1001": "this is a message"
+  },
+  "chinese": {
+    "LB_1001": "你好",
+
+
+
+    "MSG_1001": "这是一个消息"
+  }
+}

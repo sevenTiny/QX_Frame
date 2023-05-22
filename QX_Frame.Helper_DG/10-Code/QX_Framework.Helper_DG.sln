@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.Helper_DG.NETFramework45", "QX_Frame.Helper_DG_NETFramework45\QX_Frame.Helper_DG.NETFramework45.csproj", "{160D5850-5485-42C9-997B-F0DC860BA9AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QX_Frame.Helper_DG.NETFramework461", "QX_Frame.Helper_DG_NETFramework461\QX_Frame.Helper_DG.NETFramework461.csproj", "{D2E5D39C-9457-4BCE-8869-9FF2B49EDE62}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QX_Frame.Helper_DG.NETStandard14", "QX_Frame.Helper_DG_NETStandard14\QX_Frame.Helper_DG.NETStandard14.csproj", "{588DBD09-AC59-472A-9522-D61CF6D31861}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.ConsoleApp1.NETFramework461", "Test.ConsoleApp1.NETFramework461\Test.ConsoleApp1.NETFramework461.csproj", "{77A2AF7F-D5BA-47C9-9989-AF28C11FF470}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.FormsApp.NETFramework461", "Test.FormsApp.NETFramework461\Test.FormsApp.NETFramework461.csproj", "{80F8E02A-70A1-49C4-A865-7B627613B65A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{160D5850-5485-42C9-997B-F0DC860BA9AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{160D5850-5485-42C9-997B-F0DC860BA9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{160D5850-5485-42C9-997B-F0DC860BA9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{160D5850-5485-42C9-997B-F0DC860BA9AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2E5D39C-9457-4BCE-8869-9FF2B49EDE62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2E5D39C-9457-4BCE-8869-9FF2B49EDE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2E5D39C-9457-4BCE-8869-9FF2B49EDE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2E5D39C-9457-4BCE-8869-9FF2B49EDE62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{588DBD09-AC59-472A-9522-D61CF6D31861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{588DBD09-AC59-472A-9522-D61CF6D31861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{588DBD09-AC59-472A-9522-D61CF6D31861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{588DBD09-AC59-472A-9522-D61CF6D31861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77A2AF7F-D5BA-47C9-9989-AF28C11FF470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A2AF7F-D5BA-47C9-9989-AF28C11FF470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A2AF7F-D5BA-47C9-9989-AF28C11FF470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A2AF7F-D5BA-47C9-9989-AF28C11FF470}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80F8E02A-70A1-49C4-A865-7B627613B65A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80F8E02A-70A1-49C4-A865-7B627613B65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80F8E02A-70A1-49C4-A865-7B627613B65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80F8E02A-70A1-49C4-A865-7B627613B65A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
